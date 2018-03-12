@@ -1,6 +1,6 @@
 import React from 'react';
 
-export defaultq class Home extends React.Component {
+export default class Home extends React.Component {
 
     render() {
 
