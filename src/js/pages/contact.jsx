@@ -1,12 +1,17 @@
 import React from 'react';
+import FormContact from '../form-contact/form-contact';
 
 export default class Contact extends React.Component {
-    render() {
-        const contact = (
-            <section class="contacto .flex-center" id="Contact">
-                
-		    </section>
-        );
-        return contact;
+    constructor(props) {
+        super(props);
     }
+
+	render() {
+		const contact = (
+			<section className='contacto .flex-center' id='Contact'>
+				<FormContact />
+			</section>
+		);
+		return contact;
+	}
 }

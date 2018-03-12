@@ -23,7 +23,7 @@
     "ansi-html": "0.0.7",
     "array-includes": "^3.0.3",
     "debug": "^3.1.0",
-    "history": "^4.7.2",
+    "history": "^1.17.0",
     "html-entities": "^1.2.1",
     "http-proxy-middleware": "^0.17.4",
     "import-local": "^1.0.0",
@@ -31,6 +31,7 @@
     "ip": "^1.1.5",
     "react": "^16.2.0",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
     "sockjs": "^0.3.19",
     "sockjs-client": "^1.1.4",
@@ -69,7 +70,8 @@
     "rollup-plugin-uglify": "^3.0.0",
     "sass-loader": "^6.0.7",
     "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack-cli": "^2.0.10"
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.1"
   },
   "babel": {
     "presets": [

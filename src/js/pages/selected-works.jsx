@@ -1,25 +1,31 @@
 import React from 'react';
 
-export default class React extends React.Component {
-    render() {
-        const selectedWorks = (
-            <section class="selected-works" id="Selected_Works">
-                <div class="grid-container">
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                    <div class="flex-center"></div>
-                </div>
-            </section>
-        );
-        return selectedWorks;
+export default class SelectedWorks extends React.Component {
+    constructor(props){
+        super(props);
     }
+
+	render() {
+		const selectedWorks = (
+			<div>
+				<section className='selected-works' id='Selected_Works'>
+					<div className='grid-container'>
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+						<div className='flex-center' />
+					</div>
+				</section>
+			</div>
+		);
+		return selectedWorks;
+	}
 }

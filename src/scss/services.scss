@@ -3,15 +3,24 @@
     .flex-container {
         display: flex;
         flex-wrap: wrap;
-        padding: 40px;
-        justify-content: space-between;
+        padding: 200px;
+        justify-content: space-around;
         height: 100%;
 
         & > div {
             width: 30%;
-
+            
             h2 {
                 width: 100%;
+                font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
+                font-size: 60px;
+                color: $grisOsc;
+            }
+            
+            div {
+                
+                font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
+                font-size: 20px;
             }
         }
         // align-items: space-around;

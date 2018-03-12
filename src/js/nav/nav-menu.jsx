@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default class Nav extends React.Component {
 
@@ -25,10 +26,12 @@ export default class Nav extends React.Component {
 		default:
 
 			nav = (
-				<nav className={this.props.tipo}>
-					<Logo logo={this.props.logo}/>
-					<Menu tipo={this.props.tipo} links={this.props.links}/>
-				</nav>
+				<aside className='left'>
+					<nav className={this.props.tipo}>
+						<Logo logo={this.props.logo}/>
+						<Menu tipo={this.props.tipo} links={this.props.links}/>
+					</nav>
+				</aside>
 			);
 
 			break;
@@ -65,7 +68,13 @@ class Menu extends React.Component {
 			<div>
 				<ul>
 					{
-						links.map(elemento => <li key={'li' + elemento}><a href={'#' + elemento.replace(' ', '_')}>{elemento.toUpperCase()} <span/></a></li>)
+						links.map(elemento => (
+							<li key={'li' + elemento}>
+								<NavLink to={(elemento === 'Home') ? '/testing/site/' : '/testing/site/' + elemento.replace(' ', '_')} activeClassName='selected' >
+									{elemento.toUpperCase()} <span/>
+								</NavLink>
+							</li>)
+						)
 					}
 				</ul>
 			</div>

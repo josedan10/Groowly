@@ -5,11 +5,11 @@ const config = {
 
 	// entry: './src/js/index.jsx',
 	entry: {
-		index: './src/js/index.jsx',
-		formContact: './src/js/form-contact.config.jsx',
-		presentation: './src/js/presentation.config.jsx',
-		timer: './src/js/timer.config.jsx',
-		slideshow: './src/js/slideshow.config.jsx'
+		index: './src/js/index.jsx'
+		// formContact: './src/js/form-contact.config.jsx',
+		// presentation: './src/js/presentation.config.jsx',
+		// timer: './src/js/timer.config.jsx',
+		// slideshow: './src/js/slideshow.config.jsx'
 		// slideshow: './src/js/slideshow/swiper-js/source/jquery.slides.js'
 	},
 
@@ -52,6 +52,7 @@ const config = {
 
 	devServer: {
 		contentBase: path.join(__dirname, './'),
+		historyApiFallback: true,	
 		port: 8080
 	},
 

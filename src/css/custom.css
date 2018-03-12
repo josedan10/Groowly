@@ -4,6 +4,9 @@
 @font-face {
   font-family: BrownStd-Light;
   src: url("tipografias/BrownStd-Light.otf"); }
+@font-face {
+  font-family: Berlin-Sans;
+  src: url("tipografias/Berlin-Sans.otf"); }
 * {
   padding: 0;
   margin: 0;
@@ -197,13 +200,19 @@ nav.nav-right {
 .services .flex-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
-  justify-content: space-between;
+  padding: 200px;
+  justify-content: space-around;
   height: 100%; }
   .services .flex-container > div {
     width: 30%; }
     .services .flex-container > div h2 {
-      width: 100%; }
+      width: 100%;
+      font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
+      font-size: 60px;
+      color: #595959; }
+    .services .flex-container > div div {
+      font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
+      font-size: 20px; }
 
 .selected-works .grid-container {
   grid-gap: 10px;
