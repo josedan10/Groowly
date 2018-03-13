@@ -1,3 +1,18 @@
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        position: absolute;
+        margin-right: 2000px;
+    }
+    25% {
+        margin-right: 0;
+    }
+    100% {
+        opacity: 1;
+        position: static;
+    }
+}
+
 .services {
 
     .flex-container {
@@ -22,6 +37,14 @@
                 font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
                 font-size: 20px;
             }
+
+            // @for $i from 1 through 6 {
+            //     &:nth-child(#{$i}) { 
+            //         animation-name: entrada;
+            //         animation-duration: 1.5s;
+            //         animation-delay: $i * 2s;
+            //     }
+            // }
         }
         // align-items: space-around;
     }
