@@ -34,7 +34,7 @@ nav{
 				transition: all .5s ease;
 
 				&:hover{
-					color: $violeta;
+					color: $dorado;
 					transition: all .5s ease;
 				}
 
@@ -73,9 +73,10 @@ nav.nav-left{
 		display:flex;
 		justify-content: space-between;
 		align-items: center;
-		position: absolute;
 		width: 210px;
+		position: absolute;
 		right: 0;
+		top: 40%;
 
 		ul{
 			flex-direction: column;
@@ -104,11 +105,11 @@ nav.nav-left{
 					}
 
 					&:hover	{
-						color: $violeta;
+						color: $dorado;
 						transition: all .5s ease;
 
 						span{
-							background-color: $grisOsc;
+							background-color: $dorado;
 						}
 					}
 				}

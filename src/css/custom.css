@@ -43,7 +43,7 @@ aside.right {
       color: #595959;
       transition: all .5s ease; }
       .right ul li a:hover {
-        color: #230f28;
+        color: #d39205;
         transition: all .5s ease; }
 
 section {
@@ -157,7 +157,7 @@ nav {
         color: #595959;
         transition: all .5s ease; }
         nav ul li a:hover {
-          color: #230f28;
+          color: #d39205;
           transition: all .5s ease; }
         nav ul li a i {
           margin-right: 3px; }
@@ -183,9 +183,10 @@ nav.nav-left {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
     width: 210px;
-    right: 0; }
+    position: absolute;
+    right: 0;
+    top: 40%; }
     nav.nav-left div ul {
       flex-direction: column;
       align-items: center;
@@ -207,10 +208,10 @@ nav.nav-left {
           top: 7px;
           right: 15px; }
         nav.nav-left div ul li a:hover {
-          color: #230f28;
+          color: #d39205;
           transition: all .5s ease; }
           nav.nav-left div ul li a:hover span {
-            background-color: #595959; }
+            background-color: #d39205; }
 
 nav.nav-right {
   top: 0;
@@ -225,13 +226,12 @@ nav.nav-right {
   background: #ececec;
   right: 0; }
 
-.menu .grid-container {
-  padding: 10px;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
-  .menu .grid-container div {
-    background-color: #f2f2f2; }
+.home {
+  background-color: #ececec;
+  position: relative;
+  overflow: hidden; }
+  .home video {
+    width: 100%; }
 
 @keyframes entrada {
   0% {
@@ -523,11 +523,13 @@ nav.nav-right {
   .contacto .form-contact {
     padding: 20px 0; }
 
-  .clientes > .flex-center div {
-    background: #ffffff;
-    margin: 1%;
-    width: 31%;
-    height: 15%; } }
+  .clientes {
+    padding: 20px 50px; }
+    .clientes > .flex-center div {
+      background: #ffffff;
+      margin: 5px;
+      width: 31%;
+      height: 20%; } }
 @media (max-width: 480px) {
   .services .flex-container > div {
     width: 100%; }
@@ -538,7 +540,7 @@ nav.nav-right {
 
   .selected-works .flex-center div {
     width: 48%;
-    height: 31.2%;
+    height: 31.3%;
     margin: 1%; } }
 
 /*# sourceMappingURL=custom.css.map */

@@ -2,6 +2,7 @@
 $gris: #ececec;
 $grisOsc: #595959;
 $violeta: #230f28;
+$dorado: #d39205;
 
 // Fuentes
 $font-title: 'BrownStd-Regular', Arial, Helvetica, sans-serif;
@@ -67,7 +68,7 @@ aside.right {
 				transition: all .5s ease;
 
 				&:hover {
-					color: $violeta;
+					color: $dorado;
 					transition: all .5s ease;
 				}
 			}
@@ -200,7 +201,7 @@ section{
 
 @import 'nav';
 @import 'social';
-@import 'menu-collage';
+@import 'home';
 @import 'services';
 @import 'selected-works';
 @import 'own-community';
