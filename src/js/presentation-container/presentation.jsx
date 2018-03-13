@@ -7,7 +7,7 @@ export default class PresentationFrame extends React.Component {
 	}
 
 	cambiarVista(ev) {
-		let images = document.getElementsByClassName('img'),
+		let images = document.getElementsByClassName('view-screen'),
 			index,        
 			vistaAbierta = document.getElementsByClassName('display-content'),
 			vistas;
@@ -113,7 +113,7 @@ class PresentationItem extends React.Component {
 		return (
 			<div className='content-container default-content'>
 				<div className='view-content'>
-					<div className='img' style={{ backgroundImage: 'url(' + this.props.datos.img + ')' }} onClick={this.props.onClick} />
+					<div className='img' style={{ backgroundImage: 'url(' + this.props.datos.img + ')' }} />
 
 					<div className='content'>
 
@@ -131,7 +131,7 @@ class PresentationItem extends React.Component {
 					</div>
 				</div>
 
-				<div className='view-screen' />
+				<div className='view-screen' onClick={this.props.onClick} />
 			</div>
 		);
 	}

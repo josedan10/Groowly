@@ -98,6 +98,11 @@ section{
 	align-items: center;
 }
 
+.team .display-content .view-content .content {
+	display: grid;
+	grid-template-rows: 1fr 5fr repeat(2fr);
+}
+
 .flex-presentation {
 	display: flex;
 	width: 100%;
@@ -112,10 +117,28 @@ section{
 	.default-content {
 		width: 16.66%;
 		transition: all .7s ease;
+		position: relative;
 
 		.img {
 			width: 100%;
 			transition: all .7s ease;
+		}
+
+		.view-screen {
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color: #000000, $alpha: .5);
+			transition: all .5s ease;
+
+			&:hover {
+				background-color: rgba($color: #000000, $alpha: 0);
+				transition: all .5s ease;
+			}
 		}
 	}
 
@@ -135,16 +158,42 @@ section{
 		.content {
 			position: absolute;
 			right: 0;
+
+            .info {
+                grid-row: 2 / 3;
+            }
+		}
+
+		.view-screen {
+			display: none;
 		}
 	}
 
 	.reduce-content {
 		width: 4%;
 		transition: all .7s ease;
+		position: relative;
 
 		.img {
 			width: 100%;
 			transition: all .7s ease;
+		}
+
+		.view-screen {
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color: #000000, $alpha: .5);
+			transition: all .5s ease;
+
+			&:hover {
+				background-color: rgba($color: #000000, $alpha: 0);
+				transition: all .5s ease;
+			}
 		}
 	}
 }

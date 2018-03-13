@@ -1,13 +1,21 @@
+@media (max-width: 1200px) {
+
+    .services {
+        .flex-container {
+            padding: 50px;
+        }
+    }
+}
 @media (max-width: 991px) { 
-    
 }
 @media (max-width: 768px) { 
     
     .services {
         .flex-container {
-            div {
-                background-color: purple;
-                width: 40%;
+            padding: 0;
+
+            & > div div {
+                font-size: 16px;
             }
         }
     }
@@ -26,7 +34,6 @@
     .services {
         .flex-container {
             div {
-                background-color: purple;
                 width: 100%;
             }
         }
