@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch, hashHistory, browserHistory } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Route, Switch, hashHistory, browserHistory } from 'react-router-dom';
 import Nav from './nav/nav-menu';
 import Home from './pages/home';
 import SelectedWorks from './pages/selected-works';
@@ -18,7 +18,7 @@ const links = ['Home', 'Services', 'Selected Works', 'Own Community', 'Team', 'C
 const logo = 'src/img/logo.svg';
 
 ReactDOM.render(	
-	<BrowserRouter history={hashHistory}>
+	<HashRouter history={hashHistory}>
 		<div>
 			<Nav tipo='nav-left' logo={logo} links={links} />
 
@@ -32,13 +32,14 @@ ReactDOM.render(
 
 
 			{/* <Switch>
-				<Route exact path='groowly.com/testing/site/' component={Home} />
-				<Route exact path='groowly.com/testing/site/Services' component={Services} />
-				<Route exact path='groowly.com/testing/site/Selected_Works' component={SelectedWorks} />
-				<Route exact path='groowly.com/testing/site/Own_Community' component={OwnCommunity} />
-				<Route exact path='groowly.com/testing/site/Team' component={Team} />
-				<Route exact path='groowly.com/testing/site/Clients' component={Clients} />
-				<Route exact path='groowly.com/testing/site/Contact' component={Contact} /> 
+				<Route exact path='/testing/site/' component={Home} >
+				<Route path='/testing/site/#/Services' component={Services} />
+				<Route path='/testing/site/#/Selected_Works' component={SelectedWorks} />
+				<Route path='/testing/site/#/Own_Community' component={OwnCommunity} />
+				<Route path='/testing/site/#/Team' component={Team} />
+				<Route path='/testing/site/#/Clients' component={Clients} />
+				<Route path='/testing/site/#/Contact' component={Contact} />
+				</Route>
 			</Switch> */}
 
 			<Switch>
@@ -51,7 +52,7 @@ ReactDOM.render(
 				<Route path='/Contact' component={Contact} /> 
 			</Switch>
 		</div>
-	</BrowserRouter>
+	</HashRouter>
 	, document.getElementById('app')
 );
 

@@ -1,5 +1,4 @@
 @media (max-width: 1200px) {
-
     .services {
         .flex-container {
             padding: 50px;
@@ -7,6 +6,28 @@
     }
 }
 @media (max-width: 991px) { 
+    
+    .contacto .form-contact .form-view {
+        width: 100%;
+    
+        form.grid-container {
+            position: relative;
+    
+             
+            input::placeholder,
+            input {
+                font-size: 12px;
+            }
+    
+            input {
+                grid-column: 1 / span 2;
+            }
+    
+            textarea {
+                grid-row: 5 / span 2;
+            }
+        }
+    }
 }
 @media (max-width: 768px) { 
     
@@ -20,21 +41,47 @@
         }
     }
 
-    .form-view {
-        min-width: 300px;
-        form {
-            input::placeholder,
-            input {
-                font-size: 12px;
+    .selected-works {
+        .flex-center {
+            
+            div{
+                width: 30%;
+                height: 31.3%;
+                margin: 1%;
             }
         }
     }
+
+    .contacto .form-contact {
+        padding: 20px 0;
+    }
+
 }
 @media (max-width: 480px) { 
     .services {
         .flex-container {
-            div {
+            & > div {
                 width: 100%;
+                
+                h2 {
+                    font-size: 30px;
+                }
+            }
+
+
+            & > div div {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .selected-works {
+        .flex-center {
+            
+            div{
+                width: 48%;
+                height: 31.2%;
+                margin: 1%;
             }
         }
     }

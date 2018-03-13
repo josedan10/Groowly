@@ -8,7 +8,7 @@ export default class Clients extends React.Component {
 	render() {
 		const clients = (
 			<section className='clientes' id='Clients'>
-				<div className='grid-container'>
+				<div className='flex-center'>
 					<div className='flex-center' />
 					<div className='flex-center' />
 					<div className='flex-center' />

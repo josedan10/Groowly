@@ -18,7 +18,7 @@ export default class Home extends React.Component {
                     <h1>Hola groowly!</h1>
                 </section>
             </div>
-		);
+        );
 
 		return home;
 	}

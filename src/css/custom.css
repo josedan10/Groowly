@@ -222,7 +222,7 @@ nav.nav-right {
     flex-direction: column; }
 
 #social {
-  background: #f5f5f5;
+  background: #ececec;
   right: 0; }
 
 .menu .grid-container {
@@ -260,13 +260,13 @@ nav.nav-right {
       font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
       font-size: 20px; }
 
-.selected-works .grid-container {
-  grid-gap: 10px;
-  overflow: hidden;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(10%, 1fr)); }
-  .selected-works .grid-container div {
-    background-color: #f5f5f5; }
+.selected-works .flex-center {
+  overflow: hidden; }
+  .selected-works .flex-center div {
+    background-color: #f5f5f5;
+    width: 22%;
+    height: 30.33%;
+    margin: 1%; }
 
 .own-community h1 {
   text-align: center;
@@ -326,12 +326,11 @@ nav.nav-right {
     height: 100%;
     display: none; }
 
-.clientes .grid-container {
-  grid-gap: 5px;
-  grid-template-columns: repeat(4, minmax(50px, 1fr));
-  grid-template-rows: repeat(3, minmax(50px, 1fr)); }
-  .clientes .grid-container div {
-    background: #ffffff; }
+.clientes > .flex-center div {
+  background: #ffffff;
+  margin: 1%;
+  width: 31%;
+  height: 23%; }
 
 .slideshow {
   width: 100%;
@@ -408,63 +407,120 @@ nav.nav-right {
   .slideshow-control.control-active {
     background-color: #77ffab; }
 
-.contacto .form-contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px; }
-  .contacto .form-contact h1,
-  .contacto .form-contact p,
-  .contacto .form-contact div {
-    width: 100%;
-    text-align: center; }
-  .contacto .form-contact h1,
-  .contacto .form-contact p {
-    max-height: 40px; }
-  .contacto .form-contact .btn-container {
-    margin: 0 auto;
+.contacto {
+  background-color: #ececec;
+  color: #595959; }
+  .contacto .form-contact {
     display: flex;
-    justify-content: space-between;
-    height: 25px;
-    max-width: 250px; }
-    .contacto .form-contact .btn-container button {
-      width: 80px;
-      padding: 5px; }
-  .contacto .form-contact .form-view {
-    min-height: 400px;
-    max-width: 500px; }
-    .contacto .form-contact .form-view form {
-      height: 100%;
-      grid-gap: 10px 5px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr) 5fr 1fr; }
-      .contacto .form-contact .form-view form input {
-        padding: 5px;
-        max-height: 80px;
-        max-width: 100%; }
-      .contacto .form-contact .form-view form textarea,
-      .contacto .form-contact .form-view form input[type='submit'] {
-        grid-column: 1 / span 2; }
-      .contacto .form-contact .form-view form input[type='submit'] {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px; }
+    .contacto .form-contact h1,
+    .contacto .form-contact p,
+    .contacto .form-contact div {
+      width: 100%;
+      text-align: center; }
+    .contacto .form-contact h1,
+    .contacto .form-contact p {
+      max-height: 40px; }
+    .contacto .form-contact .btn-container {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      height: 25px;
+      max-width: 250px; }
+      .contacto .form-contact .btn-container button {
         width: 80px;
-        margin: 0 auto; }
+        padding: 5px;
+        color: #595959;
+        background: #ececec;
+        border-color: #595959;
+        border-style: solid;
+        border-width: 1px;
+        transition: all .3s ease; }
+        .contacto .form-contact .btn-container button:hover {
+          cursor: pointer;
+          background-color: #595959;
+          color: #ececec;
+          transition: all .3s ease; }
+    .contacto .form-contact .form-view {
+      max-width: 500px;
+      margin-top: 10px; }
+      .contacto .form-contact .form-view i {
+        font-size: 30px;
+        color: #595959; }
+      .contacto .form-contact .form-view form {
+        height: 100%;
+        grid-gap: 10px 5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 40px); }
+        .contacto .form-contact .form-view form input {
+          padding: 5px;
+          max-height: 80px;
+          max-width: 100%;
+          color: #595959; }
+        .contacto .form-contact .form-view form textarea,
+        .contacto .form-contact .form-view form input[type='submit'] {
+          color: #595959;
+          grid-column: 1 / span 2; }
+        .contacto .form-contact .form-view form textarea {
+          padding: 5px;
+          grid-row: 3 / span 5;
+          resize: none;
+          font-size: 12px; }
+        .contacto .form-contact .form-view form input[type='submit'] {
+          width: 100px;
+          margin: 0 auto;
+          border-color: #595959;
+          border-style: solid;
+          border-width: 1px;
+          transition: all .3s ease; }
+          .contacto .form-contact .form-view form input[type='submit']:hover {
+            cursor: pointer;
+            background-color: #595959;
+            color: #ececec;
+            transition: all .3s ease; }
 
 @media (max-width: 1200px) {
   .services .flex-container {
     padding: 50px; } }
+@media (max-width: 991px) {
+  .contacto .form-contact .form-view {
+    width: 100%; }
+    .contacto .form-contact .form-view form.grid-container {
+      position: relative; }
+      .contacto .form-contact .form-view form.grid-container input::placeholder,
+      .contacto .form-contact .form-view form.grid-container input {
+        font-size: 12px; }
+      .contacto .form-contact .form-view form.grid-container input {
+        grid-column: 1 / span 2; }
+      .contacto .form-contact .form-view form.grid-container textarea {
+        grid-row: 5 / span 2; } }
 @media (max-width: 768px) {
   .services .flex-container {
     padding: 0; }
     .services .flex-container > div div {
       font-size: 16px; }
 
-  .form-view {
-    min-width: 300px; }
-    .form-view form input::placeholder,
-    .form-view form input {
-      font-size: 12px; } }
+  .selected-works .flex-center div {
+    width: 30%;
+    height: 31.3%;
+    margin: 1%; }
+
+  .contacto .form-contact {
+    padding: 20px 0; } }
 @media (max-width: 480px) {
-  .services .flex-container div {
-    width: 100%; } }
+  .services .flex-container > div {
+    width: 100%; }
+    .services .flex-container > div h2 {
+      font-size: 30px; }
+  .services .flex-container > div div {
+    font-size: 12px; }
+
+  .selected-works .flex-center div {
+    width: 48%;
+    height: 31.2%;
+    margin: 1%; } }
 
 /*# sourceMappingURL=custom.css.map */

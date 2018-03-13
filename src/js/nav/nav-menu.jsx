@@ -61,9 +61,10 @@ class Menu extends React.Component {
 
 	}
 
-	handleClick(e) {
-		e.preventDefault();
-	}
+	// handleClick(e) {
+	// 	console.log(e.target.props.history);
+	// 	e.preventDefault();
+	// }
 
 	render() {
 		const links = this.props.links;
@@ -74,7 +75,7 @@ class Menu extends React.Component {
 			// 		{
 			// 			links.map(elemento => (
 			// 				<li key={'li' + elemento}>
-			// 					<NavLink to={(elemento === 'Home') ? '/testing/site/' : '/testing/site/' + elemento.replace(' ', '_')} activeClassName='selected' onClick={this.handleClick.bind.bind(this)}>
+			// 					<NavLink to={(elemento === 'Home') ? '/testing/site/' : '/testing/site/' + elemento.replace(' ', '_')} activeClassName='selected'>
 			// 						{elemento.toUpperCase()}  <span/>
 			// 					</NavLink>
 			// 				</li>)
@@ -88,7 +89,7 @@ class Menu extends React.Component {
 					{
 						links.map(elemento => (
 							<li key={'li' + elemento}>
-								<NavLink to={(elemento === 'Home') ? '/' : elemento.replace(' ', '_')} activeClassName='selected' onClick={this.handleClick.bind.bind(this)} >
+								<NavLink to={(elemento === 'Home') ? '/' : elemento.replace(' ', '_')} activeClassName='selected'>
 									{elemento.toUpperCase()}  <span/>
 								</NavLink>
 							</li>)

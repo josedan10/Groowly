@@ -26,11 +26,11 @@ export default class FormContact extends React.Component {
 		let form = (
 			<div className='form-view'>
 				<form className='grid-container'>
-					<input type='text' placeholder='First Name and Last Name' required/>
-					<input type='email' placeholder='Email' required/>
-					<input type='phone' placeholder='Phone' required/>
-					<input type='text' placeholder='Address' required/>
-					<textarea name='comentario' placeholder='comment' id='' rows='10' required/>
+					<input type='text' placeholder='Name' />
+					<input type='email' placeholder='Email' />
+					<input type='phone' placeholder='Phone' />
+					<input type='text' placeholder='Address' />
+					<textarea name='comentario' placeholder='Comment' id='' rows='10' />
 					<input type='submit' value='SUBMIT'/>
 				</form>
 			</div>
@@ -39,8 +39,8 @@ export default class FormContact extends React.Component {
 		let correo = (
 			<div className='form-view grid-container'>
 				<div className='flex-center'>
+					<i className='icon  icon-mail_outline' />
 					<p>contacto@groowly.com</p>
-					<i className='icon ' />
 				</div>
 			</div>
 		);

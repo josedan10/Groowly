@@ -7,6 +7,7 @@ export default class Contact extends React.Component {
     }
 
 	render() {
+		console.log(this.props.history);
 		const contact = (
 			<section className='contacto .flex-center' id='Contact'>
 				<FormContact />
@@ -14,4 +15,5 @@ export default class Contact extends React.Component {
 		);
 		return contact;
 	}
+
 }
