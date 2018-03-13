@@ -7,7 +7,7 @@ export default class Services extends React.Component {
     
 	render() {
 		const services = (
-			<section className='services' id='Services'>
+			<section className='services' id='Services' onTouchMove={this.props.onTouchMove}>
 				<div className='flex-container'>
 					<div className='flex-center'> 
 						<h2> 1 </h2> 

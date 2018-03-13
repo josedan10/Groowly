@@ -7,9 +7,8 @@ export default class Contact extends React.Component {
     }
 
 	render() {
-		console.log(this.props.history);
 		const contact = (
-			<section className='contacto .flex-center' id='Contact'>
+			<section className='contacto flex-center' id='Contact' onTouchMove={this.props.onTouchMove}>
 				<FormContact />
 			</section>
 		);

@@ -14,8 +14,11 @@ export default class Home extends React.Component {
 
 		const home = (
             <div>
-                <section style={style} className='home' id='Home'> 
-                    <h1>Hola groowly!</h1>
+                <section style={style} className='home' id='Home' onTouchMove={this.props.onTouchMove}> 
+                    <video autoPlay>
+                        <source src='src/videos/video1.mp4' type='video/mp4' />
+                        Your browser does not support the video tag.
+                    </video>
                 </section>
             </div>
         );

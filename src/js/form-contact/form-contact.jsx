@@ -10,12 +10,24 @@ export default class FormContact extends React.Component {
 	}
 
 	mostrarFormulario() {
+		const emailBtn = document.getElementById('displayEmail');
+		const contactBtn = document.getElementById('displayContact');
+
+		emailBtn.classList.remove('active');
+		contactBtn.classList.add('active');
+
 		this.setState({
 			view: 0
 		});
 	}
 
 	mostrarCorreo() {
+		const emailBtn = document.getElementById('displayEmail');
+		const contactBtn = document.getElementById('displayContact');
+
+		emailBtn.classList.add('active');
+		contactBtn.classList.remove('active');
+
 		this.setState({
 			view: 1
 		});
@@ -24,7 +36,7 @@ export default class FormContact extends React.Component {
 	render() {
 		var muestra;
 		let form = (
-			<div className='form-view'>
+			<div className='form-view flex-center'>
 				<form className='grid-container'>
 					<input type='text' placeholder='Name' />
 					<input type='email' placeholder='Email' />
@@ -37,9 +49,9 @@ export default class FormContact extends React.Component {
 		);
         
 		let correo = (
-			<div className='form-view grid-container'>
+			<div className='form-view'>
 				<div className='flex-center'>
-					<i className='icon  icon-mail_outline' />
+					<img src='src/img/mail-icon.png' />
 					<p>contacto@groowly.com</p>
 				</div>
 			</div>
@@ -62,8 +74,8 @@ export default class FormContact extends React.Component {
 				<p>Comentario genial!</p>
 				<div className='btn-actions'>
 					<div className='btn-container'>
-						<button className='flex-center' onClick={this.mostrarCorreo.bind(this)}>CONTACT</button>
-						<button className='flex-center' onClick={this.mostrarFormulario.bind(this)}>FORM</button>
+						<button className='flex-center active' id='displayEmail' onClick={this.mostrarCorreo.bind(this)}>CONTACT</button>
+						<button className='flex-center' id='displayContact' onClick={this.mostrarFormulario.bind(this)}>FORM</button>
 					</div>
 				</div>
 				{muestra}

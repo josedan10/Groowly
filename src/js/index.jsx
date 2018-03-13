@@ -11,11 +11,15 @@ import Clients from './pages/clients';
 import Contact from './pages/contact';
 
 // Links para el menu y las redes
-const links = ['Home', 'Services', 'Selected Works', 'Own Community', 'Team', 'Clients', 'Contact'];
+const links = ['Home', 'Services', 'Works', 'Community', 'Team', 'Clients', 'Contact'];
 // const redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 
 // Imagen del logo
 const logo = 'src/img/logo.svg';
+
+function noScroll (e) {
+	e.preventDefault();
+}
 
 ReactDOM.render(	
 	<HashRouter history={hashHistory}>
@@ -24,9 +28,9 @@ ReactDOM.render(
 
 			<aside className='right' id='social'>
 				<ul>
-					<li><a href='' target='_blank'><i className='icon icon-facebook' /></a></li>
-					<li><a href='' target='_blank'><i className='icon icon-twitter' /></a></li>
-					<li><a href='' target='_blank'><i className='icon icon-instagram' /></a></li>
+					<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
+					<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
+					<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
 				</ul>
 			</aside>
 
@@ -43,13 +47,13 @@ ReactDOM.render(
 			</Switch> */}
 
 			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route path='/Services' component={Services} />
-				<Route path='/Selected_Works' component={SelectedWorks} />
-				<Route path='/Own_Community' component={OwnCommunity} />
-				<Route path='/Team' component={Team} />
-				<Route path='/Clients' component={Clients} />
-				<Route path='/Contact' component={Contact} /> 
+				<Route exact path='/' component={Home} onTouchMove={noScroll}/>
+				<Route path='/Services' component={Services} onTouchMove={noScroll}/>
+				<Route path='/Works' component={SelectedWorks} onTouchMove={noScroll}/>
+				<Route path='/Community' component={OwnCommunity} onTouchMove={noScroll}/>
+				<Route path='/Team' component={Team} onTouchMove={noScroll}/>
+				<Route path='/Clients' component={Clients} onTouchMove={noScroll}/>
+				<Route path='/Contact' component={Contact} onTouchMove={noScroll}/> 
 			</Switch>
 		</div>
 	</HashRouter>

@@ -254,11 +254,11 @@ nav.nav-right {
     .services .flex-container > div h2 {
       width: 100%;
       font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
-      font-size: 60px;
+      font-size: 50px;
       color: #595959; }
     .services .flex-container > div div {
       font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
-      font-size: 20px; }
+      font-size: 16px; }
 
 .selected-works .flex-center {
   overflow: hidden; }
@@ -409,12 +409,15 @@ nav.nav-right {
 
 .contacto {
   background-color: #ececec;
-  color: #595959; }
+  color: #595959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px; }
   .contacto .form-contact {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 40px) 1fr;
     padding: 20px; }
     .contacto .form-contact h1,
     .contacto .form-contact p,
@@ -436,22 +439,27 @@ nav.nav-right {
         color: #595959;
         background: #ececec;
         border-color: #595959;
-        border-style: solid;
-        border-width: 1px;
-        transition: all .3s ease; }
+        border-style: none; }
         .contacto .form-contact .btn-container button:hover {
-          cursor: pointer;
-          background-color: #595959;
-          color: #ececec;
-          transition: all .3s ease; }
+          cursor: pointer; }
+        .contacto .form-contact .btn-container button.active {
+          border-style: solid;
+          border-width: 1px; }
+    .contacto .form-contact input:focus, .contacto .form-contact input:active,
+    .contacto .form-contact button:focus,
+    .contacto .form-contact button:active,
+    .contacto .form-contact textarea:focus,
+    .contacto .form-contact textarea:active {
+      outline: none; }
     .contacto .form-contact .form-view {
       max-width: 500px;
-      margin-top: 10px; }
-      .contacto .form-contact .form-view i {
-        font-size: 30px;
-        color: #595959; }
+      margin: 10px auto 0; }
+      .contacto .form-contact .form-view img {
+        height: 30px;
+        margin-top: 100px;
+        margin-bottom: 20px; }
       .contacto .form-contact .form-view form {
-        height: 100%;
+        width: 100%;
         grid-gap: 10px 5px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(8, 40px); }
@@ -459,24 +467,28 @@ nav.nav-right {
           padding: 5px;
           max-height: 80px;
           max-width: 100%;
-          color: #595959; }
+          color: #595959;
+          background-color: transparent;
+          border: 1px solid #595959; }
         .contacto .form-contact .form-view form textarea,
         .contacto .form-contact .form-view form input[type='submit'] {
           color: #595959;
           grid-column: 1 / span 2; }
         .contacto .form-contact .form-view form textarea {
           padding: 5px;
-          grid-row: 3 / span 5;
+          grid-row: 3 / span 3;
           resize: none;
-          font-size: 12px; }
+          font-size: 14px;
+          color: #595959;
+          background-color: transparent;
+          border: 1px solid #595959; }
         .contacto .form-contact .form-view form input[type='submit'] {
           width: 100px;
           margin: 0 auto;
-          border-color: #595959;
           border-style: solid;
           border-width: 1px;
           transition: all .3s ease; }
-          .contacto .form-contact .form-view form input[type='submit']:hover {
+          .contacto .form-contact .form-view form input[type='submit']:active {
             cursor: pointer;
             background-color: #595959;
             color: #ececec;
@@ -509,7 +521,13 @@ nav.nav-right {
     margin: 1%; }
 
   .contacto .form-contact {
-    padding: 20px 0; } }
+    padding: 20px 0; }
+
+  .clientes > .flex-center div {
+    background: #ffffff;
+    margin: 1%;
+    width: 31%;
+    height: 15%; } }
 @media (max-width: 480px) {
   .services .flex-container > div {
     width: 100%; }

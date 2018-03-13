@@ -16,8 +16,8 @@ const config = {
 
 	output: {
 	    path: path.resolve(__dirname, 'dist'),
-		publicPath: '/testing/site/dist/',
-		// publicPath: '/dist/',		
+		// publicPath: '/testing/site/dist/',
+		publicPath: '/dist/',		
 	    filename: '[name].min.js' // Archivo de salida
 	},
 

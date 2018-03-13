@@ -47,7 +47,7 @@ export default class Team extends React.Component {
     
 	render() {
 		const team = (
-			<section className='team flex-center' id='Team'>
+			<section className='team flex-center' id='Team' onTouchMove={this.props.onTouchMove}>
 				<PresentationFrame datos={datos}/>
 			</section>
 		);

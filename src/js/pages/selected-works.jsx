@@ -8,7 +8,7 @@ export default class SelectedWorks extends React.Component {
 	render() {
 		const selectedWorks = (
 			<div>
-				<section className='selected-works' id='Selected_Works'>
+				<section className='selected-works' id='Selected_Works' onTouchMove={this.props.onTouchMove}>
 					<div className='flex-center'>
 						<div className='flex-center' />
 						<div className='flex-center' />

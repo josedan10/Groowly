@@ -56,6 +56,17 @@
         padding: 20px 0;
     }
 
+    .clientes {
+        & > .flex-center{
+            div {
+                background: #ffffff;
+                margin: 1%;
+                width: 31%;
+                height: 15%;
+            }
+        }
+    }
+
 }
 @media (max-width: 480px) { 
     .services {
