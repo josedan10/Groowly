@@ -61,17 +61,35 @@ class Menu extends React.Component {
 
 	}
 
+	handleClick(e) {
+		e.preventDefault();
+	}
+
 	render() {
 		const links = this.props.links;
 
 		return (
+			// <div>
+			// 	<ul>
+			// 		{
+			// 			links.map(elemento => (
+			// 				<li key={'li' + elemento}>
+			// 					<NavLink to={(elemento === 'Home') ? '/testing/site/' : '/testing/site/' + elemento.replace(' ', '_')} activeClassName='selected' onClick={this.handleClick.bind.bind(this)}>
+			// 						{elemento.toUpperCase()}  <span/>
+			// 					</NavLink>
+			// 				</li>)
+			// 			)
+			// 		}
+			// 	</ul>
+			// </div>
+
 			<div>
 				<ul>
 					{
 						links.map(elemento => (
 							<li key={'li' + elemento}>
-								<NavLink to={(elemento === 'Home') ? '/testing/site/' : '/testing/site/' + elemento.replace(' ', '_')} activeClassName='selected' >
-									{elemento.toUpperCase()} <span/>
+								<NavLink to={(elemento === 'Home') ? '/' : elemento.replace(' ', '_')} activeClassName='selected' onClick={this.handleClick.bind.bind(this)} >
+									{elemento.toUpperCase()}  <span/>
 								</NavLink>
 							</li>)
 						)
