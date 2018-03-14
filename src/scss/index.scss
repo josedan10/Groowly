@@ -24,6 +24,33 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	src: url('tipografias/Berlin-Sans.otf');
 }
 
+// Efectos
+@keyframes mostrarTitulo {
+    0% {
+        opacity: 0;
+        left: -2000px;
+    }
+    25% {
+        left: auto;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes esconderTitulo {
+    0% {
+        opacity: 1;
+        left: auto;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        left: -2000px;
+    }
+}
+
 *{
 	padding: 0;
 	margin: 0;

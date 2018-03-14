@@ -24,9 +24,6 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log(config);
-		console.log(config.getLogo());
-
 		return (
 			<div>
 				<Nav tipo='nav-left' logo={config.getLogo()} links={config.getLinks()} />
@@ -47,18 +44,8 @@ class App extends React.Component {
 
 ReactDOM.render(	
 	<HashRouter history={hashHistory}>
-		{/* <Switch>
-			<Route exact path='/testing/site/' component={Home} >
-			<Route path='/testing/site/#/Services' component={Services} />
-			<Route path='/testing/site/#/Selected_Works' component={SelectedWorks} />
-			<Route path='/testing/site/#/Own_Community' component={OwnCommunity} />
-			<Route path='/testing/site/#/Team' component={Team} />
-			<Route path='/testing/site/#/Clients' component={Clients} />
-			<Route path='/testing/site/#/Contact' component={Contact} />
-			</Route>
-		</Switch> */}
-		<div>
-			<Route component={App} onTouchMove={noScroll} />
+
+		<App>
 			<Switch>
 				<Route path='/' exact render={ () => <Home config={config} />} onTouchMove={noScroll} />
 				<Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} />
@@ -68,7 +55,7 @@ ReactDOM.render(
 				<Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} />
 				<Route path='/Contact' render={ () => <Contact config={config} />} onTouchMove={noScroll} /> 
 			</Switch>
-		</div>
+		</App>
 		
 	</HashRouter>
 	, document.getElementById('app')
