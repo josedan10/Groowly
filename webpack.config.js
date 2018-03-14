@@ -5,6 +5,7 @@ const config = {
 
 	// entry: './src/js/index.jsx',
 	entry: {
+		config: './src/js/config.js',
 		index: './src/js/index.jsx',
 		formContact: './src/js/form-contact/form-contact.jsx',
 		presentation: './src/js/presentation-container/presentation.jsx',
@@ -16,8 +17,8 @@ const config = {
 
 	output: {
 	    path: path.resolve(__dirname, 'dist'),
-		// publicPath: '/testing/site/dist/',
-		publicPath: '/dist/',		
+		publicPath: '/testing/site/dist/',
+		// publicPath: '/dist/',
 	    filename: '[name].min.js' // Archivo de salida
 	},
 

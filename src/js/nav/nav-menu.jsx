@@ -58,13 +58,33 @@ class Logo extends React.Component {
 class Menu extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			link: location.hash.replace('#', '')
+		};
 
 	}
 
-	// handleClick(e) {
-	// 	console.log(e.target.props.history);
-	// 	e.preventDefault();
-	// }
+	changeLinkStyle(e) {
+		this.setState({
+			link: e.target.hash.replace('#', '')
+		});
+	}
+
+	assignClass(elemento) {
+		let classState;
+
+		switch (elemento) {
+		case 'Home':
+			classState = (this.state.link === '/') ? 'selected' : '';
+			break;
+
+		default:
+			classState = (this.state.link === '/' + elemento) ? 'selected' : '';
+			break;
+		}
+
+		return classState;
+	}
 
 	render() {
 		const links = this.props.links;
@@ -89,7 +109,7 @@ class Menu extends React.Component {
 					{
 						links.map(elemento => (
 							<li key={'li' + elemento}>
-								<NavLink to={(elemento === 'Home') ? '/' : elemento.replace(' ', '_')} activeClassName='selected'>
+								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
 									{elemento.toUpperCase()}  <span/>
 								</NavLink>
 							</li>)

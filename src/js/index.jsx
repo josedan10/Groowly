@@ -10,52 +10,66 @@ import Team from './pages/team';
 import Clients from './pages/clients';
 import Contact from './pages/contact';
 
-// Links para el menu y las redes
-const links = ['Home', 'Services', 'Works', 'Community', 'Team', 'Clients', 'Contact'];
-// const redes = ['twitter', 'facebook', 'instagram', 'youtube'];
+var config = require('./config');
+config = config.config;
 
-// Imagen del logo
-const logo = 'src/img/logo.svg';
-
-function noScroll (e) {
+function noScroll(e) {
 	e.preventDefault();
+}
+
+
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		console.log(config);
+		console.log(config.getLogo());
+
+		return (
+			<div>
+				<Nav tipo='nav-left' logo={config.getLogo()} links={config.getLinks()} />
+
+				<aside className='right' id='social'>
+					<ul>
+						<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
+						<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
+						<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
+					</ul>
+				</aside>
+
+				{this.props.children}
+			</div>
+		);
+	}
 }
 
 ReactDOM.render(	
 	<HashRouter history={hashHistory}>
+		{/* <Switch>
+			<Route exact path='/testing/site/' component={Home} >
+			<Route path='/testing/site/#/Services' component={Services} />
+			<Route path='/testing/site/#/Selected_Works' component={SelectedWorks} />
+			<Route path='/testing/site/#/Own_Community' component={OwnCommunity} />
+			<Route path='/testing/site/#/Team' component={Team} />
+			<Route path='/testing/site/#/Clients' component={Clients} />
+			<Route path='/testing/site/#/Contact' component={Contact} />
+			</Route>
+		</Switch> */}
 		<div>
-			<Nav tipo='nav-left' logo={logo} links={links} />
-
-			<aside className='right' id='social'>
-				<ul>
-					<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
-					<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
-					<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
-				</ul>
-			</aside>
-
-
-			{/* <Switch>
-				<Route exact path='/testing/site/' component={Home} >
-				<Route path='/testing/site/#/Services' component={Services} />
-				<Route path='/testing/site/#/Selected_Works' component={SelectedWorks} />
-				<Route path='/testing/site/#/Own_Community' component={OwnCommunity} />
-				<Route path='/testing/site/#/Team' component={Team} />
-				<Route path='/testing/site/#/Clients' component={Clients} />
-				<Route path='/testing/site/#/Contact' component={Contact} />
-				</Route>
-			</Switch> */}
-
+			<Route component={App} onTouchMove={noScroll} />
 			<Switch>
-				<Route exact path='/' component={Home} onTouchMove={noScroll}/>
-				<Route path='/Services' component={Services} onTouchMove={noScroll}/>
-				<Route path='/Works' component={SelectedWorks} onTouchMove={noScroll}/>
-				<Route path='/Community' component={OwnCommunity} onTouchMove={noScroll}/>
-				<Route path='/Team' component={Team} onTouchMove={noScroll}/>
-				<Route path='/Clients' component={Clients} onTouchMove={noScroll}/>
-				<Route path='/Contact' component={Contact} onTouchMove={noScroll}/> 
+				<Route path='/' exact render={ () => <Home config={config} />} onTouchMove={noScroll} />
+				<Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} />
+				<Route path='/Works' render={ () => <SelectedWorks config={config} />} onTouchMove={noScroll} />
+				<Route path='/Community' render={ () => <OwnCommunity config={config} />} onTouchMove={noScroll} />
+				<Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} />
+				<Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} />
+				<Route path='/Contact' render={ () => <Contact config={config} />} onTouchMove={noScroll} /> 
 			</Switch>
 		</div>
+		
 	</HashRouter>
 	, document.getElementById('app')
 );
