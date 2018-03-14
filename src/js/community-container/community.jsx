@@ -31,7 +31,9 @@ export default class Community extends React.Component {
 	closeWidget(e) {        
 		this.setState({
 			community: null
-		});
+        });
+
+        document.getElementsByClassName('target')[0].classList.remove('target');
 
 		document.getElementById('communityTitle').classList.add('show');
 		document.getElementById('communityTitle').classList.remove('hide');
