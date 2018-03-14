@@ -27,11 +27,20 @@ export default class Community extends React.Component {
 		document.getElementById('communityTitle').classList.remove('show');
 		document.getElementById('communityTitle').classList.add('hide');
 	}
+    
+	closeWidget(e) {        
+		this.setState({
+			community: null
+		});
+
+		document.getElementById('communityTitle').classList.add('show');
+		document.getElementById('communityTitle').classList.remove('hide');
+	}
 
 	render() {
 		return (
 			<div className='flex-center'>
-				<InstagramWidget communities={this.props.communities} index={this.state.community}/>
+				<InstagramWidget communities={this.props.communities} index={this.state.community} onClick={this.closeWidget.bind(this)}/>
 
 				<h1 id='communityTitle'>MEET OUR OWN DIGITAL COMMUNITY</h1>
 				<div className='flex-presentation'>
@@ -70,25 +79,22 @@ class InstagramWidget extends React.Component {
 	constructor(props) {
 		super(props);
 		this.widgets = [
-			<iframe src='//lightwidget.com/widgets/3faadf6a917f56c794bd99ad839f02ca.html' scrolling='no' allowTransparency='true' className='lightwidget-widget' style={{ width: '100%', border: '0', overflow: 'hidden' }}/>
+			<iframe src='//lightwidget.com/widgets/3faadf6a917f56c794bd99ad839f02ca.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{ width: '100%', border: '0', overflow: 'hidden' }}/>
 
 		];
 	}
 
 	render() {
-		// console.log(this.props.communities);
-		// console.log(this.props.index);
-
-		let container = <div className='community-widget' />;
+		let container = <div className='community-widget' id='widget'/>;
         
 		if (this.props.index !== null) {
             
 			container = (
-				<div className='community-widget slideInDown'>
+				<div id='widget' className='community-widget slideInDown' onClick={this.props.onClick}>
 					<div className='widget-container flex-center'>
 						{this.widgets[this.props.index]}
 					</div>
-					<CommunityData community={this.props.communities[this.props.index]}/>
+					{/* <CommunityData community={this.props.communities[this.props.index]}/> */}
 				</div>
 			);
 		}
