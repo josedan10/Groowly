@@ -1,10 +1,14 @@
 .clientes {
     & > .flex-center{
         div {
-            background: #ffffff;
+            position: relative;
             margin: 1%;
             width: 31%;
             height: 23%;
+
+            img {
+                width: 100%;
+            }
         }
     }
 }

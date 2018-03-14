@@ -94,6 +94,14 @@ nav.nav-left{
 					position: relative;
 					font-size: 14px;
 
+					&.selected {
+						color: $dorado;
+
+						span {
+							background: $dorado;
+						}
+					}
+
 					span{
 						display: block;
 						width: 20px;
