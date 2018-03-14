@@ -286,10 +286,12 @@ nav.nav-right {
 .selected-works .flex-center {
   overflow: hidden; }
   .selected-works .flex-center div {
-    background-color: #f5f5f5;
+    background-color: #ececec;
     width: 22%;
     height: 30.33%;
     margin: 1%; }
+    .selected-works .flex-center div img {
+      width: 100%; }
 
 .own-community > div h1 {
   text-align: center;
