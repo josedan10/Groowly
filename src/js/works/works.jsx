@@ -41,7 +41,9 @@ export default class Works extends React.Component {
 		if (this.state.work !== null)
 			workDisplay = (
 				<div className='flex-center work-display slideInDown' id='work' onClick={this.closeWork.bind(this)}>
-					<div/>
+					<img src={this.props.works[this.state.work.images[0]]}/>
+
+					<div className='description flex-center' />
 				</div>
 			);
 		else
@@ -105,7 +107,7 @@ export default class Works extends React.Component {
 
 				</div>
 
-                {workDisplay}
+				{workDisplay}
 
 			</div>
 		);
