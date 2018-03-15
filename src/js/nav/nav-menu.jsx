@@ -6,6 +6,10 @@ export default class Nav extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+	
+	openNav(e) {
+		console.log(e);
+	}
 
 	render() {
 
@@ -26,7 +30,7 @@ export default class Nav extends React.Component {
 		default:
 
 			nav = (
-				<aside className='left'>
+				<aside className='left' onTouchMove={this.openNav}>
 					<nav className={this.props.tipo}>
 						<Logo logo={this.props.logo}/>
 						<Menu tipo={this.props.tipo} links={this.props.links}/>

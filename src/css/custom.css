@@ -374,7 +374,7 @@ nav.nav-right {
     .team .view-content .icon-arrow_back:hover {
       cursor: pointer; }
   .team .view-content .img {
-    background-position: top left;
+    background-position: top center;
     height: 100%;
     position: absolute;
     left: 0;
@@ -383,6 +383,7 @@ nav.nav-right {
     overflow: hidden;
     padding: 40px 20px;
     height: 100%;
+    color: #ececec;
     display: none; }
 
 .clientes > .flex-center {

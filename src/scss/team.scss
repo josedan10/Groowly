@@ -36,7 +36,7 @@
         }
 
         .img {
-            background-position: top left;
+            background-position: top center;
             height: 100%;
             position: absolute;
             left: 0;
@@ -47,6 +47,7 @@
             overflow: hidden;
             padding: 40px 20px;
             height: 100%;
+            color: $gris;
 
             display: none;
         }

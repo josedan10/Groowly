@@ -84,6 +84,20 @@ const communities = [
 		posts: 642,
 		img: 'src/img/communities/recetases-community.jpg',
 		description: 'Nos gusta cocinar y conocer contigo.'
+	},
+	{
+		name: 'Travel',
+		followers: null,
+		posts: null,
+		img: 'src/img/communities/travel-community.jpg',
+		description: ''
+	},
+	{
+		name: 'Celine',
+		followers: null,
+		posts: null,
+		img: 'src/img/communities/celine-community.jpg',
+		description: ''
 	}
 ];
 
