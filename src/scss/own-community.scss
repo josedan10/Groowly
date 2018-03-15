@@ -26,6 +26,13 @@
             .community-image {
                 height: 100%;
                 width: 100%;
+                transition: all .5 ease;
+                
+                &:hover{
+                    cursor: pointer;
+                    opacity: .7;
+                    transition: all .5 ease;
+                }
             }
             width: 20%;
         }
