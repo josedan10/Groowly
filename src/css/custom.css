@@ -285,11 +285,29 @@ nav.nav-right {
 
 .selected-works .flex-center {
   overflow: hidden; }
-  .selected-works .flex-center div {
-    background-color: #ececec;
-    width: 22%;
-    height: 30.33%;
-    margin: 1%; }
+  .selected-works .flex-center .works-container {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .selected-works .flex-center .works-container div {
+      background-color: #ececec;
+      width: 22%;
+      height: 30.33%;
+      margin: 1%;
+      transition: all .7 ease; }
+      .selected-works .flex-center .works-container div img:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transition: all .7 ease; }
+  .selected-works .flex-center .work-display {
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); }
+    .selected-works .flex-center .work-display.slideInDown {
+      visibility: visible;
+      animation-duration: 1s; }
 
 .own-community > div h1 {
   text-align: center;
@@ -309,7 +327,12 @@ nav.nav-right {
   width: 20%; }
   .own-community .flex-presentation > div .community-image {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    transition: all .5 ease; }
+    .own-community .flex-presentation > div .community-image:hover {
+      cursor: pointer;
+      opacity: .7;
+      transition: all .5 ease; }
 .own-community .community-widget {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
@@ -362,14 +385,16 @@ nav.nav-right {
     height: 100%;
     display: none; }
 
-.clientes > .flex-center div {
-  position: relative;
-  width: 31%;
-  height: 23%;
-  overflow: hidden; }
-  .clientes > .flex-center div img {
-    width: 100%;
-    position: absolute; }
+.clientes > .flex-center {
+  padding: 100px 30px; }
+  .clientes > .flex-center div {
+    position: relative;
+    width: 31%;
+    height: 23%;
+    overflow: hidden; }
+    .clientes > .flex-center div img {
+      width: 75%;
+      position: absolute; }
 
 .slideshow {
   width: 100%;

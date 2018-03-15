@@ -6,6 +6,26 @@ class Config {
 		this.redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 		this.logo = logo;
 		this.communities = communities;
+		this.works = [
+			{
+				images: ['Carolinawork.jpg']
+			},
+			{
+				images: ['Equilibriowork.jpg']
+			},
+			{
+				images: ['Fierawork.jpg']
+			},
+			{
+				images: ['Gabrielawork.jpg']
+			},
+			{
+				images: ['Kathieswork.jpg']
+			},
+			{
+				images: ['Venuswork.jpg']
+			}
+		];
 	}
     
 	getLinks() {

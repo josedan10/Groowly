@@ -28,15 +28,21 @@ export default class Community extends React.Component {
 		document.getElementById('communityTitle').classList.add('hide');
 	}
     
-	closeWidget(e) {        
-		this.setState({
-			community: null
-        });
+	closeWidget() {        
+		
 
-        document.getElementsByClassName('target')[0].classList.remove('target');
+		document.getElementsByClassName('target')[0].classList.remove('target');
 
 		document.getElementById('communityTitle').classList.add('show');
 		document.getElementById('communityTitle').classList.remove('hide');
+
+		document.getElementById('widget').classList.add('slideOutUp');
+
+		setTimeout(() => {
+			this.setState({
+				community: null
+			});
+		}, 800);
 	}
 
 	render() {
