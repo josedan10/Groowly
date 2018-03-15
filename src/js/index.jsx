@@ -21,12 +21,35 @@ function noScroll(e) {
 class App extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			nav: null
+		};
+	}
+
+	componentWillMount() {
+		this.chooseNav();
+	}
+
+	chooseNav() {
+		let navType;
+
+		if (window.innerWidth < 768) {
+			navType = 'nav-movil nav-left';
+		} else {
+			navType = 'nav-left';
+		}
+
+		this.setState({
+			nav: navType
+		});
 	}
 
 	render() {
+		window.addEventListener('resize', this.chooseNav, false);
+		
 		return (
 			<div>
-				<Nav tipo='nav-left' logo={config.getLogo()} links={config.getLinks()} />
+				<Nav tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
 
 				<aside className='right' id='social'>
 					<ul>

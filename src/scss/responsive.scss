@@ -15,7 +15,8 @@
     
              
             input::placeholder,
-            input {
+            input,
+            textarea {
                 font-size: 12px;
             }
     
@@ -30,9 +31,23 @@
     }
 }
 @media (max-width: 768px) { 
+
+    // Swipe events on navbar
+    nav:hover {
+        width: 100vw;
+    }
+
+    .right {
+        display: none;
+    }
+
+    section {
+        padding-right: 0;
+    }
     
     .services {
         .flex-container {
+            padding: 50px 10px;
 
             & > div {
                 width: 50%;
@@ -59,15 +74,19 @@
         }
     }
 
+    .contacto {
+        padding: 30px 10px 30px 50px;
+    }
+
     .contacto .form-contact {
         padding: 20px 0;
     }
 
     .clientes {
-        padding: 20px 50px;
+        padding: 0;
 
         & > .flex-center{
-            div {
+            & > div {
                 margin: 5px;
                 width: 31%;
                 height: 20%;
@@ -99,6 +118,24 @@
                 width: 40%;
                 height: 18.6%;
             }
+        }
+    }
+
+    .contacto {
+        overflow: hidden;
+        .form-contact {
+            padding: 0;
+
+            .form-view {
+
+                form.grid-container {
+
+                    textarea {
+                        grid-row: 5 / span 1;
+                    }
+                }
+            }
+
         }
     }
 }

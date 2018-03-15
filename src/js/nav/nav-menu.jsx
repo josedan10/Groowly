@@ -7,8 +7,14 @@ export default class Nav extends React.Component {
 		super(props);
 	}
 	
-	openNav(e) {
-		console.log(e);
+	openNav() {
+		document.getElementById('logo').classList.add('rotateLogoIn');
+		document.getElementById('logo').classList.remove('rotateLogoOut');
+	}
+
+	closeNav() {
+		document.getElementById('logo').classList.remove('rotateLogoIn');
+		document.getElementById('logo').classList.add('rotateLogoOut');
 	}
 
 	render() {
@@ -16,13 +22,16 @@ export default class Nav extends React.Component {
 		var nav;
 
 		switch (this.props.tipo) {
-		case 'nav-movil':
+		case 'nav-movil nav-left':
 
 			nav = (
-				<nav className='nav-movil'>
-					<Logo />
-					<Menu tipo={this.props.tipo} />
-				</nav>
+				<aside className='left' onMouseEnter={this.openNav} onMouseLeave={this.closeNav}>
+					<nav className={this.props.tipo}>
+						<Logo logo={this.props.logo}/>
+						<Menu tipo={this.props.tipo} links={this.props.links}/>
+						<Redes redes={this.props.redes}/>
+					</nav>
+				</aside>
 			);
 
 			break;
@@ -54,7 +63,7 @@ class Logo extends React.Component {
 	}
 
 	render() {
-		return <img src={this.props.logo} />;
+		return <img src={this.props.logo} id='logo'/>;
 	}
 }
 
@@ -121,6 +130,22 @@ class Menu extends React.Component {
 					}
 				</ul>
 			</div>
+		);
+	}
+}
+
+class Redes extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<ul className='redes-nav'>
+				<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
+				<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
+				<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
+			</ul>
 		);
 	}
 }

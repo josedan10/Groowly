@@ -60,7 +60,7 @@ const logo = 'src/img/logo.svg';
 const baseURL = '/';
 
 // Clientes
-const clientes = ['bath', 'caro-mansabel', 'equilibrio370', 'expogrow', 'fiera', 'igpm', 'kathies', 'themeltinhot', 'unilever', 'vecoolstyle', 'alfonso'];
+const clientes = ['mundoejecutivo', 'alfonso', 'igpm', 'expogrow', 'bath', 'themeltinhot', 'fiera', 'vecoolstyle', 'kathies', 'equilibrio370', 'caro-mansabel', 'unilever'];
 
 // Comunidades
 const communities = [
