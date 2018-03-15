@@ -17,7 +17,7 @@ export default class FormContact extends React.Component {
 		contactBtn.classList.add('active');
 
 		this.setState({
-			view: 0
+			view: 1
 		});
 	}
 
@@ -29,7 +29,7 @@ export default class FormContact extends React.Component {
 		contactBtn.classList.remove('active');
 
 		this.setState({
-			view: 1
+			view: 0
 		});
 	}
 
@@ -59,11 +59,11 @@ export default class FormContact extends React.Component {
 
 		switch (this.state.view) {
 		    case 1:
-			    muestra = correo;
+			    muestra = form;
 			    break;
             
 		    default:
-			    muestra = form;
+			    muestra = correo;
 			    break;
 		}
         
@@ -74,8 +74,8 @@ export default class FormContact extends React.Component {
 				<p>Comentario genial!</p>
 				<div className='btn-actions'>
 					<div className='btn-container'>
-						<button className='flex-center active' id='displayEmail' onClick={this.mostrarCorreo.bind(this)}>CONTACT</button>
-						<button className='flex-center' id='displayContact' onClick={this.mostrarFormulario.bind(this)}>FORM</button>
+						<button className='flex-center active' id='displayContact' onClick={this.mostrarFormulario.bind(this)}>FORM</button>
+						<button className='flex-center' id='displayEmail' onClick={this.mostrarCorreo.bind(this)}>CONTACT</button>
 					</div>
 				</div>
 				{muestra}
