@@ -290,8 +290,6 @@ nav.nav-right {
     width: 22%;
     height: 30.33%;
     margin: 1%; }
-    .selected-works .flex-center div img {
-      width: 100%; }
 
 .own-community > div h1 {
   text-align: center;
@@ -366,11 +364,12 @@ nav.nav-right {
 
 .clientes > .flex-center div {
   position: relative;
-  margin: 1%;
   width: 31%;
-  height: 23%; }
+  height: 23%;
+  overflow: hidden; }
   .clientes > .flex-center div img {
-    width: 100%; }
+    width: 100%;
+    position: absolute; }
 
 .slideshow {
   width: 100%;

@@ -2,12 +2,13 @@
     & > .flex-center{
         div {
             position: relative;
-            margin: 1%;
             width: 31%;
             height: 23%;
+            overflow: hidden;
 
             img {
                 width: 100%;
+                position: absolute;
             }
         }
     }
