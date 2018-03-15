@@ -31,6 +31,21 @@
   text-decoration: none;
   font-family: "BrownStd-Light", Arial, Helvetica, sans-serif; }
 
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+::-moz-selection {
+  /* Code for Firefox */
+  background-color: #d39205;
+  color: #595959; }
+
+::selection {
+  background-color: #d39205;
+  color: #595959; }
+
 html,
 body {
   height: 100%;
@@ -110,7 +125,8 @@ section {
       transition: all .5s ease; }
       .flex-presentation .default-content .view-screen:hover {
         background-color: rgba(0, 0, 0, 0);
-        transition: all .5s ease; }
+        transition: all .5s ease;
+        cursor: pointer; }
   .flex-presentation .display-content {
     width: 80%;
     transition: all .7s ease; }
@@ -147,6 +163,16 @@ section {
         background-color: rgba(0, 0, 0, 0);
         transition: all .5s ease; }
 
+@keyframes rotateLogoOutAnimation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-90deg); } }
+@keyframes rotateLogoInAnimation {
+  from {
+    transform: rotate(-90deg); }
+  to {
+    transform: rotate(0deg); } }
 #nav {
   height: 100%;
   width: 100%; }
@@ -192,6 +218,15 @@ nav.nav-left {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  nav.nav-left .rotateLogoIn {
+    animation-name: rotateLogoInAnimation;
+    animation-duration: 1s; }
+  nav.nav-left .rotateLogoOut {
+    animation-name: rotateLogoOutAnimation;
+    animation-duration: 1s; }
+  nav.nav-left:hover #logo {
+    transform: rotate(0deg);
+    animation-duration: 1s; }
   nav.nav-left img {
     position: fixed;
     top: 50px; }
@@ -233,16 +268,6 @@ nav.nav-left {
           nav.nav-left div ul li a:hover span {
             background-color: #d39205; }
 
-@keyframes rotateLogoOutAnimation {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(-90deg); } }
-@keyframes rotateLogoInAnimation {
-  from {
-    transform: rotate(-90deg); }
-  to {
-    transform: rotate(0deg); } }
 .nav-movil .redes-nav {
   position: absolute;
   bottom: 10px;
@@ -324,7 +349,11 @@ nav.nav-right {
       width: 22%;
       height: 30.33%;
       margin: 1%;
-      transition: all .7 ease; }
+      transition: all .7 ease;
+      overflow: hidden;
+      position: relative; }
+      .selected-works .flex-center .works-container div img {
+        position: absolute; }
       .selected-works .flex-center .works-container div img:hover {
         opacity: 0.7;
         cursor: pointer;
@@ -353,16 +382,27 @@ nav.nav-right {
     animation-name: esconderTitulo;
     animation-duration: .5s;
     left: -2000px; }
+.own-community .flex-presentation .flex-center {
+  position: relative; }
 .own-community .flex-presentation > div {
   width: 20%; }
   .own-community .flex-presentation > div .community-image {
     height: 100%;
+    width: 100%; }
+  .own-community .flex-presentation > div .view-screen {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
     width: 100%;
-    transition: all .5 ease; }
-    .own-community .flex-presentation > div .community-image:hover {
-      cursor: pointer;
-      opacity: .7;
-      transition: all .5 ease; }
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s ease; }
+    .own-community .flex-presentation > div .view-screen:hover {
+      background-color: rgba(0, 0, 0, 0);
+      transition: all .5s ease;
+      cursor: pointer; }
 .own-community .community-widget {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
@@ -417,16 +457,15 @@ nav.nav-right {
     display: none; }
 
 .clientes > .flex-center {
-  padding: 100px; }
+  padding: 70px; }
   .clientes > .flex-center div {
     position: relative;
-    width: 30%;
-    margin: 10px;
+    width: 25%;
+    margin: 10px 20px;
     height: 18%;
     overflow: hidden; }
-    .clientes > .flex-center div .img {
+    .clientes > .flex-center div img {
       width: 100%;
-      height: 100%;
       position: absolute;
       background-position: center; }
 

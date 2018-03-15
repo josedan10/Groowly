@@ -60,6 +60,23 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	font-family: $font-normal;
 }
 
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+     user-select: none;
+    }
+
+::-moz-selection { /* Code for Firefox */
+	background-color: $dorado;
+	color: $grisOsc;
+}
+
+::selection {
+	background-color: $dorado;
+	color: $grisOsc;
+}
+
 html,
 body{
 	height: 100%;
@@ -166,6 +183,7 @@ section{
 			&:hover {
 				background-color: rgba($color: #000000, $alpha: 0);
 				transition: all .5s ease;
+				cursor: pointer;
 			}
 		}
 	}

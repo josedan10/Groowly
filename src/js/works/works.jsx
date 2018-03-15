@@ -41,8 +41,7 @@ export default class Works extends React.Component {
 		if (this.state.work !== null)
 			workDisplay = (
 				<div className='flex-center work-display slideInDown' id='work' onClick={this.closeWork.bind(this)}>
-					<img src={this.props.works[this.state.work.images[0]]}/>
-
+					<img src={'src/img/works/' + this.props.works[this.state.work].image} />
 					<div className='description flex-center' />
 				</div>
 			);
@@ -55,7 +54,7 @@ export default class Works extends React.Component {
 
 				<div className='flex-center works-container'>
 					
-					{this.props.works.map((work, index) => <div className='flex-center' key={'work-' + index}><img onClick={this.showWork.bind(this)} className='work-image' src={'src/img/works/' + work.images[0] } /></div>)}
+					{this.props.works.map((work, index) => <div className='flex-center' key={'work-' + index}><img onClick={this.showWork.bind(this)} className='work-image' src={'src/img/works/' + work.image } /></div>)}
 					
 					{/* <div className='flex-center'>
 						<img src='src/img/works/Carolinawork.jpg'/>

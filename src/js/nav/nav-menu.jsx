@@ -39,7 +39,7 @@ export default class Nav extends React.Component {
 		default:
 
 			nav = (
-				<aside className='left' onTouchMove={this.openNav}>
+				<aside className='left' onMouseEnter={this.openNav} onMouseLeave={this.closeNav}>
 					<nav className={this.props.tipo}>
 						<Logo logo={this.props.logo}/>
 						<Menu tipo={this.props.tipo} links={this.props.links}/>

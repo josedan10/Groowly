@@ -1,3 +1,20 @@
+@keyframes rotateLogoOutAnimation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-90deg);
+	}
+}
+
+@keyframes rotateLogoInAnimation {
+	from {
+		transform: rotate(-90deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
 #nav{
 	height: 100%;
 	width: 100%;
@@ -64,6 +81,23 @@ nav.nav-left{
 	align-items: center;
 	justify-content: center;
 
+	.rotateLogoIn {
+		animation-name: rotateLogoInAnimation;
+		animation-duration: 1s;
+	}
+
+	.rotateLogoOut {
+		animation-name: rotateLogoOutAnimation;
+		animation-duration: 1s;
+	}
+
+	&:hover {
+		#logo {
+			transform: rotate(0deg);
+			animation-duration: 1s;
+		}
+	}
+
 	img{
 		position: fixed;
 		top: 50px;
@@ -126,23 +160,6 @@ nav.nav-left{
 	}
 }
 
-@keyframes rotateLogoOutAnimation {
-    from {
-		transform: rotate(0deg);
-	}
-    to {
-		transform: rotate(-90deg);
-	}
-}
-
-@keyframes rotateLogoInAnimation {
-    from {
-		transform: rotate(-90deg);
-	}
-    to {
-		transform: rotate(0deg);
-	}
-}
 
 .nav-movil {
 	.redes-nav {

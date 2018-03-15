@@ -68,7 +68,7 @@ export default class PresentationFrame extends React.Component {
 		let i = 0;
 		return (
 			<div className='presentation-container flex-center'>
-				<h1 id='teamTitle'>APRENDE, TRANSFORMA Y CONECTA</h1>
+				<h1 id='teamTitle'>LEARN, TRANSFORM AND CONNECT</h1>
 
 				<div className='flex-presentation'>
 					{this.props.datos.map(item => <PresentationItem datos={item} key={item.nombre + i++} onClick={this.cambiarVista.bind(this)}/>)}

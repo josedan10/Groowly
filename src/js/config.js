@@ -8,22 +8,40 @@ class Config {
 		this.communities = communities;
 		this.works = [
 			{
-				images: ['Carolinawork.jpg']
+				image: 'Carolinawork.jpg'
 			},
 			{
-				images: ['Equilibriowork.jpg']
+				image: 'Equilibriowork.jpg'
 			},
 			{
-				images: ['Fierawork.jpg']
+				image: 'Fierawork.jpg'
 			},
 			{
-				images: ['Gabrielawork.jpg']
+				image: 'Gabrielawork.jpg'
 			},
 			{
-				images: ['Kathieswork.jpg']
+				image: 'Kathieswork.jpg'
 			},
 			{
-				images: ['Venuswork.jpg']
+				image: 'Venuswork.jpg'
+			},
+			{
+				image: 'Expogrowwork.jpg'
+			},
+			{
+				image: 'Fermedinawork.jpg'
+			},
+			{
+				image: 'Igpmwork.jpg'
+			},
+			{
+				image: 'Meltingwork.jpg'
+			},
+			{
+				image: 'Alfonsowork.jpg'
+			},
+			{
+				image: 'Bathwork.jpg'
 			}
 		];
 	}
@@ -50,7 +68,7 @@ class Config {
 }
 
 // Links para el menu y las redes
-const links = ['Home', 'Services', 'Works', 'Community', 'Team', 'Clients', 'Contact'];
+const links = ['Home', 'Community', 'Services', 'Works', 'Clients', 'Team', 'Contact'];
 // const redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 
 // Imagen del logo
