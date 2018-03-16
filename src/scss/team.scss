@@ -1,4 +1,100 @@
 .team {
+    
+    .flex-presentation {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        
+        .content-container{
+            background-color: rgba($color: #000000, $alpha: .7);
+            height: 100%;
+        }
+    
+        .default-content {
+            width: 16.66%;
+            transition: all .7s ease;
+            position: relative;
+    
+            .img {
+                width: 100%;
+                transition: all .7s ease;
+            }
+    
+            .view-screen {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: .5);
+                transition: all .5s ease;
+    
+                &:hover {
+                    background-color: rgba($color: #000000, $alpha: 0);
+                    transition: all .5s ease;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        .display-content {
+            width: 80%;
+            transition: all .7s ease;
+    
+            .img,
+            .content {
+                width: 50%;
+            }
+    
+            .img {
+                transition: all .7s ease;
+            }
+    
+            .content {
+                position: absolute;
+                right: 0;
+                display: grid;
+                grid-template-rows: 1fr 5fr repeat(2fr);
+    
+                .info {
+                    grid-row: 2 / 3;
+                }
+            }
+    
+            .view-screen {
+                display: none;
+            }
+        }
+    
+        .reduce-content {
+            width: 4%;
+            transition: all .7s ease;
+            position: relative;
+    
+            .img {
+                width: 100%;
+                transition: all .7s ease;
+            }
+    
+            .view-screen {
+                display: block;
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: .5);
+                transition: all .5s ease;
+    
+                &:hover {
+                    background-color: rgba($color: #000000, $alpha: 0);
+                    transition: all .5s ease;
+                }
+            }
+        }
+    }
 
     h1 {
         text-align: center;
@@ -53,14 +149,14 @@
         }
     }
 
-    // .grid-container {
-    //     padding: 30px 0;
-    //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    //     grid-template-rows: 1fr;
-        
-    //     div{
-    //         border: solid 1px rgb(90, 37, 97);
-    //         background-color: rgba($color: #000000, $alpha: .7);
-    //     }
-    // }
+    .info {
+        h2,
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        p{
+            text-align: justify;
+        }
+    }
 }

@@ -115,7 +115,7 @@ class PresentationItem extends React.Component {
 				<div className='view-content'>
 					<div className='img' style={{ backgroundImage: 'url(' + this.props.datos.img + ')' }} />
 
-					<div className='content'>
+					<div className='content flex-center'>
 
 						<i className='icon icon-arrow_back' onClick={this.cerrarVista}/>
 

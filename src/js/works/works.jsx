@@ -42,7 +42,11 @@ export default class Works extends React.Component {
 			workDisplay = (
 				<div className='flex-center work-display slideInDown' id='work' onClick={this.closeWork.bind(this)}>
 					<img src={'src/img/works/' + this.props.works[this.state.work].image} />
-					<div className='description flex-center' />
+					<div className='info flex-center'>
+						<h2>{this.props.works[this.state.work].name}</h2>
+						<p>{this.props.works[this.state.work].description}</p>
+						<p><a href={'http://' + this.props.works[this.state.work].website}>{this.props.works[this.state.work].website}</a></p>
+					</div>
 				</div>
 			);
 		else

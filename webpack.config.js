@@ -9,7 +9,6 @@ const config = {
 		index: './src/js/index.jsx',
 		formContact: './src/js/form-contact/form-contact.jsx',
 		presentation: './src/js/presentation-container/presentation.jsx',
-		swipe: './src/js/swipe.js',
 		nav: './src/js/nav/nav-menu.jsx'
 		// timer: './src/js/timer.config.jsx',
 		// slideshow: './src/js/slideshow.config.jsx'
@@ -18,8 +17,8 @@ const config = {
 
 	output: {
 	    path: path.resolve(__dirname, 'dist'),
-		publicPath: '/testing/site/dist/',
-		// publicPath: '/dist/',
+		// publicPath: '/testing/site/dist/',
+		publicPath: '/dist/',
 	    filename: '[name].min.js' // Archivo de salida
 	},
 
