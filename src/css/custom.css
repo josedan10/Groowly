@@ -361,12 +361,15 @@ nav.nav-right {
   .selected-works .flex-center .work-display {
     visibility: hidden;
     position: absolute;
+    padding: 20px;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7); }
     .selected-works .flex-center .work-display.slideInDown {
       visibility: visible;
       animation-duration: 1s; }
+    .selected-works .flex-center .work-display img {
+      height: 100%; }
 
 .own-community > div h1 {
   text-align: center;
@@ -392,7 +395,6 @@ nav.nav-right {
   .own-community .flex-presentation > div .view-screen {
     display: block;
     position: absolute;
-    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;

@@ -9,7 +9,7 @@ export default class Community extends React.Component {
 	}
     
 	showCommunity(e) {
-		var communities = document.getElementsByClassName('community-image');
+		var communities = document.getElementsByClassName('view-screen');
 		let index;
 		e.target.classList.add('target');
 
@@ -26,6 +26,7 @@ export default class Community extends React.Component {
 
 		document.getElementById('communityTitle').classList.remove('show');
 		document.getElementById('communityTitle').classList.add('hide');
+		document.getElementById('widget').classList.add('slideInDown');
 	}
     
 	closeWidget() {        
@@ -48,7 +49,6 @@ export default class Community extends React.Component {
 	render() {
 		return (
 			<div className='flex-center'>
-				<InstagramWidget communities={this.props.communities} index={this.state.community} onClick={this.closeWidget.bind(this)}/>
 
 				<h1 id='communityTitle'>MEET OUR OWN DIGITAL COMMUNITY</h1>
 				<div className='flex-presentation'>
@@ -61,6 +61,7 @@ export default class Community extends React.Component {
 					)}
 	
 				</div>
+				<InstagramWidget communities={this.props.communities} index={this.state.community} onClick={this.closeWidget.bind(this)}/>
 			</div>
 		);
 	}
