@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Swipeable from 'react-swipeable';
 
 export default class Nav extends React.Component {
 
@@ -7,14 +8,32 @@ export default class Nav extends React.Component {
 		super(props);
 	}
 	
-	openNav() {
+	rotateLogoIn() {
 		document.getElementById('logo').classList.add('rotateLogoIn');
 		document.getElementById('logo').classList.remove('rotateLogoOut');
 	}
 
-	closeNav() {
+	rotateLogoOut() {
 		document.getElementById('logo').classList.remove('rotateLogoIn');
 		document.getElementById('logo').classList.add('rotateLogoOut');
+	}
+
+	swipeRight(e) {
+		if (!e.target.classList.contains('open')) {
+			e.target.classList.add('open');
+			e.target.classList.remove('close');
+		}
+		this.rotateLogoIn();
+		e.preventDefault();
+	}
+
+	swipeLeft(e) {
+		if (!e.target.classList.contains('close')) {
+			e.target.classList.add('close');
+			e.target.classList.remove('open');
+		}
+		this.rotateLogoOut();
+		e.preventDefault();
 	}
 
 	render() {
@@ -22,15 +41,17 @@ export default class Nav extends React.Component {
 		var nav;
 
 		switch (this.props.tipo) {
-		case 'nav-movil nav-left':
+		case 'nav-movil':
 
 			nav = (
-				<aside className='left' onMouseEnter={this.openNav} onMouseLeave={this.closeNav}>
-					<nav className={this.props.tipo}>
-						<Logo logo={this.props.logo}/>
-						<Menu tipo={this.props.tipo} links={this.props.links}/>
-						<Redes redes={this.props.redes}/>
-					</nav>
+				<aside className='left'>
+					<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
+						<nav id='nav-movil' className={this.props.tipo}>
+							<Logo logo={this.props.logo}/>
+							<Menu tipo={this.props.tipo} links={this.props.links}/>
+							<Redes redes={this.props.redes}/>
+						</nav>
+					</Swipeable>
 				</aside>
 			);
 
@@ -39,7 +60,7 @@ export default class Nav extends React.Component {
 		default:
 
 			nav = (
-				<aside className='left' onMouseEnter={this.openNav} onMouseLeave={this.closeNav}>
+				<aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
 					<nav className={this.props.tipo}>
 						<Logo logo={this.props.logo}/>
 						<Menu tipo={this.props.tipo} links={this.props.links}/>
@@ -103,20 +124,6 @@ class Menu extends React.Component {
 		const links = this.props.links;
 
 		return (
-			// <div>
-			// 	<ul>
-			// 		{
-			// 			links.map(elemento => (
-			// 				<li key={'li' + elemento}>
-			// 					<NavLink to={(elemento === 'Home') ? '/testing/site/' : '/testing/site/' + elemento.replace(' ', '_')} activeClassName='selected'>
-			// 						{elemento.toUpperCase()}  <span/>
-			// 					</NavLink>
-			// 				</li>)
-			// 			)
-			// 		}
-			// 	</ul>
-			// </div>
-
 			<div>
 				<ul>
 					{

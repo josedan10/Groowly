@@ -34,7 +34,7 @@ class App extends React.Component {
 		let navType;
 
 		if (window.innerWidth < 768) {
-			navType = 'nav-movil nav-left';
+			navType = 'nav-movil';
 		} else {
 			navType = 'nav-left';
 		}
@@ -45,7 +45,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		window.addEventListener('resize', this.chooseNav, false);
+		window.addEventListener('resize', this.chooseNav.bind(this), false);
 		
 		return (
 			<div>

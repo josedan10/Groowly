@@ -95,6 +95,11 @@ aside.right {
 	z-index: 300;
 }
 
+.left > div{
+	height: 100%;
+	width: 100%;
+}
+
 .right{
 	right: 0;
 	width: 50px;
@@ -172,7 +177,6 @@ section{
 		.view-screen {
 			display: block;
 			position: absolute;
-			z-index: 10;
 			top: 0;
 			left: 0;
 			width: 100%;

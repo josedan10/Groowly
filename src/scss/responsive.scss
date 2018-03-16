@@ -33,8 +33,25 @@
 @media (max-width: 768px) { 
 
     // Swipe events on navbar
-    nav:hover {
-        width: 100vw;
+    .nav-movil {
+        &:hover,
+        &.open {
+            width: 100vw;
+            transition: all .5s ease;
+            #logo {
+                transform: rotate(0deg);
+            }
+        }
+
+        &.close {
+            width: 50px;
+            transition: all .5s ease;
+            #logo {
+                transform: rotate(-90deg);
+            }
+        }
+
+        transition: all .5s ease;
     }
 
     .right {

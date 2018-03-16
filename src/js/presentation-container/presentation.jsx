@@ -131,7 +131,7 @@ class PresentationItem extends React.Component {
 					</div>
 				</div>
 
-				<div className='view-screen' onClick={this.props.onClick} />
+				<div className='view-screen' style={{ zIndex: 5 }} onClick={this.props.onClick} />
 			</div>
 		);
 	}
