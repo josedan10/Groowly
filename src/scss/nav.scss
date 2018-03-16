@@ -15,6 +15,25 @@
 		transform: rotate(0deg);
 	}
 }
+
+@keyframes iconsIn {
+    from {
+		transform: translateX(-600px);
+	}
+    to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes iconsOut {
+    from {
+		transform: translateX(0px);
+	}
+    to {
+		transform: translateX(-600px);
+	}
+}
+
 #nav{
 	height: 100%;
 	width: 100%;
@@ -41,7 +60,9 @@ nav{
 
 		li{
 			margin: 3px 0;
-			width: 100%;
+			width: 100%;div {
+				position: static;
+			}
 
 			a{
 				text-decoration: none;
@@ -118,7 +139,9 @@ nav.nav-left{
 			width: 100%;
 
 			li{
-
+				div {
+					position: static;
+				}
 				a {
 					transition: all .7s ease;
 					display: block;
@@ -189,6 +212,9 @@ nav.nav-left{
 			width: 100%;
 
 			li{
+				div {
+					position: static;
+				}
 
 				a {
 					transition: all .7s ease;
@@ -233,8 +259,18 @@ nav.nav-left{
 	.redes-nav {
 		position: absolute;
 		bottom: 10px;
-		margin-right: 600px;
 		transition: all .5s ease;
+		animation-duration: .5s;
+
+		&.In {
+			animation-name: iconsIn;
+			transform: translateX(0px);
+		}
+
+		&.Out {
+			animation-name: iconsOut;
+			transform: translateX(-600px);
+		}
 
 		i {
 			margin: 10px;
@@ -259,6 +295,7 @@ nav.nav-left{
 		.redes-nav{
 			margin-right: 0;
 			transition: all .5s ease;
+			animation-duration: .5s;
 		}
 	}
 }

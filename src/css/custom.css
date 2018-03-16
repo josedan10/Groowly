@@ -110,6 +110,16 @@ section {
     transform: rotate(-90deg); }
   to {
     transform: rotate(0deg); } }
+@keyframes iconsIn {
+  from {
+    transform: translateX(-600px); }
+  to {
+    transform: translateX(0px); } }
+@keyframes iconsOut {
+  from {
+    transform: translateX(0px); }
+  to {
+    transform: translateX(-600px); } }
 #nav {
   height: 100%;
   width: 100%; }
@@ -131,6 +141,8 @@ nav {
     nav ul li {
       margin: 3px 0;
       width: 100%; }
+      nav ul li div {
+        position: static; }
       nav ul li a {
         text-decoration: none;
         color: #595959;
@@ -179,6 +191,8 @@ nav.nav-left {
       flex-direction: column;
       align-items: center;
       width: 100%; }
+      nav.nav-left div ul li div {
+        position: static; }
       nav.nav-left div ul li a {
         transition: all .7s ease;
         display: block;
@@ -227,6 +241,8 @@ nav.nav-left {
       flex-direction: column;
       align-items: center;
       width: 100%; }
+      .nav-movil div ul li div {
+        position: static; }
       .nav-movil div ul li a {
         transition: all .7s ease;
         display: block;
@@ -255,8 +271,14 @@ nav.nav-left {
   .nav-movil .redes-nav {
     position: absolute;
     bottom: 10px;
-    margin-right: 600px;
-    transition: all .5s ease; }
+    transition: all .5s ease;
+    animation-duration: .5s; }
+    .nav-movil .redes-nav.In {
+      animation-name: iconsIn;
+      transform: translateX(0px); }
+    .nav-movil .redes-nav.Out {
+      animation-name: iconsOut;
+      transform: translateX(-600px); }
     .nav-movil .redes-nav i {
       margin: 10px; }
   .nav-movil .rotateLogoIn {
@@ -270,7 +292,8 @@ nav.nav-left {
     animation-duration: 1s; }
   .nav-movil:hover .redes-nav {
     margin-right: 0;
-    transition: all .5s ease; }
+    transition: all .5s ease;
+    animation-duration: .5s; }
 
 nav.nav-right {
   top: 0;
@@ -791,7 +814,7 @@ nav.nav-right {
 
   .selected-works .flex-center .works-container div {
     width: 30%;
-    height: 32%;
+    height: 23%;
     margin: 5px; }
   .selected-works .work-display .info {
     height: 100%;
