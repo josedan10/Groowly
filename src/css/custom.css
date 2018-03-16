@@ -462,14 +462,12 @@ nav.nav-right {
   padding: 70px; }
   .clientes > .flex-center div {
     position: relative;
-    width: 25%;
+    width: 20%;
     margin: 10px 20px;
-    height: 18%;
+    height: 20%;
     overflow: hidden; }
     .clientes > .flex-center div img {
-      width: 100%;
-      position: absolute;
-      background-position: center; }
+      height: 100%; }
 
 .slideshow {
   width: 100%;
