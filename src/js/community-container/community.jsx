@@ -1,4 +1,5 @@
 import React from 'react';
+import Swipeable from 'react-swipeable';
 
 export default class Community extends React.Component {
 	constructor(props) {
@@ -100,12 +101,16 @@ class InstagramWidget extends React.Component {
 		if (this.props.index !== null) {
             
 			container = (
-				<div id='widget' className='community-widget slideInDown' onClick={this.props.onClick}>
-					<div className='widget-container flex-center'>
-						{this.widgets[this.props.index]}
+				<Swipeable onSwipingUp={this.props.onClick}>
+					<div id='widget' className='community-widget slideInDown' onClick={this.props.onClick}>
+						<div className='widget-container flex-center'>
+							<Swipeable onSwipingUp={this.props.onClick}>
+								{this.widgets[this.props.index]}
+							</Swipeable>
+						</div>
+						{/* <CommunityData community={this.props.communities[this.props.index]}/> */}
 					</div>
-					{/* <CommunityData community={this.props.communities[this.props.index]}/> */}
-				</div>
+				</Swipeable>
 			);
 		}
         
