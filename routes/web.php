@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'frontend/index');
+
+Route::view('Community', 'frontend/community');
+
+Route::view('Services', 'frontend/community');
+
+Route::view('Works', 'frontend/works');
+
+Route::view('')
+
+?>

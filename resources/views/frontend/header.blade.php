@@ -7,9 +7,16 @@
 
 	<title>Groowly</title>
 
-	<link rel="icon" href="favicon.png" type="image/x-icon" />	
-	<link rel="stylesheet" href="src/css/style.css">
-	<link rel="stylesheet" href="src/css/animate.css">
-	<link rel="stylesheet" href="src/css/custom.css">
+	<link rel="icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon" />	
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 	
 </head>
+<body>
+	<main id="app"></main>
+
+
+	<script src="dist/config.min.js"></script>
+	<script src="dist/index.min.js"></script>
+</body>
