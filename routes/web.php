@@ -15,10 +15,14 @@ Route::view('/', 'frontend/index');
 
 Route::view('Community', 'frontend/community');
 
-Route::view('Services', 'frontend/community');
+Route::view('Services', 'frontend/services');
 
 Route::view('Works', 'frontend/works');
 
-Route::view('')
+Route::view('Clients', 'frontend/clients');
+
+Route::view('Team', 'frontend/team');
+
+Route::view('Contact', 'frontend/contact');
 
 ?>
