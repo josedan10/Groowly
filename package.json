@@ -16,7 +16,9 @@
   "keywords": [
     "React",
     "Javascript",
-    "Frontend"
+    "Frontend",
+    "Laravel",
+    "Backend"
   ],
   "dependencies": {
     "ajv-keywords": "^3.1.0",
