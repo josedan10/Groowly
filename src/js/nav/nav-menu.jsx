@@ -9,29 +9,50 @@ export default class Nav extends React.Component {
 	}
 	
 	rotateLogoIn() {
-		document.getElementById('logo').classList.add('rotateLogoIn');
-		document.getElementById('logo').classList.remove('rotateLogoOut');
+		let redes = document.getElementsByClassName('redes-nav')[0];
+		let logo = document.getElementById('logo');
+
+		logo.classList.add('rotateLogoIn');
+		logo.classList.remove('rotateLogoOut');
+		redes.classList.add('In');
+		redes.classList.remove('Out');
 	}
 
 	rotateLogoOut() {
-		document.getElementById('logo').classList.remove('rotateLogoIn');
-		document.getElementById('logo').classList.add('rotateLogoOut');
+		let redes = document.getElementsByClassName('redes-nav')[0];
+		let logo = document.getElementById('logo');
+
+		logo.classList.remove('rotateLogoIn');
+		logo.classList.add('rotateLogoOut');
+		redes.classList.add('Out');
+		redes.classList.remove('In');
 	}
 
 	swipeRight(e) {
-		if (!e.target.classList.contains('open')) {
-			e.target.classList.add('open');
-			e.target.classList.remove('close');
+		let redes = document.getElementsByClassName('redes-nav')[0];
+		let nav = document.getElementById('nav-movil');
+
+		if (!nav.classList.contains('open')) {
+			nav.classList.add('open');
+			nav.classList.remove('close');
+			redes.classList.add('In');
+			redes.classList.remove('Out');
 		}
 		this.rotateLogoIn();
 		e.preventDefault();
 	}
 
 	swipeLeft(e) {
-		if (!e.target.classList.contains('close')) {
-			e.target.classList.add('close');
-			e.target.classList.remove('open');
+		let redes = document.getElementsByClassName('redes-nav')[0];
+		let nav = document.getElementById('nav-movil');
+
+		if (!nav.classList.contains('close')) {
+			nav.classList.add('close');
+			nav.classList.remove('open');
+			redes.classList.add('Out');
+			redes.classList.remove('In');
 		}
+
 		this.rotateLogoOut();
 		e.preventDefault();
 	}
@@ -48,8 +69,10 @@ export default class Nav extends React.Component {
 					<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
 						<nav id='nav-movil' className={this.props.tipo}>
 							<Logo logo={this.props.logo}/>
-							<Menu tipo={this.props.tipo} links={this.props.links}/>
-							<Redes redes={this.props.redes}/>
+							
+							<Menu tipo={this.props.tipo} links={this.props.links} onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)} />
+
+							<Redes redes={this.props.redes} />
 						</nav>
 					</Swipeable>
 				</aside>
@@ -99,9 +122,19 @@ class Menu extends React.Component {
 	}
 
 	changeLinkStyle(e) {
+		let nav = document.getElementById('nav-movil');
+		let redes = document.getElementsByClassName('redes-nav')[0];
+
 		this.setState({
 			link: e.target.hash.replace('#', '')
 		});
+
+		if (nav.classList.contains('open')) {
+			nav.classList.add('close');
+			nav.classList.remove('open');
+			redes.classList.add('Out');
+			redes.classList.remove('In');
+		}
 	}
 
 	assignClass(elemento) {
@@ -129,9 +162,11 @@ class Menu extends React.Component {
 					{
 						links.map(elemento => (
 							<li key={'li' + elemento}>
-								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
-									{elemento.toUpperCase()}  <span/>
-								</NavLink>
+								<Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}>
+									<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
+										{elemento.toUpperCase()}  <span/>
+									</NavLink>
+								</Swipeable>
 							</li>)
 						)
 					}
@@ -148,7 +183,7 @@ class Redes extends React.Component {
 
 	render() {
 		return (
-			<ul className='redes-nav'>
+			<ul className='redes-nav Out'>
 				<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
 				<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
 				<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
