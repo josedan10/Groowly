@@ -22,6 +22,8 @@ export default class Works extends React.Component {
 		this.setState({
 			work: i
 		});
+
+		document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 	}
     
 	closeWork() {
@@ -34,6 +36,9 @@ export default class Works extends React.Component {
 			this.setState({
 				work: null
 			});
+
+			if (window.innerWidth <= 768)
+				document.getElementsByTagName('body')[0].style.overflow = 'scroll';
 		}, 800);
 	}
 

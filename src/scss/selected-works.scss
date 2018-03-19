@@ -1,6 +1,5 @@
 .selected-works {
     .flex-center {
-        overflow: hidden;
         
         .works-container {
             width: 100%;
@@ -10,6 +9,7 @@
             div{
                 background-color: $gris;
                 width: 22%;
+                min-height: 100px;
                 height: 30.33%;
                 margin: 1%;
                 transition: all .7 ease;

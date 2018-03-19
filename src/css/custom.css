@@ -344,26 +344,25 @@ nav.nav-right {
         font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
         font-size: 16px; }
 
-.selected-works .flex-center {
-  overflow: hidden; }
-  .selected-works .flex-center .works-container {
-    width: 100%;
-    height: 100%;
+.selected-works .flex-center .works-container {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .selected-works .flex-center .works-container div {
+    background-color: #ececec;
+    width: 22%;
+    min-height: 100px;
+    height: 30.33%;
+    margin: 1%;
+    transition: all .7 ease;
+    overflow: hidden;
     position: relative; }
-    .selected-works .flex-center .works-container div {
-      background-color: #ececec;
-      width: 22%;
-      height: 30.33%;
-      margin: 1%;
-      transition: all .7 ease;
-      overflow: hidden;
-      position: relative; }
-      .selected-works .flex-center .works-container div img {
-        position: absolute; }
-      .selected-works .flex-center .works-container div img:hover {
-        opacity: 0.7;
-        cursor: pointer;
-        transition: all .7 ease; }
+    .selected-works .flex-center .works-container div img {
+      position: absolute; }
+    .selected-works .flex-center .works-container div img:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      transition: all .7 ease; }
 .selected-works .work-display {
   visibility: hidden;
   position: absolute;
@@ -412,7 +411,8 @@ nav.nav-right {
 .own-community .flex-presentation {
   display: flex;
   width: 100%;
-  height: 100%; }
+  height: 100vh;
+  overflow: hidden; }
   .own-community .flex-presentation .flex-center {
     position: relative; }
   .own-community .flex-presentation > div {
@@ -440,7 +440,7 @@ nav.nav-right {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 50px 70px;
   visibility: hidden;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -785,6 +785,9 @@ nav.nav-right {
     position: absolute;
     left: 70px; } }
 @media (max-width: 768px) {
+  nav img {
+    margin-top: 0; }
+
   .nav-movil {
     transition: all .5s ease; }
     .nav-movil:hover, .nav-movil.open {

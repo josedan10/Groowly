@@ -95,7 +95,12 @@
         }
     }
 }
+
 @media (max-width: 768px) { 
+
+    nav img {
+        margin-top: 0;
+    }
 
     // Swipe events on navbar
     .nav-movil {
