@@ -5,11 +5,11 @@ const config = {
 
 	// entry: './src/js/index.jsx',
 	entry: {
-		config: './src/js/config.js',
-		index: './src/js/index.jsx',
-		formContact: './src/js/form-contact/form-contact.jsx',
-		presentation: './src/js/presentation-container/presentation.jsx',
-		nav: './src/js/nav/nav-menu.jsx'
+		config: './resources/js/config.js',
+		index: './resources/js/index.jsx',
+		formContact: './resources/js/form-contact/form-contact.jsx',
+		presentation: './resources/js/presentation-container/presentation.jsx',
+		nav: './resources/js/nav/nav-menu.jsx'
 		// timer: './src/js/timer.config.jsx',
 		// slideshow: './src/js/slideshow.config.jsx'
 		// slideshow: './src/js/slideshow/swiper-js/source/jquery.slides.js'
@@ -17,8 +17,8 @@ const config = {
 
 	output: {
 	    path: path.resolve(__dirname, 'dist'),
-		publicPath: '/testing/site/dist/',
-		// publicPath: '/dist/',
+		// publicPath: '/testing/site/dist/',
+		publicPath: './public/js/',
 	    filename: '[name].min.js' // Archivo de salida
 	},
 
