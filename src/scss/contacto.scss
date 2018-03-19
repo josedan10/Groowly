@@ -7,9 +7,9 @@
     padding: 50px;
     
     .form-contact {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 40px) 1fr;
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // grid-template-rows: repeat(3, 40px) 1fr;
         padding: 20px;
 
         h1,
@@ -21,14 +21,14 @@
 
         h1,
         p {
-            max-height: 40px;
+           height: 40px;
         }
 
         .btn-container {
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            height: 25px;
+            height: 40px;
             max-width: 250px;
 
 
@@ -74,7 +74,8 @@
                 width: 100%;
                 grid-gap: 10px 5px;
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(8, 40px);
+                grid-template-rows: repeat(6, 40px);
+                grid-auto-rows: 40px;
 
                 input {
                     padding: 5px;

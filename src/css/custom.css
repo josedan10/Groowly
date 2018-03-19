@@ -29,8 +29,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: "BrownStd-Light", Arial, Helvetica, sans-serif;
-  overflow: hidden; }
+  font-family: "BrownStd-Light", Arial, Helvetica, sans-serif; }
 
 img {
   -webkit-user-select: none;
@@ -345,38 +344,39 @@ nav.nav-right {
         font-family: 'Berlin-Sans', Arial, Helvetica, sans-serif;
         font-size: 16px; }
 
-.selected-works .flex-center {
-  overflow: hidden; }
-  .selected-works .flex-center .works-container {
-    width: 100%;
-    height: 100%;
+.selected-works .flex-center .works-container {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .selected-works .flex-center .works-container div {
+    background-color: #ececec;
+    width: 22%;
+    min-height: 100px;
+    height: 30.33%;
+    margin: 1%;
+    transition: all .7 ease;
+    overflow: hidden;
     position: relative; }
-    .selected-works .flex-center .works-container div {
-      background-color: #ececec;
-      width: 22%;
-      height: 30.33%;
-      margin: 1%;
-      transition: all .7 ease;
-      overflow: hidden;
-      position: relative; }
-      .selected-works .flex-center .works-container div img {
-        position: absolute; }
-      .selected-works .flex-center .works-container div img:hover {
-        opacity: 0.7;
-        cursor: pointer;
-        transition: all .7 ease; }
+    .selected-works .flex-center .works-container div img {
+      position: absolute; }
+    .selected-works .flex-center .works-container div img:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      transition: all .7 ease; }
 .selected-works .work-display {
   visibility: hidden;
   position: absolute;
+  top: 0;
+  left: 0;
   padding: 20px;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7); }
   .selected-works .work-display.slideInDown {
     visibility: visible;
     animation-duration: 1s; }
   .selected-works .work-display img {
-    height: 100%; }
+    height: 90vh; }
   .selected-works .work-display .info {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -411,7 +411,8 @@ nav.nav-right {
 .own-community .flex-presentation {
   display: flex;
   width: 100%;
-  height: 100%; }
+  height: 100vh;
+  overflow: hidden; }
   .own-community .flex-presentation .flex-center {
     position: relative; }
   .own-community .flex-presentation > div {
@@ -434,6 +435,8 @@ nav.nav-right {
         cursor: pointer; }
 .own-community .community-widget {
   position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 50px 70px;
   visibility: hidden;
@@ -648,9 +651,6 @@ nav.nav-right {
   align-items: center;
   padding: 50px; }
   .contacto .form-contact {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 40px) 1fr;
     padding: 20px; }
     .contacto .form-contact h1,
     .contacto .form-contact p,
@@ -659,12 +659,12 @@ nav.nav-right {
       text-align: center; }
     .contacto .form-contact h1,
     .contacto .form-contact p {
-      max-height: 40px; }
+      height: 40px; }
     .contacto .form-contact .btn-container {
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      height: 25px;
+      height: 40px;
       max-width: 250px; }
       .contacto .form-contact .btn-container button {
         width: 80px;
@@ -699,7 +699,8 @@ nav.nav-right {
         width: 100%;
         grid-gap: 10px 5px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 40px); }
+        grid-template-rows: repeat(6, 40px);
+        grid-auto-rows: 40px; }
         .contacto .form-contact .form-view form input {
           padding: 5px;
           max-height: 80px;
@@ -784,6 +785,9 @@ nav.nav-right {
     position: absolute;
     left: 70px; } }
 @media (max-width: 768px) {
+  nav img {
+    margin-top: 0; }
+
   .nav-movil {
     transition: all .5s ease; }
     .nav-movil:hover, .nav-movil.open {
@@ -825,7 +829,8 @@ nav.nav-right {
     width: 50%;
     height: auto;
     position: absolute;
-    left: 70px; }
+    left: 70px;
+    top: 20px; }
 
   .clientes {
     padding: 0;

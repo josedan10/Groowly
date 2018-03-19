@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Swipeable from 'react-swipeable';
+import { isUndefined } from 'util';
 
 export default class Nav extends React.Component {
 
@@ -14,8 +15,11 @@ export default class Nav extends React.Component {
 
 		logo.classList.add('rotateLogoIn');
 		logo.classList.remove('rotateLogoOut');
-		redes.classList.add('In');
-		redes.classList.remove('Out');
+
+		if (redes !== undefined) {
+			redes.classList.add('In');
+			redes.classList.remove('Out');
+		}
 	}
 
 	rotateLogoOut() {
@@ -24,8 +28,11 @@ export default class Nav extends React.Component {
 
 		logo.classList.remove('rotateLogoIn');
 		logo.classList.add('rotateLogoOut');
-		redes.classList.add('Out');
-		redes.classList.remove('In');
+
+		if (redes !== undefined) {
+			redes.classList.add('Out');
+			redes.classList.remove('In');
+		}
 	}
 
 	swipeRight(e) {
