@@ -50,7 +50,7 @@ export default class Works extends React.Component {
 				<Swipeable onSwipingUp={this.closeWork.bind(this)}>	
 					<div className='flex-center work-display slideInDown' id='work' onClick={this.closeWork.bind(this)}>
 						<Swipeable onSwipingUp={this.closeWork.bind(this)}>
-							<img src={'src/img/works/' + this.props.works[this.state.work].image} />
+							<img src={'img/works/' + this.props.works[this.state.work].image} />
 						</Swipeable>
 						<Swipeable onSwipingUp={this.closeWork.bind(this)}>
 							<div className='info flex-center'>
@@ -71,7 +71,7 @@ export default class Works extends React.Component {
 
 				<div className='flex-center works-container'>
 					
-					{this.props.works.map((work, index) => <div className='flex-center' key={'work-' + index}><img onClick={this.showWork.bind(this)} className='work-image' src={'src/img/works/' + work.image } /></div>)}
+					{this.props.works.map((work, index) => <div className='flex-center' key={'work-' + index}><img onClick={this.showWork.bind(this)} className='work-image' src={'img/works/' + work.image } /></div>)}
 					
 				</div>
 

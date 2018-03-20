@@ -7,8 +7,13 @@ const config = {
 	entry: {
 		config: './resources/assets/js/config.js',
 		index: './resources/assets/js/index.jsx',
-		formContact: './resources/assets/js/form-contact/form-contact.jsx',
-		presentation: './resources/assets/js/presentation-container/presentation.jsx',
+		clients: './resources/assets/js/clients.jsx',
+		contact: './resources/assets/js/contact.jsx',
+		community: './resources/assets/js/community.jsx',
+		main: './resources/assets/js/main.jsx',
+		services: './resources/assets/js/services.jsx',
+		team: './resources/assets/js/team.jsx',
+		works: './resources/assets/js/works.jsx',
 		nav: './resources/assets/js/nav/nav-menu.jsx'
 		// timer: './src/js/timer.config.jsx',
 		// slideshow: './src/js/slideshow.config.jsx'

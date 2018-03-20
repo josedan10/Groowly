@@ -247,13 +247,13 @@
     }
 
     .contacto {
-        overflow: hidden;
         .form-contact {
             padding: 40px 10px;
 
             .form-view {
-                height: 300px;
                 form.grid-container {
+                    height: 300px;
+                    margin-top: 80px; 
 
                     textarea {
                         grid-row: 5 / span 1;

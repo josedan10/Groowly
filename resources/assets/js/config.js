@@ -80,7 +80,7 @@ class Config {
 				image: 'Venuswork.jpg',
 				name: 'VeCoolStyle',
 				website: 'www.vecoolstyle.com',
-				description: 'Cillum ut labore occaecat eiusmod labore duis eiusmod ad irure id dolor minim amet consequat. Pariatur ex id irure consequat consectetur minim tempor magna do anim adipisicing. Do nostrud eiusmod dolor reprehenderit veniam ea culpa sunt. Exercitation laborum do aliquip ad amet exercitation. Sunt reprehenderit sit ut exercitation non nostrud est elit cillum. Veniam excepteur dolor officia fugiat veniam fugiat nisi pariatur voluptate. Excepteur laboris sit commodo exercitation adipisicing ipsum officia cupidatat laboris amet proident.'
+				description: 'Cillum ut labore occaecat eiusmod labore duis eiusmod ad irure id dolor minim amet consequat. Pariatur ex id irure consequat consectetur t exercitation non nostrud est elit cillum. Veniam excepteur dolor officia fugiat veniam fugiat nisi pariatur voluptate. Excepteur laboris sit commodo exercitation adipisicing ipsum officia cupidatat laboris amet proident.'
 			},
 			{
 				image: 'Expogrowwork.jpg',
@@ -143,6 +143,10 @@ class Config {
 
 	getTeam() {
 		return this.team;
+	}
+
+	getWorks() {
+		return this.works;
 	}
 }
 

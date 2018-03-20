@@ -51,7 +51,7 @@ export default class FormContact extends React.Component {
 		let correo = (
 			<div className='form-view'>
 				<div className='flex-center'>
-					<img src='src/img/mail-icon.png' />
+					<img src='img/mail-icon.png' />
 					<p>contacto@groowly.com</p>
 				</div>
 			</div>
@@ -69,13 +69,15 @@ export default class FormContact extends React.Component {
         
         
 		return (
-			<div className='form-contact flex-center'>
-				<h1>CONTACT</h1>
-				<p>Comentario genial!</p>
-				<div className='btn-actions'>
-					<div className='btn-container'>
-						<button className='flex-center active' id='displayContact' onClick={this.mostrarFormulario.bind(this)}>FORM</button>
-						<button className='flex-center' id='displayEmail' onClick={this.mostrarCorreo.bind(this)}>CONTACT</button>
+			<div className='form-contact grid-container'>
+				<div className='header-form flex-center'>
+					<h1>CONTACT</h1>
+					<p>Comentario genial!</p>
+					<div className='btn-actions'>
+						<div className='btn-container'>
+							<button className='flex-center active' id='displayContact' onClick={this.mostrarFormulario.bind(this)}>FORM</button>
+							<button className='flex-center' id='displayEmail' onClick={this.mostrarCorreo.bind(this)}>CONTACT</button>
+						</div>
 					</div>
 				</div>
 				{muestra}

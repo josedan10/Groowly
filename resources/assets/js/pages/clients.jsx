@@ -10,40 +10,40 @@ export default class Clients extends React.Component {
 			<section className='clientes' id='Clients' onTouchMove={this.props.onTouchMove}>
 				<div className='flex-center'>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[0] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[0] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[1] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[1] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[2] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[2] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[3] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[3] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[4] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[4] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[5] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[5] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[6] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[6] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[7] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[7] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[8] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[8] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[9] + '.png' }/>
+						<img src={'img/clientes/' + this.props.config[9] + '.png' }/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[10] + '.png'}/>
+						<img src={'img/clientes/' + this.props.config[10] + '.png'}/>
 					</div>
 					<div className='flex-center'>
-						<img src={'src/img/clientes/' + this.props.config.getClientes()[11] + '.png'}/>
+						<img src={'img/clientes/' + this.props.config[11] + '.png'}/>
 					</div>
 				</div>
 			</section>

@@ -9,7 +9,7 @@ export default class OwnCommunity extends React.Component {
 	render() {
 		const ownCommunity = (
 			<section className='own-community flex-center' id='Own_Community' onTouchMove={this.props.onTouchMove}>
-				<Community communities={this.props.config.communities} />
+				<Community communities={this.props.config} />
 			</section>
 		);
 

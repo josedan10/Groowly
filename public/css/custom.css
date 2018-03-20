@@ -651,6 +651,8 @@ nav.nav-right {
   align-items: center;
   padding: 50px; }
   .contacto .form-contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(150px, 1fr) minmax(100px, 3fr);
     padding: 20px; }
     .contacto .form-contact h1,
     .contacto .form-contact p,
@@ -867,14 +869,13 @@ nav.nav-right {
     left: auto;
     top: 0; }
 
-  .contacto {
-    overflow: hidden; }
-    .contacto .form-contact {
-      padding: 40px 10px; }
-      .contacto .form-contact .form-view {
-        height: 300px; }
-        .contacto .form-contact .form-view form.grid-container textarea {
-          grid-row: 5 / span 1; }
+  .contacto .form-contact {
+    padding: 40px 10px; }
+    .contacto .form-contact .form-view form.grid-container {
+      height: 300px;
+      margin-top: 80px; }
+      .contacto .form-contact .form-view form.grid-container textarea {
+        grid-row: 5 / span 1; }
 
   .clientes > .flex-center > div {
     margin: 5px;
