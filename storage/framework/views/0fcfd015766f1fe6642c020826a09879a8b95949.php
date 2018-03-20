@@ -6,7 +6,8 @@
 <body>
 
     <main id="main"></main>
-    <div id="home"></div>
+    <div id="app"></div>
+    <script src="<?php echo e(asset('js/main.min.js')); ?>"></script>
     <script src="<?php echo e(asset('js/index.min.js')); ?>"></script>
     
 </body>

@@ -25,4 +25,10 @@ Route::view('Team', 'frontend/team');
 
 Route::view('Contact', 'frontend/contact');
 
+Route::group(['prefix' => 'admin'], function() {
+    // Admin Panel
+    Route::get('login', 'LoginController@view');
+});
+
+
 ?>

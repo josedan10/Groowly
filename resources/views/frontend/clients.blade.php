@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @section('page', 'Clients | ')
     @include('includes/head')
 </head>
 <body>
