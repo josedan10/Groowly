@@ -10,37 +10,37 @@ class Config {
 			{
 				nombre: 'Jose Quintero',
 				cargo: 'Web Developer',
-				img: 'src/img/meCaricautre.jpg',
+				img: '/img/meCaricautre.jpg',
 				descripcion: 'Excepteur culpa dolor labore reprehenderit nisi do id ipsum culpa. Occaecat dolore reprehenderit cillum dolor enim anim ex qui sit duis enim. Fugiat cupidatat laborum ex aute ullamco.'
 			},
 			{
 				nombre: 'Jose Quintero',
 				cargo: 'Web Developer',
-				img: 'src/img/meCaricautre.jpg',
+				img: '/img/meCaricautre.jpg',
 				descripcion: 'Cupidatat occaecat commodo laborum nostrud. Irure velit amet Lorem proident tempor ut sunt. Velit tempor mollit ad fugiat dolore sint Lorem non voluptate.'
 			},
 			{
 				nombre: 'Jose Quintero',
 				cargo: 'Web Developer',
-				img: 'src/img/meCaricautre.jpg',
+				img: '/img/meCaricautre.jpg',
 				descripcion: 'Enim ea commodo excepteur adipisicing. Enim enim do sunt sit sit sunt commodo. Velit esse voluptate anim sint laborum duis. Qui Lorem exercitation consectetur mollit consequat ullamco. Id ad in minim ullamco laborum incididunt occaecat aliqua dolor amet eu. Aute nostrud reprehenderit dolor laboris commodo duis incididunt culpa minim excepteur eiusmod nisi exercitation.'
 			},
 			{
 				nombre: 'Jose Quintero',
 				cargo: 'Web Developer',
-				img: 'src/img/meCaricautre.jpg',
+				img: '/img/meCaricautre.jpg',
 				descripcion: 'Commodo id ea aliquip aute eiusmod in laboris aliquip incididunt aliqua et ullamco. Aliqua qui esse dolor ea laboris proident reprehenderit culpa excepteur dolore cupidatat. Eiusmod voluptate sunt minim irure amet in. Dolor excepteur Lorem eu occaecat mollit dolor elit aute ullamco ut veniam commodo voluptate.'
 			},
 			{
 				nombre: 'Jose Quintero',
 				cargo: 'Web Developer',
-				img: 'src/img/meCaricautre.jpg',
+				img: '/img/meCaricautre.jpg',
 				descripcion: 'Consequat esse velit reprehenderit cillum sunt consequat voluptate cupidatat voluptate amet eu. Eu quis anim anim voluptate laboris minim deserunt. Non aliquip dolor sunt eu proident et laborum eiusmod proident pariatur laborum laboris. Quis laborum cupidatat nulla consequat officia incididunt consectetur occaecat in. Labore reprehenderit elit proident aliquip velit ea.'
 			},
 			{
 				nombre: 'Jose Quintero',
 				cargo: 'Web Developer',
-				img: 'src/img/meCaricautre.jpg',
+				img: '/img/meCaricautre.jpg',
 				descripcion: 'Sit ex esse fugiat cupidatat ullamco nostrud eiusmod proident veniam ea consectetur eiusmod incididunt quis. Sint proident duis et est ullamco adipisicing esse nisi. Anim excepteur tempor duis id incididunt duis enim consequat cupidatat. Ad et sunt id Lorem labore duis adipisicing exercitation eu nulla. Deserunt non reprehenderit mollit est.'
 			}
 		];
@@ -151,7 +151,7 @@ const links = ['Home', 'Community', 'Services', 'Works', 'Clients', 'Team', 'Con
 // const redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 
 // Imagen del logo
-const logo = 'src/img/logo.svg';
+const logo = '/img/logo.svg';
 
 // URL
 const baseURL = '/';
@@ -165,35 +165,35 @@ const communities = [
 		name: 'Groowly',
 		followers: 78.9,
 		posts: 41,
-		img: 'src/img/communities/groowly-community.jpg',
+		img: '/img/communities/groowly-community.jpg',
 		description: 'Groowly Mindful Marketing.'
 	},
 	{
 		name: 'DibujosEs',
 		followers: 971,
 		posts: 4.377,
-		img: 'src/img/communities/dibujoses-community.jpg',
+		img: '/img/communities/dibujoses-community.jpg',
 		description: 'DibujosEs.com | ART, CONNECT. Dibujoses is one platform for sharing artwork worldwide.' 
 	},
 	{
 		name: 'RecetasEs',
 		followers: 392,
 		posts: 642,
-		img: 'src/img/communities/recetases-community.jpg',
+		img: '/img/communities/recetases-community.jpg',
 		description: 'Nos gusta cocinar y conocer contigo.'
 	},
 	{
 		name: 'Travel',
 		followers: null,
 		posts: null,
-		img: 'src/img/communities/travel-community.jpg',
+		img: '/img/communities/travel-community.jpg',
 		description: ''
 	},
 	{
 		name: 'Celine',
 		followers: null,
 		posts: null,
-		img: 'src/img/communities/celine-community.jpg',
+		img: '/img/communities/celine-community.jpg',
 		description: ''
 	}
 ];

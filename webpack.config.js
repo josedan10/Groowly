@@ -5,18 +5,18 @@ const config = {
 
 	// entry: './src/js/index.jsx',
 	entry: {
-		config: './resources/js/config.js',
-		index: './resources/js/index.jsx',
-		formContact: './resources/js/form-contact/form-contact.jsx',
-		presentation: './resources/js/presentation-container/presentation.jsx',
-		nav: './resources/js/nav/nav-menu.jsx'
+		config: './resources/assets/js/config.js',
+		index: './resources/assets/js/index.jsx',
+		formContact: './resources/assets/js/form-contact/form-contact.jsx',
+		presentation: './resources/assets/js/presentation-container/presentation.jsx',
+		nav: './resources/assets/js/nav/nav-menu.jsx'
 		// timer: './src/js/timer.config.jsx',
 		// slideshow: './src/js/slideshow.config.jsx'
 		// slideshow: './src/js/slideshow/swiper-js/source/jquery.slides.js'
 	},
 
 	output: {
-	    path: path.resolve(__dirname, 'dist'),
+	    path: path.resolve(__dirname, 'public/js/'),
 		// publicPath: '/testing/site/dist/',
 		publicPath: './public/js/',
 	    filename: '[name].min.js' // Archivo de salida

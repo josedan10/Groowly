@@ -123,8 +123,9 @@ class Menu extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			link: location.hash.replace('#', '')
+			link: location.pathname
 		};
+		this.url = 'http://localhost:8000';
 
 	}
 
@@ -133,7 +134,7 @@ class Menu extends React.Component {
 		let redes = document.getElementsByClassName('redes-nav')[0];
 
 		this.setState({
-			link: e.target.hash.replace('#', '')
+			link: e.target.href.replace(this.url, '')
 		});
 
 		if (nav.classList.contains('open')) {
@@ -170,9 +171,9 @@ class Menu extends React.Component {
 						links.map(elemento => (
 							<li key={'li' + elemento}>
 								<Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}>
-									<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
+									<a href={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
 										{elemento.toUpperCase()}  <span/>
-									</NavLink>
+									</a>
 								</Swipeable>
 							</li>)
 						)
