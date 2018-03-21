@@ -28,11 +28,7 @@ class ContactController extends Controller
             'comment' => $request->comment
         );
 
-        Mail::to('josedanq100@gmail.com')->send(new ContactMail($user));
-
-        // dd('Mensaje enviado');
-        dd($request->all());
-        
+        Mail::to('josedanq100@gmail.com')->send(new ContactMail($user));        
     }
 
    
