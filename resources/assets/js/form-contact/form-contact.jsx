@@ -37,12 +37,12 @@ export default class FormContact extends React.Component {
 		var muestra;
 		let form = (
 			<div className='form-view flex-center'>
-				<form className='grid-container'>
-					<input type='text' placeholder='Name' />
-					<input type='email' placeholder='Email' />
-					<input type='phone' placeholder='Phone' />
-					<input type='text' placeholder='Address' />
-					<textarea name='comentario' placeholder='Comment' id='' rows='10' />
+				<form className='grid-container' method='GET' action='Contact/sendMessage'>
+					<input type='text' placeholder='Name' name='name' id='name'/>
+					<input type='email' placeholder='Email' name='email' id='email'/>
+					<input type='phone' placeholder='Phone' name='phone' id='phone'/>
+					<input type='text' placeholder='Address' name='address' id='address'/>
+					<textarea placeholder='Comment' rows='10' name='comment' id='comment'/>
 					<input type='submit' value='SUBMIT'/>
 				</form>
 			</div>

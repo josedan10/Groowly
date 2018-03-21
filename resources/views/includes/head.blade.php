@@ -10,6 +10,8 @@
 {{--  Style sheet  --}}
 @if(isset($page))
     <link rel="stylesheet" href="{{ asset('css/'.$page.'.css') }}">
+@else
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 @endif
 
 <script src="{{ asset('js/config.min.js') }}"></script>
