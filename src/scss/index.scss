@@ -62,11 +62,11 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 }
 
 img {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-     user-select: none;
-    }
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+	user-select: none;
+}
 
 ::-moz-selection { /* Code for Firefox */
 	background-color: $dorado;
