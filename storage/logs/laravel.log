@@ -1971,3 +1971,18 @@ Did you mean one of these?
 #67 C:\\Users\\josed\\Documents\\Groowly\\server.php(21): require_once('C:\\\\Users\\\\josed\\\\...')
 #68 {main}
 "} 
+[2018-03-27 17:46:50] local.ERROR: Command "seve" is not defined.
+
+Did you mean this?
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"seve\" is not defined.
+
+Did you mean this?
+    serve at C:\\Users\\josed\\Documents\\Groowly\\vendor\\symfony\\console\\Application.php:611)
+[stacktrace]
+#0 C:\\Users\\josed\\Documents\\Groowly\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->find('seve')
+#1 C:\\Users\\josed\\Documents\\Groowly\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\josed\\Documents\\Groowly\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\josed\\Documents\\Groowly\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\josed\\Documents\\Groowly\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
