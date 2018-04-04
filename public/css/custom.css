@@ -151,9 +151,6 @@ nav {
           transition: all .5s ease; }
         nav ul li a i {
           margin-right: 3px; }
-  nav:hover {
-    width: 210px;
-    transition: all .7s ease; }
 
 nav.default {
   justify-content: space-between;
@@ -171,9 +168,6 @@ nav.nav-left {
     animation-duration: 1s; }
   nav.nav-left .rotateLogoOut {
     animation-name: rotateLogoOutAnimation;
-    animation-duration: 1s; }
-  nav.nav-left:hover #logo {
-    transform: rotate(0deg);
     animation-duration: 1s; }
   nav.nav-left img {
     position: fixed;
@@ -286,13 +280,6 @@ nav.nav-left {
   .nav-movil .rotateLogoOut {
     animation-name: rotateLogoOutAnimation;
     animation-duration: 1s; }
-  .nav-movil:hover #logo {
-    transform: rotate(0deg);
-    animation-duration: 1s; }
-  .nav-movil:hover .redes-nav {
-    margin-right: 0;
-    transition: all .5s ease;
-    animation-duration: .5s; }
 
 nav.nav-right {
   top: 0;
