@@ -1,0 +1,22 @@
+.videos {
+
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        height: auto;
+    }
+
+    video {
+        width: 100%;
+    }
+}
+
+.cover-videos {
+    background-image: url('../img/pattern.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}

@@ -72,12 +72,24 @@ export default class Nav extends React.Component {
 		case 'nav-movil':
 
 			nav = (
+				// <aside className='left'>
+				// 	<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
+				// 		<nav id='nav-movil' className={this.props.tipo}>
+				// 			<Logo logo={this.props.logo}/>
+							
+				// 			<Menu tipo={this.props.tipo} links={this.props.links} onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)} />
+
+				// 			<Redes redes={this.props.redes} />
+				// 		</nav>
+				// 	</Swipeable>
+				// </aside>
+
 				<aside className='left'>
-					<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
+					<Swipeable>
 						<nav id='nav-movil' className={this.props.tipo}>
 							<Logo logo={this.props.logo}/>
 							
-							<Menu tipo={this.props.tipo} links={this.props.links} onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)} />
+							<Menu tipo={this.props.tipo} links={this.props.links} />
 
 							<Redes redes={this.props.redes} />
 						</nav>
@@ -90,7 +102,14 @@ export default class Nav extends React.Component {
 		default:
 
 			nav = (
-				<aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
+				// <aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
+				// 	<nav className={this.props.tipo}>
+				// 		<Logo logo={this.props.logo}/>
+				// 		<Menu tipo={this.props.tipo} links={this.props.links}/>
+				// 	</nav>
+				// </aside>
+
+				<aside className='left' >
 					<nav className={this.props.tipo}>
 						<Logo logo={this.props.logo}/>
 						<Menu tipo={this.props.tipo} links={this.props.links}/>
