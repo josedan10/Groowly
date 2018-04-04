@@ -1,4 +1,5 @@
 import React from 'react';
+import Swipeable from 'react-swipeable';
 
 export default class Community extends React.Component {
 	constructor(props) {
@@ -27,6 +28,7 @@ export default class Community extends React.Component {
 		document.getElementById('communityTitle').classList.remove('show');
 		document.getElementById('communityTitle').classList.add('hide');
 		document.getElementById('widget').classList.add('slideInDown');
+		document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 	}
     
 	closeWidget() {        
@@ -43,6 +45,8 @@ export default class Community extends React.Component {
 			this.setState({
 				community: null
 			});
+			if (window.innerWidth <= 768)
+				document.getElementsByTagName('body')[0].style.overflow = 'scroll';
 		}, 800);
 	}
 
@@ -89,8 +93,10 @@ class InstagramWidget extends React.Component {
 	constructor(props) {
 		super(props);
 		this.widgets = [
-			<iframe src='//lightwidget.com/widgets/3faadf6a917f56c794bd99ad839f02ca.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{ width: '100%', border: '0', overflow: 'hidden' }}/>
-
+			null,
+			<iframe src='//lightwidget.com/widgets/33e450847f2b5cda91909dfa2417f553.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{width: '100%', border: '0', overflow: 'hidden'}} />,
+			<iframe src='//lightwidget.com/widgets/469a216100aa53cf955804d66fe8ea50.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{width: '100%', border: '0', overflow: 'hidden'}} />,
+			<iframe src='//lightwidget.com/widgets/579bd239e0005fc49bc744d1a9ca15cf.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{width: '100%', border: '0', overflow: 'hidden'}} />
 		];
 	}
 
@@ -100,12 +106,16 @@ class InstagramWidget extends React.Component {
 		if (this.props.index !== null) {
             
 			container = (
-				<div id='widget' className='community-widget slideInDown' onClick={this.props.onClick}>
-					<div className='widget-container flex-center'>
-						{this.widgets[this.props.index]}
+				<Swipeable onSwipingUp={this.props.onClick}>
+					<div id='widget' className='community-widget slideInDown' onClick={this.props.onClick}>
+						<div className='widget-container flex-center'>
+							<Swipeable onSwipingUp={this.props.onClick}>
+								{this.widgets[this.props.index]}
+							</Swipeable>
+						</div>
+						{/* <CommunityData community={this.props.communities[this.props.index]}/> */}
 					</div>
-					{/* <CommunityData community={this.props.communities[this.props.index]}/> */}
-				</div>
+				</Swipeable>
 			);
 		}
         

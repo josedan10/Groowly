@@ -69,7 +69,7 @@ export default class FormContact extends React.Component {
         
         
 		return (
-			<div className='form-contact'>
+			<div className='form-contact flex-center'>
 				<h1>CONTACT</h1>
 				<p>Comentario genial!</p>
 				<div className='btn-actions'>
