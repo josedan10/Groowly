@@ -1,9 +1,22 @@
 .home {
-    background-color: $gris;
+
     position: relative;
     overflow: hidden;
+
+    .container {
+        position: relative;
+        height: auto;
+    }
 
     video {
         width: 100%;
     }
+}
+
+.cover-home {
+    background-image: url('../img/pattern.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }

@@ -309,11 +309,20 @@ nav.nav-right {
   right: 0; }
 
 .home {
-  background-color: #ececec;
   position: relative;
   overflow: hidden; }
+  .home .container {
+    position: relative;
+    height: auto; }
   .home video {
     width: 100%; }
+
+.cover-home {
+  background-image: url("../img/pattern.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; }
 
 @keyframes entrada {
   0% {

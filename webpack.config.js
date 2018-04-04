@@ -56,7 +56,7 @@ const config = {
 	devServer: {
 		contentBase: path.join(__dirname, './'),
 		historyApiFallback: true,	
-		port: 8080
+		port: 8000
 	},
 
 	devtool: 'inline-source-map',
