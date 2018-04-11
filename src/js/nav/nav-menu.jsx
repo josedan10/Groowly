@@ -36,28 +36,28 @@ export default class Nav extends React.Component {
 	}
 
 	swipeRight(e) {
-		let redes = document.getElementsByClassName('redes-nav')[0];
+		// let redes = document.getElementsByClassName('redes-nav')[0];
 		let nav = document.getElementById('nav-movil');
 
 		if (!nav.classList.contains('open')) {
 			nav.classList.add('open');
 			nav.classList.remove('close');
-			redes.classList.add('In');
-			redes.classList.remove('Out');
+			// redes.classList.add('In');
+			// redes.classList.remove('Out');
 		}
 		this.rotateLogoIn();
 		e.preventDefault();
 	}
 
 	swipeLeft(e) {
-		let redes = document.getElementsByClassName('redes-nav')[0];
+		// let redes = document.getElementsByClassName('redes-nav')[0];
 		let nav = document.getElementById('nav-movil');
 
 		if (!nav.classList.contains('close')) {
 			nav.classList.add('close');
 			nav.classList.remove('open');
-			redes.classList.add('Out');
-			redes.classList.remove('In');
+			// redes.classList.add('Out');
+			// redes.classList.remove('In');
 		}
 
 		this.rotateLogoOut();
@@ -72,29 +72,29 @@ export default class Nav extends React.Component {
 		case 'nav-movil':
 
 			nav = (
-				// <aside className='left'>
-				// 	<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
-				// 		<nav id='nav-movil' className={this.props.tipo}>
-				// 			<Logo logo={this.props.logo}/>
-							
-				// 			<Menu tipo={this.props.tipo} links={this.props.links} onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)} />
-
-				// 			<Redes redes={this.props.redes} />
-				// 		</nav>
-				// 	</Swipeable>
-				// </aside>
-
 				<aside className='left'>
-					<Swipeable>
+					<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
 						<nav id='nav-movil' className={this.props.tipo}>
 							<Logo logo={this.props.logo}/>
 							
-							<Menu tipo={this.props.tipo} links={this.props.links} />
+							<Menu tipo={this.props.tipo} links={this.props.links} onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)} />
 
 							<Redes redes={this.props.redes} />
 						</nav>
 					</Swipeable>
 				</aside>
+
+				// <aside className='left'>
+				// 	<Swipeable>
+				// 		<nav id='nav-movil' className={this.props.tipo}>
+				// 			<Logo logo={this.props.logo}/>
+							
+				// 			<Menu tipo={this.props.tipo} links={this.props.links} />
+
+				// 			<Redes redes={this.props.redes} />
+				// 		</nav>
+				// 	</Swipeable>
+				// </aside>
 			);
 
 			break;
@@ -209,7 +209,7 @@ class Redes extends React.Component {
 
 	render() {
 		return (
-			<ul className='redes-nav Out'>
+			<ul className='redes-nav In'>
 				<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
 				<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
 				<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>

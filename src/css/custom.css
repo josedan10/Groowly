@@ -162,13 +162,16 @@ nav.nav-left {
   left: 0;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  width: 220px; }
   nav.nav-left .rotateLogoIn {
     animation-name: rotateLogoInAnimation;
     animation-duration: 1s; }
   nav.nav-left .rotateLogoOut {
     animation-name: rotateLogoOutAnimation;
     animation-duration: 1s; }
+  nav.nav-left #logo {
+    transform: rotate(0deg); }
   nav.nav-left img {
     position: fixed;
     top: 50px; }

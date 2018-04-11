@@ -101,6 +101,7 @@ nav.nav-left{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 220px;
 
 	.rotateLogoIn {
 		animation-name: rotateLogoInAnimation;
@@ -110,6 +111,10 @@ nav.nav-left{
 	.rotateLogoOut {
 		animation-name: rotateLogoOutAnimation;
 		animation-duration: 1s;
+	}
+
+	#logo {
+		transform: rotate(0deg);
 	}
 
 	// &:hover {
