@@ -209,7 +209,7 @@ class Redes extends React.Component {
 
 	render() {
 		return (
-			<ul className='redes-nav In'>
+			<ul className='redes-nav Out'>
 				<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
 				<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
 				<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
