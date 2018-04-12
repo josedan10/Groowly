@@ -120,6 +120,10 @@
 
             a {
                 font-size: 20px;
+
+                &.selected {
+                    color: $dorado;
+                }
             }
         }
     }

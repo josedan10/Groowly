@@ -412,6 +412,9 @@ nav.nav-right {
       .marketing .submenu ul a,
       .subsection .submenu ul a {
         font-size: 20px; }
+        .marketing .submenu ul a.selected,
+        .subsection .submenu ul a.selected {
+          color: #d39205; }
 
 .marketing .text-decoration {
   display: flex;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { SubMenuRelaciones } from '../nav/nav-menu';
 
 export default class Relaciones extends React.Component {
 	constructor(props) {
@@ -37,15 +38,7 @@ export default class Relaciones extends React.Component {
 						<span>O</span>
 						<span>S</span>
 					</div>
-					<nav className='submenu'>
-						<ul>
-							<li><a href='#/Estrategias'>ESTRATEGIAS <br /> DE COMUNICACIÓN</a></li>
-							<li><a href='#/Estrategias'>CONVOCATORIA <br /> DE MEDIOS</a></li>
-							<li><a href='#/Estrategias'>POSICIONAMIENTO <br /> EN MEDIOS</a></li>
-							<li><a href='#/Estrategias'>CONTENIDO <br /> EDITORIAL</a></li>
-							<li><a href='#/Estrategias'>PRODUCCIÓN <br /> DE EVENTOS</a></li>
-						</ul>
-					</nav>
+					<SubMenuRelaciones />
 				</section>
 			</div>
 		);

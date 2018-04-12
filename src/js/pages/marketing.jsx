@@ -1,4 +1,5 @@
 import React from 'react';
+import { SubMenuMarketing } from '../nav/nav-menu';
 
 export default class Marketing extends React.Component {
 	constructor(props) {
@@ -37,16 +38,7 @@ export default class Marketing extends React.Component {
 						<span>O</span>
 						<span>S</span>
 					</div>
-					<nav className='submenu'>
-						<ul>
-							<li><a href=''>ESTRATEGIA</a></li>
-							<li><a href=''>DESARROLLO <br /> WEB / APPS</a></li>
-							<li><a href=''>MANEJO <br /> RRSS</a></li>
-							<li><a href=''>INFLUENCER <br /> MARKETING</a></li>
-							<li><a href=''>CREACIÓN <br /> DE MARCAS</a></li>
-							<li><a href=''>CREACIÓN <br /> DE CONTENIDO</a></li>
-						</ul>
-					</nav>
+					<SubMenuMarketing />
 				</section>
 			</div>
 		);

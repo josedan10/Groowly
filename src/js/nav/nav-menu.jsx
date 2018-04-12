@@ -189,7 +189,7 @@ export class Menu extends React.Component {
 						links.map(elemento => (
 							<li key={'li' + elemento}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
-								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
+								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)}  className={this.assignClass('Estrategias')}>
 									<span>-</span>
 									{elemento.toUpperCase()}  
 								</NavLink>
@@ -215,6 +215,101 @@ class Redes extends React.Component {
 				<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
 				<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
 			</ul>
+		);
+	}
+}
+
+export class SubMenuMarketing extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			link: location.hash.replace('#', '')
+		};
+
+	}
+
+	changeLinkStyle(e) {
+		this.setState({
+			link: e.target.hash.replace('#', '')
+		});
+	}
+
+	assignClass(elemento) {
+		let classState;
+
+		switch (elemento) {
+		case 'Home':
+			classState = (this.state.link === '/') ? 'selected' : '';
+			break;
+
+		default:
+			classState = (this.state.link === '/' + elemento) ? 'selected' : '';
+			break;
+		}
+
+		return classState;
+	}
+
+	render() {
+		return (
+			<nav className='submenu'>
+				<ul>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias')}>ESTRATEGIA</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Desarrollo')}>DESARROLLO <br/> WEB / APPS</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Manejo_RSS')}>MANEJO <br/> RRSS</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Influencer_Marketing')}>INFLUENCER <br/> MARKETING</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Marcas')}>CREACIÓN <br/> DE MARCAS</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Contenido')}>CREACIÓN <br/> DE CONTENIDO</NavLink></li>
+				</ul>
+			</nav>
+		);
+	}
+}
+
+export class SubMenuRelaciones extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			link: location.hash.replace('#', '')
+		};
+
+	}
+
+	changeLinkStyle(e) {
+
+		this.setState({
+			link: e.target.hash.replace('#', '')
+		});
+
+	}
+
+	assignClass(elemento) {
+		let classState;
+
+		switch (elemento) {
+		case 'Home':
+			classState = (this.state.link === '/') ? 'selected' : '';
+			break;
+
+		default:
+			classState = (this.state.link === '/' + elemento) ? 'selected' : '';
+			break;
+		}
+
+		return classState;
+	}
+
+	render() {
+		return (
+			<nav className='submenu'>
+				<ul>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias_Comunicacion')}>ESTRATEGIAS <br /> DE COMUNICACIÓN</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Convocatoria_Medios')}>CONVOCATORIA <br /> DE MEDIOS</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Posicinamiento_Medios')}>POSICIONAMIENTO <br /> EN MEDIOS</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Contenido_Editorial')}>CONTENIDO <br /> EDITORIAL</NavLink></li>
+					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Produccion_Eventos')}>PRODUCCIÓN <br /> DE EVENTOS</NavLink></li>
+				</ul>
+			</nav>
 		);
 	}
 }
