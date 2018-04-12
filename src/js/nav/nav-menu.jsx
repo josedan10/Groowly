@@ -36,28 +36,28 @@ export default class Nav extends React.Component {
 	}
 
 	swipeRight(e) {
-		let redes = document.getElementsByClassName('redes-nav')[0];
+		// let redes = document.getElementsByClassName('redes-nav')[0];
 		let nav = document.getElementById('nav-movil');
 
 		if (!nav.classList.contains('open')) {
 			nav.classList.add('open');
 			nav.classList.remove('close');
-			redes.classList.add('In');
-			redes.classList.remove('Out');
+			// redes.classList.add('In');
+			// redes.classList.remove('Out');
 		}
 		this.rotateLogoIn();
 		e.preventDefault();
 	}
 
 	swipeLeft(e) {
-		let redes = document.getElementsByClassName('redes-nav')[0];
+		// let redes = document.getElementsByClassName('redes-nav')[0];
 		let nav = document.getElementById('nav-movil');
 
 		if (!nav.classList.contains('close')) {
 			nav.classList.add('close');
 			nav.classList.remove('open');
-			redes.classList.add('Out');
-			redes.classList.remove('In');
+			// redes.classList.add('Out');
+			// redes.classList.remove('In');
 		}
 
 		this.rotateLogoOut();
@@ -83,6 +83,18 @@ export default class Nav extends React.Component {
 						</nav>
 					</Swipeable>
 				</aside>
+
+				// <aside className='left'>
+				// 	<Swipeable>
+				// 		<nav id='nav-movil' className={this.props.tipo}>
+				// 			<Logo logo={this.props.logo}/>
+							
+				// 			<Menu tipo={this.props.tipo} links={this.props.links} />
+
+				// 			<Redes redes={this.props.redes} />
+				// 		</nav>
+				// 	</Swipeable>
+				// </aside>
 			);
 
 			break;
@@ -90,7 +102,14 @@ export default class Nav extends React.Component {
 		default:
 
 			nav = (
-				<aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
+				// <aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
+				// 	<nav className={this.props.tipo}>
+				// 		<Logo logo={this.props.logo}/>
+				// 		<Menu tipo={this.props.tipo} links={this.props.links}/>
+				// 	</nav>
+				// </aside>
+
+				<aside className='left' >
 					<nav className={this.props.tipo}>
 						<Logo logo={this.props.logo}/>
 						<Menu tipo={this.props.tipo} links={this.props.links}/>

@@ -7,7 +7,8 @@ import SelectedWorks from './pages/selected-works';
 import Services from './pages/services';
 import OwnCommunity from './pages/own-community';
 import Team from './pages/team';
-import Clients from './pages/clients';
+import Videos from './pages/videos';
+// import Clients from './pages/clients';
 import Contact from './pages/contact';
 
 var config = require('./config');
@@ -71,11 +72,12 @@ ReactDOM.render(
 		<App>
 			<Switch>
 				<Route path='/' exact render={ () => <Home config={config} />} onTouchMove={noScroll} />
-				<Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} />
+				{/* <Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} /> */}
 				<Route path='/Works' render={ () => <SelectedWorks config={config} />} onTouchMove={noScroll} />
 				<Route path='/Community' render={ () => <OwnCommunity config={config} />} onTouchMove={noScroll} />
-				<Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} />
-				<Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} />
+				{/* <Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} /> */}
+				{/* <Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} /> */}
+				<Route path='/Videos' render={ () => <Videos config={config} />} onTouchMove={noScroll} />
 				<Route path='/Contact' render={ () => <Contact config={config} />} onTouchMove={noScroll} /> 
 			</Switch>
 		</App>

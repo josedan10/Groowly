@@ -17,8 +17,8 @@ const config = {
 
 	output: {
 	    path: path.resolve(__dirname, 'dist'),
-		publicPath: '/testing/site/dist/',
-		// publicPath: '/dist/',
+		// publicPath: '/testing/site/dist/',
+		publicPath: '/dist/',
 	    filename: '[name].min.js' // Archivo de salida
 	},
 
@@ -56,7 +56,7 @@ const config = {
 	devServer: {
 		contentBase: path.join(__dirname, './'),
 		historyApiFallback: true,	
-		port: 8080
+		port: 8000
 	},
 
 	devtool: 'inline-source-map',

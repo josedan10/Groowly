@@ -6,23 +6,27 @@ export default class Home extends React.Component {
 	}
 
 	render() {
-		const style = {
-			display: 'flex',
-			justifyContent: 'center',
-			alignItems: 'center'
-		};
+		// const style = {
+		// 	display: 'flex',
+		// 	justifyContent: 'center',
+		// 	alignItems: 'center'
+		// };
 
-		const home = (
-			<div>
-				<section style={style} className='home' id='Home' onTouchMove={this.props.onTouchMove}> 
-					<video autoPlay className='video'>
-						<source src='src/videos/video1.mp4' type='video/mp4' />
-                        Your browser does not support the video tag.
-					</video>
-				</section>
-			</div>
-		);
+		// const home = (
+		// 	<div>
+		// 		<section style={style} className='home' id='Home' onTouchMove={this.props.onTouchMove}> 
+		// 			<div className='container' style={style}>
+		// 				<video autoPlay>
+		// 					<source src='src/videos/video1.mp4' type='video/mp4' />
+		//                     Your browser does not support the video tag.
+		// 				</video>
+		// 				<div className='cover-home' />
+		// 			</div>
 
-		return home;
+		// 		</section>
+		// 	</div>
+		// );
+
+		return <p>Hola</p>;
 	}
 }
