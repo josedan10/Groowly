@@ -147,7 +147,7 @@ class Config {
 }
 
 // Links para el menu y las redes
-const links = ['Home', 'Community', /* 'Services', 'Works', /* 'Clients', */'Videos', /* 'Team', */'Contact'];
+const links = ['Home', 'Community', /* 'Services', 'Works', /* 'Clients', */'Videos', /* 'Team', */'Contact', 'Marketing', 'Relaciones'];
 // const redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 
 // Imagen del logo

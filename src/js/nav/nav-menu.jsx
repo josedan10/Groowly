@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Swipeable from 'react-swipeable';
-import { isUndefined } from 'util';
+// import { isUndefined } from 'util';
 
 export default class Nav extends React.Component {
 
@@ -68,57 +68,57 @@ export default class Nav extends React.Component {
 
 		var nav;
 
-		switch (this.props.tipo) {
-		case 'nav-movil':
+		// 	switch (this.props.tipo) {
+		// 	case 'nav-movil':
 
-			nav = (
-				<aside className='left'>
-					<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
-						<nav id='nav-movil' className={this.props.tipo}>
-							<Logo logo={this.props.logo}/>
+		// 		nav = (
+		// 			<aside className='left'>
+		// 				<Swipeable onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)}>
+		// 					<nav id='nav-movil' className={this.props.tipo}>
+		// 						<Logo logo={this.props.logo}/>
 							
-							<Menu tipo={this.props.tipo} links={this.props.links} onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)} />
+		// 						<Menu tipo={this.props.tipo} links={this.props.links} onSwipingRight={this.swipeRight.bind(this)} onSwipingLeft={this.swipeLeft.bind(this)} />
 
-							<Redes redes={this.props.redes} />
-						</nav>
-					</Swipeable>
-				</aside>
+		// 						<Redes redes={this.props.redes} />
+		// 					</nav>
+		// 				</Swipeable>
+		// 			</aside>
 
-				// <aside className='left'>
-				// 	<Swipeable>
-				// 		<nav id='nav-movil' className={this.props.tipo}>
-				// 			<Logo logo={this.props.logo}/>
+		// 			// <aside className='left'>
+		// 			// 	<Swipeable>
+		// 			// 		<nav id='nav-movil' className={this.props.tipo}>
+		// 			// 			<Logo logo={this.props.logo}/>
 							
-				// 			<Menu tipo={this.props.tipo} links={this.props.links} />
+		// 			// 			<Menu tipo={this.props.tipo} links={this.props.links} />
 
-				// 			<Redes redes={this.props.redes} />
-				// 		</nav>
-				// 	</Swipeable>
-				// </aside>
-			);
+		// 			// 			<Redes redes={this.props.redes} />
+		// 			// 		</nav>
+		// 			// 	</Swipeable>
+		// 			// </aside>
+		// 		);
 
-			break;
+		// 		break;
 
-		default:
+		// 	default:
 
-			nav = (
-				// <aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
-				// 	<nav className={this.props.tipo}>
-				// 		<Logo logo={this.props.logo}/>
-				// 		<Menu tipo={this.props.tipo} links={this.props.links}/>
-				// 	</nav>
-				// </aside>
+		
+		// 	break;
+		// }
+		nav = (
+			// <aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
+			// 	<nav className={this.props.tipo}>
+			// 		<Logo logo={this.props.logo}/>
+			// 		<Menu tipo={this.props.tipo} links={this.props.links}/>
+			// 	</nav>
+			// </aside>
 
-				<aside className='left' >
-					<nav className={this.props.tipo}>
-						<Logo logo={this.props.logo}/>
-						<Menu tipo={this.props.tipo} links={this.props.links}/>
-					</nav>
-				</aside>
-			);
-
-			break;
-		}
+			// <aside className='left' >
+			<nav id='nav-menu' className='hide'>
+				{/* <Logo logo={this.props.logo}/> */}
+				<Menu tipo={this.props.tipo} links={this.props.links}/>
+			</nav>
+			// </aside>
+		);
 
 		return nav;
 	}
@@ -138,7 +138,7 @@ class Logo extends React.Component {
 }
 
 
-class Menu extends React.Component {
+export class Menu extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -188,11 +188,12 @@ class Menu extends React.Component {
 					{
 						links.map(elemento => (
 							<li key={'li' + elemento}>
-								<Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}>
-									<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
-										{elemento.toUpperCase()}  <span/>
-									</NavLink>
-								</Swipeable>
+								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
+								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
+									<span>-</span>
+									{elemento.toUpperCase()}  
+								</NavLink>
+								{/* </Swipeable> */}
 							</li>)
 						)
 					}
