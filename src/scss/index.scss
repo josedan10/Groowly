@@ -148,6 +148,33 @@ section{
 	align-items: center;
 }
 
+.links {
+	height: auto;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	color: $grisOsc;
+
+	* {
+		width: 100%;
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 100px;    
+		line-height: 80px;
+	}
+
+	p {
+		font-size: 30px;
+		line-height: 10px;
+	}
+
+}
+
 @import 'nav';
 @import 'social';
 @import 'home';
