@@ -54,6 +54,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    a:hover {
+        color: $violeta;
+    }
 
     .links:last-child {
         text-align: right;
@@ -98,6 +102,7 @@
 
     .links {
         width: auto;
+        max-width: 40%;
         p {
             line-height: 20px;
         }
@@ -111,6 +116,7 @@
         width: 100%;
         padding: 20px 5%;
         background: transparent;
+        z-index: 1;
 
         ul {
             width: 100%;
@@ -141,13 +147,14 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        z-index: 1;
     }
 }
 
 header {
     height: 20px;
     padding: 50px;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 10;
 

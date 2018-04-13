@@ -23,6 +23,16 @@
     opacity: 0; }
   100% {
     left: -2000px; } }
+@keyframes scrollTop {
+  from {
+    top: 0; }
+  to {
+    top: -100vh; } }
+@keyframes scrollDown {
+  from {
+    top: -100vh; }
+  to {
+    top: 0; } }
 * {
   padding: 0;
   margin: 0;
@@ -53,7 +63,17 @@ body {
   color: #595959; }
 
 main {
+  position: absolute;
+  top: 0;
   width: 100%; }
+  main.down {
+    animation-name: scrollDown;
+    animation-duration: 1.5s;
+    top: 0; }
+  main.top {
+    animation-name: scrollTop;
+    animation-duration: 1.5s;
+    top: -100vh; }
 
 aside.left,
 aside.right {
@@ -356,6 +376,8 @@ nav.nav-right {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .sections-links a:hover {
+    color: #230f28; }
   .sections-links .links:last-child {
     text-align: right; }
 
@@ -390,7 +412,8 @@ nav.nav-right {
         font-family: "BrownStd-Regular", Arial, Helvetica, sans-serif; }
   .marketing .links,
   .subsection .links {
-    width: auto; }
+    width: auto;
+    max-width: 40%; }
     .marketing .links p,
     .subsection .links p {
       line-height: 20px; }
@@ -402,7 +425,8 @@ nav.nav-right {
     height: auto;
     width: 100%;
     padding: 20px 5%;
-    background: transparent; }
+    background: transparent;
+    z-index: 1; }
     .marketing .submenu ul,
     .subsection .submenu ul {
       width: 100%;
@@ -425,12 +449,13 @@ nav.nav-right {
 .marketing .content {
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  z-index: 1; }
 
 header {
   height: 20px;
   padding: 50px;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 10; }
   header img {
@@ -940,6 +965,60 @@ header {
     height: 100%;
     width: 24.3%; } }
 @media (max-width: 991px) {
+  header {
+    padding: 15px; }
+    header img {
+      height: 30px; }
+    header .icon {
+      top: 14px;
+      right: 20px; }
+      header .icon > span {
+        height: 6px;
+        width: 6px; }
+
+  .home {
+    padding: 20px; }
+    .home .row .line {
+      height: 80%; }
+
+  .links h1 {
+    font-size: 70px;
+    line-height: 60px; }
+  .links h2 {
+    font-size: 20px; }
+  .links p {
+    font-size: 20px;
+    line-height: 10px; }
+
+  .marketing {
+    padding: 0 10px; }
+    .marketing .content {
+      justify-content: space-between; }
+    .marketing .text-decoration {
+      padding: 0 10px;
+      font-size: 100px; }
+    .marketing .info p {
+      font-size: 14px; }
+    .marketing .submenu {
+      padding: 0 10px;
+      bottom: 20px; }
+      .marketing .submenu ul a {
+        font-size: 16px; }
+
+  .subsection {
+    padding: 0; }
+    .subsection .text-decoration {
+      padding: 0 10px;
+      font-size: 120px;
+      top: -20px; }
+    .subsection .info p {
+      font-size: 14px; }
+    .subsection .submenu {
+      padding: 0 10px;
+      bottom: 20px; }
+      .subsection .submenu ul a {
+        font-size: 16px; }
+
   .own-community .flex-presentation,
   .team .flex-presentation {
     flex-direction: column; }
@@ -982,6 +1061,11 @@ header {
     position: absolute;
     left: 70px; } }
 @media (max-width: 768px) {
+  .subsection .text-decoration {
+    padding: 0 10px;
+    font-size: 80px;
+    top: -10px; }
+
   nav img {
     margin-top: 0; }
 

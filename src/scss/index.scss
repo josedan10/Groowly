@@ -51,6 +51,22 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
     }
 }
 
+@keyframes scrollTop {
+	from {
+		top: 0;
+	} to {
+		top: -100vh;
+	}
+}
+
+@keyframes scrollDown {
+	from {
+		top: -100vh;
+	} to {
+		top: 0;
+	}
+}
+
 *{
 	padding: 0;
 	margin: 0;
@@ -85,7 +101,21 @@ body{
 }
 
 main{
+	position: absolute;
+	top: 0;
 	width: 100%;
+
+	&.down {
+		animation-name: scrollDown;
+		animation-duration: 1.5s;
+		top: 0;
+	}
+
+	&.top {
+		animation-name: scrollTop;
+		animation-duration: 1.5s;
+		top: -100vh;
+	}
 }
 
 aside.left,

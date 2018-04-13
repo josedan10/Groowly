@@ -94,22 +94,19 @@ class App extends React.Component {
 
 ReactDOM.render(	
 	<HashRouter history={hashHistory}>
-
-		<App>
-			<Switch>
-				<Route path='/' exact render={ () => <Home config={config} />} onTouchMove={noScroll} />
-				<Route path='/Marketing' exact render= { () => <Marketing /> } />
-				<Route path='/Relaciones' exact render= { () => <Relaciones /> } />
-				<Route path='/Estrategias' exact render= { () => <Estrategias /> } />
-				{/* <Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} /> */}
-				<Route path='/Works' render={ () => <SelectedWorks config={config} />} onTouchMove={noScroll} />
-				<Route path='/Community' render={ () => <OwnCommunity config={config} />} onTouchMove={noScroll} />
-				{/* <Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} /> */}
-				{/* <Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} /> */}
-				<Route path='/Videos' render={ () => <Videos config={config} />} onTouchMove={noScroll} />
-				<Route path='/Contact' render={ () => <Contact config={config} />} onTouchMove={noScroll} />
-			</Switch>	
-		</App>
+		<Switch>
+			<Route path='/' exact render={ () => <App><Home config={config} /></App>} onTouchMove={noScroll} />
+			<Route path='/Marketing' exact render= { () => <Marketing /> } />
+			<Route path='/Relaciones' exact render= { () => <Relaciones /> } />
+			<Route path='/Estrategias' exact render= { () => <Estrategias /> } />
+			{/* <Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} /> */}
+			<Route path='/Works' render={ () => <SelectedWorks config={config} />} onTouchMove={noScroll} />
+			<Route path='/Community' render={ () => <OwnCommunity config={config} />} onTouchMove={noScroll} />
+			{/* <Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} /> */}
+			{/* <Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} /> */}
+			<Route path='/Videos' render={ () => <Videos config={config} />} onTouchMove={noScroll} />
+			<Route path='/Contact' render={ () => <Contact config={config} />} onTouchMove={noScroll} />
+		</Switch>	
 	</HashRouter>
 	, document.getElementById('app')
 );
