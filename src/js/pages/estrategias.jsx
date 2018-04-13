@@ -27,11 +27,24 @@ export default class Estrategias extends React.Component {
 						</div>
 						<div className='info'>
 							<p>
-                                Nuestro enfoque sobre marketing digital es holístico. Permítenos contactarte y descubre cómo hemos ayudado a empresas como la tuya.
+                                <b>Nuestro enfoque sobre marketing digital es holístico. Permítenos contactarte y descubre cómo hemos ayudado a empresas como la tuya.</b>
 							</p>
 						</div>
 					</div>
+<<<<<<< HEAD
 					<SubMenuMarketing />
+=======
+					<nav className='submenu'>
+						<ul>
+							<li><a href=''><b>ESTRATEGIA</b></a></li>
+							<li><a href=''><b>DESARROLLO <br/> WEB / APPS</b></a></li>
+							<li><a href=''><b>MANEJO <br/> RRSS</b></a></li>
+							<li><a href=''><b>INFLUENCER <br/> MARKETING</b></a></li>
+							<li><a href=''><b>CREACIÓN <br/> DE MARCAS</b></a></li>
+							<li><a href=''><b>CREACIÓN <br/> DE CONTENIDO</b></a></li>
+						</ul>
+					</nav>
+>>>>>>> be9876bc332292a4e7b170087a23f35f18d5996d
 				</section>
 			</div>
 		);

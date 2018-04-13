@@ -14,17 +14,17 @@ export default class Relaciones extends React.Component {
 							<div className='capitalize'>
 								<span>N</span>
 								<p>
-                                    uestro enfoque de PR es completamente integral. Creamos estrategias de comunicación a la medida de cada marca, siempre siguiendo best practices.
+                                    <b>uestro enfoque de PR es completamente integral. Creamos estrategias de comunicación a la medida de cada marca, siempre siguiendo best practices.</b>
 								</p>
 							</div>
 							<p>
-                                Contamos con equipos de trabajo especializados por industria y con las herramientas de distribución de contenido más modernas.
+                                <b>Contamos con equipos de trabajo especializados por industria y con las herramientas de distribución de contenido más modernas.</b>
 							</p>
 						</div>
 						<div className='links'>
 							<h1>RELA</h1>
 							<h1>CIONES</h1>
-							<p>PÚBLICAS</p>
+							<p><b>PÚBLICAS</b></p>
 						</div>
 					</div>
 					<div className='text-decoration'>

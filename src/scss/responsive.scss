@@ -19,6 +19,111 @@
 }
 @media (max-width: 991px) { 
 
+    header {
+        padding: 15px;
+
+        img {
+            height: 30px;
+        }
+
+        .icon {
+            top: 14px;
+            right: 20px;
+            
+            & > span {
+                height: 6px;
+                width: 6px;
+            }
+        }
+    }
+
+    .home {
+        padding: 20px;
+
+        .row {
+            .line {
+                height: 80%;
+            }
+        }
+    }
+
+    .links {
+    
+        h1 {
+            font-size: 70px;    
+            line-height: 60px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    
+        p {
+            font-size: 20px;
+            line-height: 10px;
+        }
+    
+    }
+
+    .marketing {
+        padding: 0 10px;
+
+        .content {
+            justify-content: space-between;
+        }
+
+        .text-decoration {
+            padding: 0 10px;
+            font-size: 100px;
+        }
+
+        .info {
+            p {
+                font-size: 14px;
+            }
+        }
+        
+        .submenu {
+            padding: 0 10px;
+            bottom: 20px;
+
+            ul {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .subsection {
+        padding: 0;
+
+        .text-decoration {
+            padding: 0 10px;
+            font-size: 120px;
+            top: -20px;
+        }
+
+        .info {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .submenu {
+            padding: 0 10px;
+            bottom: 20px;
+
+            ul {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+
     // Responsive presentations team and communities
     .own-community,
     .team {
@@ -97,6 +202,15 @@
 }
 
 @media (max-width: 768px) { 
+
+    .subsection {
+        .text-decoration {
+            padding: 0 10px;
+            font-size: 80px;
+            top: -10px;
+        }
+    } 
+        
 
     nav img {
         margin-top: 0;
