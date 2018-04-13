@@ -4,11 +4,15 @@ import { NavLink } from 'react-router-dom';
 export default class Home extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			interval: null
+		};
 	}
 
 	componentDidMount() {
 		let body = document.getElementsByTagName('body')[0];
 		let app = document.getElementById('app');
+		let arrowBody = document.getElementById('arrowBody');
 
 		document.onkeydown = (e) => {
 			// console.log(document.getElementById('home'))
@@ -19,16 +23,18 @@ export default class Home extends React.Component {
 					if (app.classList.contains('down')) {
 						app.classList.remove('down');
 					}
-	
+					this.stopArrowAnimation();
 					app.classList.add('top');
+					
 					break;
 					
 				case 38:
 					if (app.classList.contains('top')) {
 						app.classList.remove('top');
+						app.classList.add('down');
+						this.arrowAnimation();
 					}
 	
-					app.classList.add('down');
 					break;
 	
 				default:
@@ -36,9 +42,28 @@ export default class Home extends React.Component {
 				}
 			}
 		};
-
+		
+		arrowBody.classList.add('init');
+		this.arrowAnimation();
 
 		body.style.overflowY = 'hidden';
+	}
+
+	arrowAnimation() {
+		let arrowBody = document.getElementById('arrowBody');
+		
+		this.setState({ interval: setInterval(() => {
+			arrowBody.classList.remove('init');
+			setTimeout(() => {
+				arrowBody.classList.add('init');
+			}, 1000);
+		}, 5000) });
+	}
+
+	stopArrowAnimation() {
+		let arrowBody = document.getElementById('arrowBody');
+		clearInterval(this.state.interval);
+		arrowBody.classList.add('init');
 	}
 
 	scrollTop() {
@@ -49,6 +74,7 @@ export default class Home extends React.Component {
 		}
 
 		app.classList.add('top');
+		this.stopArrowAnimation();
 		
 	}
 
@@ -71,9 +97,9 @@ export default class Home extends React.Component {
 							<b>Integramos un equipo de profesionales apasionados, críticos, proactivos y empáticos con las necesidades de nuestros clientes, de los medios de comunicación y de los consumidores. Los resultados hablan por sí mismos.</b>
 						</p>
 					</article>
-					<div className='row' onClick={this.scrollTop}>
-						<div className='line' />
-						<div className='head' />
+					<div className='arrow' onClick={this.scrollTop}>
+						<div className='line' id='arrowBody'/>
+						<img className='head' src='src/img/arrowhead.svg'/>
 					</div>
 				</section>
 

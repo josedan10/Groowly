@@ -5,7 +5,7 @@ import Timer from './timer/timer';
 
 // Datos para el timer
 const timer = {
-	fecha: '2018-03-22', horaFinal: '02:29'					
+	fecha: '2018-07-22', horaFinal: '00:00'					
 };
 
 function tick() {

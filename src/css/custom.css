@@ -33,6 +33,14 @@
     top: -100vh; }
   to {
     top: 0; } }
+@keyframes largeArrow {
+  0% {
+    height: 0; }
+  50% {
+    height: 95%;
+    margin-top: 0; }
+  100% {
+    margin-top: 100vh; } }
 * {
   padding: 0;
   margin: 0;
@@ -351,26 +359,24 @@ nav.nav-right {
       text-align: justify;
       font-size: 20px;
       margin: 10px 0; }
-  .home .row {
+  .home .arrow {
     width: 30px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative; }
-    .home .row .line {
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    top: 10%; }
+    .home .arrow .line {
       width: 1px;
-      height: 95%;
       max-height: 500px;
-      background-color: #595959; }
-    .home .row .head {
-      height: 0;
-      width: 0;
-      border-left: 20px solid #595959;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      transform: rotate(90deg);
-      position: absolute;
-      bottom: 5%; }
+      background-color: #595959;
+      height: 0; }
+      .home .arrow .line.init {
+        animation: largeArrow 3s ease; }
+    .home .arrow .head {
+      height: 20px;
+      width: 20px; }
 
 .sections-links {
   padding: 0;
@@ -412,7 +418,8 @@ nav.nav-right {
   .marketing .info,
   .relaciones .info,
   .subsection .info {
-    width: 40%; }
+    width: 40%;
+    z-index: 1; }
     .marketing .info p,
     .relaciones .info p,
     .subsection .info p {
@@ -1130,16 +1137,7 @@ header {
     font-size: 80px; }
 
   .subsection .text-decoration {
-    top: -10px;
-    height: 100vh;
-    margin: 0;
-    padding-top: 30px;
-    width: auto;
-    flex-direction: column;
-    justify-content: space-around; }
-    .subsection .text-decoration span {
-      font-size: 9vh;
-      line-height: 9vh; }
+    top: -10px; }
 
   .sections-links .links {
     position: absolute; }
@@ -1241,6 +1239,24 @@ header {
     font-size: 80px; }
   .sections-links .links:first-child {
     left: -5px; }
+
+  .subsection .content {
+    flex-wrap: wrap; }
+    .subsection .content .info {
+      width: 100%;
+      padding: 30px; }
+  .subsection .text-decoration {
+    top: 260px;
+    position: fixed;
+    left: -250px;
+    right: auto;
+    margin: 0;
+    padding: 0;
+    width: 100vh;
+    justify-content: space-between;
+    transform: rotate(-90deg); }
+    .subsection .text-decoration span {
+      font-size: 20vh; }
 
   .marketing .text-decoration,
   .relaciones .text-decoration {

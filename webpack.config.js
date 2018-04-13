@@ -9,8 +9,8 @@ const config = {
 		index: './src/js/index.jsx',
 		formContact: './src/js/form-contact/form-contact.jsx',
 		presentation: './src/js/presentation-container/presentation.jsx',
-		nav: './src/js/nav/nav-menu.jsx'
-		// timer: './src/js/timer.config.jsx',
+		nav: './src/js/nav/nav-menu.jsx',
+		timer: './src/js/timer.config.jsx'
 		// slideshow: './src/js/slideshow.config.jsx'
 		// slideshow: './src/js/slideshow/swiper-js/source/jquery.slides.js'
 	},

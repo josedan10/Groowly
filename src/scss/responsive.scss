@@ -271,17 +271,7 @@
 
     .subsection .text-decoration {
         top: -10px;
-        height: 100vh;
-        margin: 0;
-        padding-top: 30px;
-        width: auto;
-        flex-direction: column;
-        justify-content: space-around;
-
-        span {
-            font-size: 9vh;
-            line-height: 9vh;
-        }
+        
     }
 
     .sections-links {
@@ -456,6 +446,32 @@
 
         .links:first-child {
             left: -5px;
+        }
+    }
+
+    .subsection {
+
+        .content {
+            flex-wrap: wrap;
+            .info {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+        .text-decoration {
+            top: 260px;
+            position: fixed;
+            left: -250px;
+            right: auto;
+            margin: 0;
+            padding: 0;
+            width: 100vh;
+            justify-content: space-between;
+            transform: rotate(-90deg);
+
+            span {
+                font-size: 20vh;
+            }
         }
     }
 
