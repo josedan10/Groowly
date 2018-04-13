@@ -16,6 +16,12 @@
         }
     }
 
+    .capitalize {
+        span {
+            font-size: 150px;
+        }
+    }
+
 }
 @media (max-width: 991px) { 
 
@@ -34,6 +40,12 @@
                 height: 6px;
                 width: 6px;
             }
+        }
+    }
+
+    .capitalize {
+        span {
+            font-size: 85px;
         }
     }
 
@@ -65,7 +77,8 @@
     
     }
 
-    .marketing {
+    .marketing,
+    .relaciones {
         padding: 0 10px;
 
         .content {
@@ -203,13 +216,106 @@
 
 @media (max-width: 768px) { 
 
-    .subsection {
+    .home {
+        article {
+            max-width: 85%;
+        }
+    }
+
+    .marketing,
+    .relaciones {
+
+        .content {
+            justify-content: center;
+        }
+
+        .info {
+            width: 70%;
+        }
+    }
+
+    .marketing {
+        .links {
+            position: absolute;
+            top: 5px;
+            left: -7px;
+
+            p {
+                padding-left: 6px;
+            }
+        }
+    }
+
+    .relaciones {
+        .links {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            text-align: right;
+            max-width: 100%;
+
+            p {
+                padding-left: 6px;
+            }
+        }
+    }
+
+    .subsection,
+    .marketing,
+    .relaciones {
         .text-decoration {
             padding: 0 10px;
             font-size: 80px;
-            top: -10px;
         }
-    } 
+    }
+
+    .subsection .text-decoration {
+        top: -10px;
+        height: 100vh;
+        margin: 0;
+        padding-top: 30px;
+        width: auto;
+        flex-direction: column;
+        justify-content: space-around;
+
+        span {
+            font-size: 9vh;
+            line-height: 9vh;
+        }
+    }
+
+    .sections-links {
+        .links {
+            position: absolute;
+            h1 {
+                font-size: 115px;
+                line-height: 90px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            &:first-child {
+                top: 10%;
+                left: -9px;
+            }
+
+            &:last-child {
+                bottom: 10%;
+                right: 0;
+            }
+        }
+    }
+
+    .submenu {
+        ul {
+            flex-wrap: wrap;
+            li {
+                width: 30%;
+            }
+        }
+    }
         
 
     nav img {
@@ -311,6 +417,55 @@
 
 }
 @media (max-width: 480px) { 
+
+    .subsection,
+    .marketing,
+    .relaciones {
+        .submenu {
+            bottom: 0;
+            ul {
+                li {
+                    width: 40%;
+                    text-align: center;
+                }
+
+                a {
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .home {
+        article {
+            h1 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .sections-links {
+
+        .links h1 {
+            font-size: 80px;
+        }
+
+        .links:first-child {
+            left: -5px;
+        }
+    }
+
+    .marketing,
+    .relaciones {
+        .text-decoration {
+            font-size: 20vw;
+        }
+    }
+
     .services {
         .flex-container {
             & > div {                

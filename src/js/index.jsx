@@ -5,7 +5,7 @@ import Nav from './nav/nav-menu';
 import Home from './pages/home';
 import Marketing from './pages/marketing';
 import Relaciones from './pages/relaciones';
-import Estrategias from './pages/estrategias';
+import Estrategia from './pages/estrategia';
 import SelectedWorks from './pages/selected-works';
 // import Services from './pages/services';
 import OwnCommunity from './pages/own-community';
@@ -98,7 +98,7 @@ ReactDOM.render(
 			<Route path='/' exact render={ () => <App><Home config={config} /></App>} onTouchMove={noScroll} />
 			<Route path='/Marketing' exact render= { () => <Marketing /> } />
 			<Route path='/Relaciones' exact render= { () => <Relaciones /> } />
-			<Route path='/Estrategias' exact render= { () => <Estrategias /> } />
+			<Route path='/Estrategia' exact render= { () => <Estrategia /> } />
 			{/* <Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} /> */}
 			<Route path='/Works' render={ () => <SelectedWorks config={config} />} onTouchMove={noScroll} />
 			<Route path='/Community' render={ () => <OwnCommunity config={config} />} onTouchMove={noScroll} />

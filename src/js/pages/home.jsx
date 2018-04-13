@@ -11,28 +11,32 @@ export default class Home extends React.Component {
 		let app = document.getElementById('app');
 
 		document.onkeydown = (e) => {
+			// console.log(document.getElementById('home'))
+			if (!(document.getElementById('Home') === null || document.getElementById('Home') === undefined)) {
 
-			switch (e.keyCode) {
-			case 40:
-				if (app.classList.contains('down')) {
-					app.classList.remove('down');
+				switch (e.keyCode) {
+				case 40:
+					if (app.classList.contains('down')) {
+						app.classList.remove('down');
+					}
+	
+					app.classList.add('top');
+					break;
+					
+				case 38:
+					if (app.classList.contains('top')) {
+						app.classList.remove('top');
+					}
+	
+					app.classList.add('down');
+					break;
+	
+				default:
+					break;
 				}
-
-				app.classList.add('top');
-				break;
-				
-			case 38:
-				if (app.classList.contains('top')) {
-					app.classList.remove('top');
-				}
-
-				app.classList.add('down');
-				break;
-
-			default:
-				break;
 			}
 		};
+
 
 		body.style.overflowY = 'hidden';
 	}

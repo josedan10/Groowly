@@ -8,7 +8,7 @@ export default class Relaciones extends React.Component {
 	render() {
 		return (
 			<div>
-				<section className='marketing'>
+				<section className='relaciones'>
 					<div className='content'>
 						<div className='info'>
 							<div className='capitalize'>

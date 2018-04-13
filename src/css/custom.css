@@ -346,9 +346,10 @@ nav.nav-right {
     max-width: 50%; }
     .home article h1 {
       margin-bottom: 20px;
-      font-size: 25px; }
+      font-size: 35px; }
     .home article p {
       text-align: justify;
+      font-size: 20px;
       margin: 10px 0; }
   .home .row {
     width: 30px;
@@ -375,13 +376,26 @@ nav.nav-right {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .sections-links a:hover {
     color: #230f28; }
+  .sections-links .links:first-child h2 {
+    padding-left: 6px; }
   .sections-links .links:last-child {
     text-align: right; }
 
+.capitalize {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .capitalize span {
+    font-size: 80px;
+    line-height: 70px;
+    font-family: "BrownStd-Regular", Arial, Helvetica, sans-serif; }
+
 .marketing,
+.relaciones,
 .subsection {
   padding: 50px;
   height: 100vh;
@@ -391,33 +405,30 @@ nav.nav-right {
   justify-content: center;
   align-items: center; }
   .marketing div,
+  .relaciones div,
   .subsection div {
     height: auto;
     width: 100%; }
   .marketing .info,
+  .relaciones .info,
   .subsection .info {
     width: 40%; }
     .marketing .info p,
+    .relaciones .info p,
     .subsection .info p {
       font-size: 20px;
       text-align: justify; }
-    .marketing .info .capitalize,
-    .subsection .info .capitalize {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .marketing .info .capitalize span,
-      .subsection .info .capitalize span {
-        font-size: 80px;
-        font-family: "BrownStd-Regular", Arial, Helvetica, sans-serif; }
   .marketing .links,
+  .relaciones .links,
   .subsection .links {
     width: auto;
     max-width: 40%; }
     .marketing .links p,
+    .relaciones .links p,
     .subsection .links p {
       line-height: 20px; }
   .marketing .submenu,
+  .relaciones .submenu,
   .subsection .submenu {
     position: absolute;
     bottom: 0;
@@ -426,21 +437,29 @@ nav.nav-right {
     width: 100%;
     padding: 20px 5%;
     background: transparent;
-    z-index: 1; }
+    z-index: 5; }
     .marketing .submenu ul,
+    .relaciones .submenu ul,
     .subsection .submenu ul {
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center; }
+      .marketing .submenu ul li,
+      .relaciones .submenu ul li,
+      .subsection .submenu ul li {
+        margin: 10px 5px; }
       .marketing .submenu ul a,
+      .relaciones .submenu ul a,
       .subsection .submenu ul a {
         font-size: 20px; }
         .marketing .submenu ul a.selected,
+        .relaciones .submenu ul a.selected,
         .subsection .submenu ul a.selected {
           color: #d39205; }
 
-.marketing .text-decoration {
+.marketing .text-decoration,
+.relaciones .text-decoration {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
@@ -449,11 +468,12 @@ nav.nav-right {
   color: white;
   position: absolute;
   bottom: 20px; }
-.marketing .content {
+.marketing .content,
+.relaciones .content {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 1; }
+  z-index: 2; }
 
 header {
   height: 20px;
@@ -507,7 +527,8 @@ header {
       visibility: visible; }
 
 .subsection .links {
-  margin-right: 50px; }
+  margin-right: 50px;
+  z-index: 1; }
 .subsection .text-decoration {
   display: flex;
   padding: 0 50px;
@@ -966,7 +987,10 @@ header {
 
   .selected-works .work-display .info {
     height: 100%;
-    width: 24.3%; } }
+    width: 24.3%; }
+
+  .capitalize span {
+    font-size: 150px; } }
 @media (max-width: 991px) {
   header {
     padding: 15px; }
@@ -978,6 +1002,9 @@ header {
       header .icon > span {
         height: 6px;
         width: 6px; }
+
+  .capitalize span {
+    font-size: 85px; }
 
   .home {
     padding: 20px; }
@@ -993,19 +1020,25 @@ header {
     font-size: 20px;
     line-height: 10px; }
 
-  .marketing {
+  .marketing,
+  .relaciones {
     padding: 0 10px; }
-    .marketing .content {
+    .marketing .content,
+    .relaciones .content {
       justify-content: space-between; }
-    .marketing .text-decoration {
+    .marketing .text-decoration,
+    .relaciones .text-decoration {
       padding: 0 10px;
       font-size: 100px; }
-    .marketing .info p {
+    .marketing .info p,
+    .relaciones .info p {
       font-size: 14px; }
-    .marketing .submenu {
+    .marketing .submenu,
+    .relaciones .submenu {
       padding: 0 10px;
       bottom: 20px; }
-      .marketing .submenu ul a {
+      .marketing .submenu ul a,
+      .relaciones .submenu ul a {
         font-size: 16px; }
 
   .subsection {
@@ -1064,10 +1097,68 @@ header {
     position: absolute;
     left: 70px; } }
 @media (max-width: 768px) {
-  .subsection .text-decoration {
+  .home article {
+    max-width: 85%; }
+
+  .marketing .content,
+  .relaciones .content {
+    justify-content: center; }
+  .marketing .info,
+  .relaciones .info {
+    width: 70%; }
+
+  .marketing .links {
+    position: absolute;
+    top: 5px;
+    left: -7px; }
+    .marketing .links p {
+      padding-left: 6px; }
+
+  .relaciones .links {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    text-align: right;
+    max-width: 100%; }
+    .relaciones .links p {
+      padding-left: 6px; }
+
+  .subsection .text-decoration,
+  .marketing .text-decoration,
+  .relaciones .text-decoration {
     padding: 0 10px;
-    font-size: 80px;
-    top: -10px; }
+    font-size: 80px; }
+
+  .subsection .text-decoration {
+    top: -10px;
+    height: 100vh;
+    margin: 0;
+    padding-top: 30px;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-around; }
+    .subsection .text-decoration span {
+      font-size: 9vh;
+      line-height: 9vh; }
+
+  .sections-links .links {
+    position: absolute; }
+    .sections-links .links h1 {
+      font-size: 115px;
+      line-height: 90px; }
+    .sections-links .links h2 {
+      font-size: 30px; }
+    .sections-links .links:first-child {
+      top: 10%;
+      left: -9px; }
+    .sections-links .links:last-child {
+      bottom: 10%;
+      right: 0; }
+
+  .submenu ul {
+    flex-wrap: wrap; }
+    .submenu ul li {
+      width: 30%; }
 
   nav img {
     margin-top: 0; }
@@ -1126,6 +1217,35 @@ header {
         width: 31%;
         height: 20%; } }
 @media (max-width: 480px) {
+  .subsection .submenu,
+  .marketing .submenu,
+  .relaciones .submenu {
+    bottom: 0; }
+    .subsection .submenu ul li,
+    .marketing .submenu ul li,
+    .relaciones .submenu ul li {
+      width: 40%;
+      text-align: center; }
+    .subsection .submenu ul a,
+    .marketing .submenu ul a,
+    .relaciones .submenu ul a {
+      font-size: 14px;
+      text-align: center; }
+
+  .home article h1 {
+    font-size: 25px; }
+  .home article p {
+    font-size: 16px; }
+
+  .sections-links .links h1 {
+    font-size: 80px; }
+  .sections-links .links:first-child {
+    left: -5px; }
+
+  .marketing .text-decoration,
+  .relaciones .text-decoration {
+    font-size: 20vw; }
+
   .services .flex-container > div h2 {
     font-size: 30px; }
   .services .flex-container > div div {

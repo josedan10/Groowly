@@ -13,11 +13,12 @@
 
         h1 {
             margin-bottom: 20px;
-            font-size: 25px;
+            font-size: 35px;
         }
 
         p {
             text-align: justify;
+            font-size: 20px;
             margin: 10px 0;
         }
     }
@@ -54,9 +55,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     
     a:hover {
         color: $violeta;
+    }
+
+    .links:first-child h2 {
+        padding-left: 6px;
     }
 
     .links:last-child {
@@ -64,7 +70,21 @@
     }
 }
 
+.capitalize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    span {
+        font-size: 80px;
+        line-height: 70px;
+        font-family: $font-title;
+    }
+}
+
 .marketing,
+.relaciones,
 .subsection {
     padding: 50px;
     height: 100vh;
@@ -86,18 +106,6 @@
             font-size: 20px;
             text-align: justify;
         }
-
-        .capitalize {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-
-            span {
-                font-size: 80px;
-                font-family: $font-title;
-            }
-        }
     }
 
     .links {
@@ -116,13 +124,17 @@
         width: 100%;
         padding: 20px 5%;
         background: transparent;
-        z-index: 1;
+        z-index: 5;
 
         ul {
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
+
+            li {
+                margin: 10px 5px;
+            }
 
             a {
                 font-size: 20px;
@@ -135,7 +147,8 @@
     }
 }
 
-.marketing {
+.marketing,
+.relaciones {
     .text-decoration {
         display: flex;
         padding: 0 50px;
@@ -151,7 +164,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        z-index: 1;
+        z-index: 2;
     }
 }
 
@@ -235,6 +248,7 @@ header {
 
     .links {
         margin-right: 50px;
+        z-index: 1;
     }
 
     .text-decoration {

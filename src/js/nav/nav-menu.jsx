@@ -254,12 +254,12 @@ export class SubMenuMarketing extends React.Component {
 		return (
 			<nav className='submenu'>
 				<ul>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias')}>ESTRATEGIA</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Desarrollo')}>DESARROLLO <br/> WEB / APPS</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Manejo_RSS')}>MANEJO <br/> RRSS</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Influencer_Marketing')}>INFLUENCER <br/> MARKETING</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Marcas')}>CREACIÓN <br/> DE MARCAS</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Contenido')}>CREACIÓN <br/> DE CONTENIDO</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategia')}><b>ESTRATEGIA</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Desarrollo')}><b>DESARROLLO<br/>WEB / APPS</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Manejo_RSS')}><b>MANEJO<br/>RRSS</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Influencer_Marketing')}><b>INFLUENCER<br/>MARKETING</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Marcas')}><b>CREACIÓN<br/>DE MARCAS</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Contenido')}><b>CREACIÓN<br/>DE CONTENIDO</b></NavLink></li>
 				</ul>
 			</nav>
 		);
@@ -303,11 +303,11 @@ export class SubMenuRelaciones extends React.Component {
 		return (
 			<nav className='submenu'>
 				<ul>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias_Comunicacion')}>ESTRATEGIAS <br /> DE COMUNICACIÓN</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Convocatoria_Medios')}>CONVOCATORIA <br /> DE MEDIOS</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Posicinamiento_Medios')}>POSICIONAMIENTO <br /> EN MEDIOS</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Contenido_Editorial')}>CONTENIDO <br /> EDITORIAL</NavLink></li>
-					<li><NavLink to='/Estrategias' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Produccion_Eventos')}>PRODUCCIÓN <br /> DE EVENTOS</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias_Comunicacion')}><b>ESTRATEGIAS <br />DE COMUNICACIÓN</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Convocatoria_Medios')}><b>CONVOCATORIA <br />DE MEDIOS</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Posicinamiento_Medios')}><b>POSICIONAMIENTO <br />EN MEDIOS</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Contenido_Editorial')}><b>CONTENIDO <br />EDITORIAL</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Produccion_Eventos')}><b>PRODUCCIÓN <br />DE EVENTOS</b></NavLink></li>
 				</ul>
 			</nav>
 		);

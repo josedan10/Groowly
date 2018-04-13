@@ -1,7 +1,7 @@
 import React from 'react';
 import { SubMenuMarketing } from '../nav/nav-menu';
 
-export default class Estrategias extends React.Component {
+export default class Estrategia extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -31,20 +31,7 @@ export default class Estrategias extends React.Component {
 							</p>
 						</div>
 					</div>
-<<<<<<< HEAD
 					<SubMenuMarketing />
-=======
-					<nav className='submenu'>
-						<ul>
-							<li><a href=''><b>ESTRATEGIA</b></a></li>
-							<li><a href=''><b>DESARROLLO <br/> WEB / APPS</b></a></li>
-							<li><a href=''><b>MANEJO <br/> RRSS</b></a></li>
-							<li><a href=''><b>INFLUENCER <br/> MARKETING</b></a></li>
-							<li><a href=''><b>CREACIÓN <br/> DE MARCAS</b></a></li>
-							<li><a href=''><b>CREACIÓN <br/> DE CONTENIDO</b></a></li>
-						</ul>
-					</nav>
->>>>>>> be9876bc332292a4e7b170087a23f35f18d5996d
 				</section>
 			</div>
 		);
