@@ -22,16 +22,13 @@
         }
     }
 
-}
-@media (max-width: 991px) { 
-
     header {
         padding: 15px;
-
+    
         img {
             height: 30px;
         }
-
+    
         .icon {
             top: 14px;
             right: 20px;
@@ -42,22 +39,31 @@
             }
         }
     }
-
     .capitalize {
         span {
             font-size: 85px;
         }
     }
-
+    
     .home {
         padding: 20px;
-
+    
         .row {
             .line {
                 height: 80%;
             }
         }
+
+        article {
+            p {
+                font-size: 16px;
+            }
+        }
     }
+}
+@media (max-width: 991px) { 
+
+
 
     .links {
     
@@ -92,7 +98,7 @@
 
         .info {
             p {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
         

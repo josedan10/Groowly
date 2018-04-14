@@ -997,8 +997,8 @@ header {
     width: 24.3%; }
 
   .capitalize span {
-    font-size: 150px; } }
-@media (max-width: 991px) {
+    font-size: 150px; }
+
   header {
     padding: 15px; }
     header img {
@@ -1017,7 +1017,9 @@ header {
     padding: 20px; }
     .home .row .line {
       height: 80%; }
-
+    .home article p {
+      font-size: 16px; } }
+@media (max-width: 991px) {
   .links h1 {
     font-size: 70px;
     line-height: 60px; }
@@ -1039,7 +1041,7 @@ header {
       font-size: 100px; }
     .marketing .info p,
     .relaciones .info p {
-      font-size: 14px; }
+      font-size: 16px; }
     .marketing .submenu,
     .relaciones .submenu {
       padding: 0 10px;
