@@ -23,20 +23,15 @@
     }
 
     header {
-        padding: 15px;
     
         img {
             height: 30px;
+            right: 100px;
         }
     
         .icon {
-            top: 14px;
+            top: 5px;
             right: 20px;
-            
-            & > span {
-                height: 6px;
-                width: 6px;
-            }
         }
     }
     .capitalize {

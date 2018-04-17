@@ -30,7 +30,7 @@
         align-items: center;
         flex-direction: column;
         position: absolute;
-        right: 5%;
+        right: 40px;
         top: 10%;
 
         .line {
@@ -41,8 +41,6 @@
             height: 0;
 
             &.init {
-                // height: 0;
-                // margin-top: 100%;
                 animation: largeArrow 3s ease;
             }
         }
@@ -179,34 +177,42 @@
 
 header {
     height: 20px;
-    padding: 50px;
     position: absolute;
     width: 100%;
     z-index: 10;
 
+    .icons {
+        width: 100%;
+        height: 50px;
+        background-color: rgba($color: $gris, $alpha: .95);
+    }
+
     img {
         height: 50px;
+        position: absolute;
+        top: 10px;
+        z-index: 1;
     }
 
     .icon {
         position: absolute;
-        top: 50px;
+        top: 10px;
         right: 50px;
         z-index: 1;
+        font-size: 30px;
 
-        & > span {
-            margin: 10px 2px;
-            border-radius: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: $violeta;
-            float: right;
-        }
+        // & > span {
+        //     margin: 10px 2px;
+        //     border-radius: 50%;
+        //     width: 10px;
+        //     height: 10px;
+        //     background-color: $violeta;
+        //     float: right;
+        // }
         
-        &:hover {
-            & > span {
-                background-color: $dorado;
-            }
+        &:hover,
+        .active {
+            color: $dorado;
             cursor: pointer;
         }
     }
@@ -214,28 +220,44 @@ header {
 
     nav {
         position: absolute;
-        width: 300px;
-        background-color: rgba($color: $grisOsc, $alpha: .95);
-        height: 100vh;
-        top: 0;
+        width: 100%;
+        top: 50px;
         right: 0;
-
+        padding: 0;
+        background-color: transparent;
+        
         & > div {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            width: 100%;
         }
         
         ul {
-            padding-left: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            // background-color: $gris;
+            
             li {
+                background-color: rgba($color: $violeta, $alpha: .95);
+                width: 100%;
+                margin: 0;
+                border-top: 1px solid $gris;
+                border-bottom: 1px solid $gris;
+
+                &:first-child {
+                    border-top: 2px solid $gris;
+                }
+
                 a {
-                    color: white;
+                    display: block;
+                    padding: 25px 0;
+                    width: 100%;
+                    color: $gris;
                     span {
                         margin-right: 10px;
                     }
@@ -243,12 +265,16 @@ header {
             }
         }
 
-        &.hide {
-            visibility: hidden;
+        &.hide-nav {
+            height: 0;
+            overflow: hidden;
+            animation: hideNav 1s ease;
         }
-
-        &.show {
-            visibility: visible;
+        
+        &.show-nav {
+            height: 414px;
+            overflow: hidden;
+            animation: showNav 1s ease;
         }
     }
 }
