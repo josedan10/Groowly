@@ -71,7 +71,7 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	0% {
 		height: 0;
 	} 50% {
-		height: 95%;
+		height: 90vh;
 		margin-top: 0;
 	// } 75% {
 	} 100% {
@@ -83,16 +83,58 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 @keyframes showMenu {
 	from {
 		left: -110px;
+		opacity: 0;
 	} to {
 		left: 0;
+		opacity: 1;
 	}
 }
 
 @keyframes hideMenu {
 	from {
 		left: 0;
+		opacity: 1;
 	} to {
 		left: -110px;
+		opacity: 0;
+	}
+}
+
+@keyframes openDropMenu {
+	from {
+		height: 0;
+	} to {
+		height: 60vh;
+	}
+}
+
+@keyframes closeDropMenu {
+	from {
+		height: 60vh;
+		opacity: 1;
+	} to {
+		height: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes openDropMenuMobile {
+	from {
+		height: 0;
+		visibility: hidden;
+	} to {
+		height: 90vh;
+		visibility: visible;
+	}
+}
+
+@keyframes closeDropMenuMobile {
+	from {
+		height: 90vh;
+		visibility: visible;
+	} to {
+		height: 0;
+		visibility: hidden;
 	}
 }
 

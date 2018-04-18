@@ -37,20 +37,50 @@
   0% {
     height: 0; }
   50% {
-    height: 95%;
+    height: 90vh;
     margin-top: 0; }
   100% {
     margin-top: 100vh; } }
 @keyframes showMenu {
   from {
-    left: -110px; }
+    left: -110px;
+    opacity: 0; }
   to {
-    left: 0; } }
+    left: 0;
+    opacity: 1; } }
 @keyframes hideMenu {
   from {
-    left: 0; }
+    left: 0;
+    opacity: 1; }
   to {
-    left: -110px; } }
+    left: -110px;
+    opacity: 0; } }
+@keyframes openDropMenu {
+  from {
+    height: 0; }
+  to {
+    height: 60vh; } }
+@keyframes closeDropMenu {
+  from {
+    height: 60vh;
+    opacity: 1; }
+  to {
+    height: 0;
+    opacity: 1; } }
+@keyframes openDropMenuMobile {
+  from {
+    height: 0;
+    visibility: hidden; }
+  to {
+    height: 90vh;
+    visibility: visible; } }
+@keyframes closeDropMenuMobile {
+  from {
+    height: 90vh;
+    visibility: visible; }
+  to {
+    height: 0;
+    visibility: hidden; } }
 * {
   padding: 0;
   margin: 0;
@@ -185,11 +215,10 @@ section {
     top: 10%; }
     .home .arrow .line {
       width: 1px;
-      max-height: 500px;
       background-color: #595959;
       height: 0; }
       .home .arrow .line.init {
-        animation: largeArrow 3s ease; }
+        animation: largeArrow 3s linear; }
     .home .arrow .head {
       height: 20px;
       width: 20px; }
@@ -275,7 +304,8 @@ section {
       .relaciones .submenu ul a,
       .subsection .submenu ul a {
         font-size: 20px;
-        color: #595959; }
+        color: #595959;
+        font-weight: bold; }
         .marketing .submenu ul a:hover,
         .relaciones .submenu ul a:hover,
         .subsection .submenu ul a:hover {
@@ -294,7 +324,11 @@ section {
   font-size: 150px;
   color: white;
   position: absolute;
-  bottom: 20px; }
+  bottom: 20px;
+  left: 0; }
+  .marketing .text-decoration span,
+  .relaciones .text-decoration span {
+    font-weight: bold; }
 .marketing .content,
 .relaciones .content {
   display: flex;
@@ -304,7 +338,6 @@ section {
 
 header {
   height: 100%;
-  padding: 0 20px;
   position: absolute;
   width: 200px;
   z-index: 10; }
@@ -321,6 +354,11 @@ header {
     header .icon:hover {
       color: #d39205;
       cursor: pointer; }
+  header .icons {
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(236, 236, 236, 0.9); }
   header nav {
     width: 100%;
     height: 100vh;
@@ -329,6 +367,7 @@ header {
     padding: 0;
     top: 0;
     left: -110px;
+    opacity: 0;
     box-sizing: border-box; }
     header nav > div {
       display: flex;
@@ -369,17 +408,19 @@ header {
             background: #d39205;
             width: 0;
             transition: all .3s ease; }
-          header nav ul li a:hover {
+          header nav ul li a:hover, header nav ul li a.selected {
             color: #d39205;
             transition: all .3s ease; }
-            header nav ul li a:hover::before {
+            header nav ul li a:hover::before, header nav ul li a.selected::before {
               width: 100%;
               transition: all .3s ease; }
     header nav.hide {
       left: -110px;
+      opacity: 0;
       animation: hideMenu .5s ease; }
     header nav.show {
       left: 0;
+      opacity: 1;
       animation: showMenu .5s ease; }
 
 .subsection .links {
@@ -395,6 +436,8 @@ header {
   position: absolute;
   top: -28px;
   left: 0; }
+  .subsection .text-decoration span {
+    font-weight: bold; }
 .subsection .content {
   display: flex;
   justify-content: center;
@@ -848,10 +891,8 @@ header {
   .capitalize span {
     font-size: 150px; }
 
-  header {
-    padding: 15px; }
-    header img {
-      height: 30px; }
+  header img {
+    height: 30px; }
 
   .capitalize span {
     font-size: 85px; }
@@ -861,7 +902,13 @@ header {
     .home .row .line {
       height: 80%; }
     .home article p {
-      font-size: 16px; } }
+      font-size: 16px; }
+
+  section,
+  .subsection .submenu,
+  .marketing .submenu
+  .relaciones .submenu {
+    padding: 0; } }
 @media (max-width: 991px) {
   .links h1 {
     font-size: 70px;
@@ -906,6 +953,46 @@ header {
       bottom: 20px; }
       .subsection .submenu ul a {
         font-size: 16px; }
+
+  header {
+    width: 100%;
+    height: auto;
+    background: transparent; }
+    header img {
+      margin-top: 10px; }
+    header .icon {
+      top: 10px; }
+    header nav {
+      left: 0;
+      height: 0;
+      width: 100vw;
+      overflow: hidden;
+      top: 50px;
+      opacity: 1;
+      background-color: rgba(35, 15, 40, 0.8); }
+      header nav ul {
+        transform: rotate(0deg);
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 0; }
+        header nav ul li {
+          padding: 10px;
+          height: 10vh;
+          width: 100%;
+          border-top: 1px solid #ececec; }
+          header nav ul li a {
+            color: #ececec; }
+      header nav.show {
+        animation: openDropMenu .5s ease;
+        height: 60vh;
+        left: 0;
+        opacity: 1; }
+      header nav.hide {
+        animation: closeDropMenu .5s ease;
+        height: 0;
+        left: 0;
+        opacity: 1; }
 
   .own-community .flex-presentation,
   .team .flex-presentation {
@@ -961,20 +1048,24 @@ header {
 
   .marketing .links {
     position: absolute;
-    top: 5px;
+    top: 30px;
     left: -7px; }
     .marketing .links p {
       padding-left: 6px; }
 
   .relaciones .links {
     position: absolute;
-    top: 5px;
+    top: 30px;
     right: 0;
     text-align: right;
     max-width: 100%; }
     .relaciones .links p {
       padding-left: 6px; }
 
+  .subsection .links,
+  .marketing .links,
+  .relaciones .links {
+    margin: 0; }
   .subsection .text-decoration,
   .marketing .text-decoration,
   .relaciones .text-decoration {
@@ -1060,6 +1151,33 @@ header {
         width: 31%;
         height: 20%; } }
 @media (max-width: 480px) {
+  header .icons {
+    z-index: 5;
+    position: absolute;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header .icon {
+    top: auto; }
+  header nav {
+    height: 90vh;
+    visibility: hidden;
+    top: 10vh; }
+    header nav ul {
+      height: 90vh; }
+      header nav ul li {
+        height: 15vh;
+        padding: 0; }
+    header nav.show {
+      animation: openDropMenuMobile .5s ease;
+      height: 90vh;
+      visibility: visible; }
+    header nav.hide {
+      animation: closeDropMenuMobile .5s ease;
+      height: 0;
+      visibility: hidden; }
+
   .subsection .submenu,
   .marketing .submenu,
   .relaciones .submenu {

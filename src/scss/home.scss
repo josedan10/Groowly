@@ -35,14 +35,14 @@
         .line {
             width: 1px;
             // height: 95%;
-            max-height: 500px;
+            // max-height: 500px;
             background-color: $grisOsc;
             height: 0;
 
             &.init {
                 // height: 0;
                 // margin-top: 100%;
-                animation: largeArrow 3s ease;
+                animation: largeArrow 3s linear;
             }
         }
 
@@ -148,6 +148,7 @@
             a {
                 font-size: 20px;
                 color: $grisOsc;
+                font-weight: bold;
 
                 &:hover {
                     color: $dorado;
@@ -172,6 +173,11 @@
         color: white;
         position: absolute;
         bottom: 20px;
+        left: 0;
+
+        span {
+            font-weight: bold;
+        }
     }
 
     .content {
@@ -184,16 +190,15 @@
 
 header {
     height: 100%;
-    padding: 0 20px;
     position: absolute;
     width: 200px;
     z-index: 10;
-
+    
     img {
         height: 30px;
         margin-top: 50px;
     }
-
+    
     .icon {
         position: absolute;
         top: 50px;
@@ -208,7 +213,13 @@ header {
             cursor: pointer;
         }
     }
-
+    
+    .icons {
+        padding: 0 20px;
+        width: 100%;
+        height: 50px;
+        background-color: rgba($color: $gris, $alpha: 0.9)
+    }
 
     nav {
         width: 100%;
@@ -218,6 +229,7 @@ header {
         padding: 0;
         top: 0;
         left: -110px;
+        opacity: 0;
         box-sizing: border-box;
 
         & > div {
@@ -271,7 +283,8 @@ header {
                         transition: all .3s ease;
                     }
     
-                    &:hover {
+                    &:hover,
+                    &.selected {
 
                         color: $dorado;
                         transition: all .3s ease;
@@ -288,11 +301,13 @@ header {
 
         &.hide {
             left: -110px;
+            opacity: 0;
             animation: hideMenu .5s ease;
         }
         
         &.show {
             left: 0;
+            opacity: 1;
             animation: showMenu .5s ease;
         }
     }
@@ -315,6 +330,10 @@ header {
         position: absolute;
         top: -28px;
         left: 0;
+
+        span {
+            font-weight: bold;
+        }
     }
 
     .content {
