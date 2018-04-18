@@ -113,7 +113,7 @@ export default class Nav extends React.Component {
 			// </aside>
 
 			// <aside className='left' >
-			<nav id='nav-menu' className='hide'>
+			<nav id='nav-menu'>
 				{/* <Logo logo={this.props.logo}/> */}
 				<Menu tipo={this.props.tipo} links={this.props.links}/>
 			</nav>
@@ -148,18 +148,20 @@ export class Menu extends React.Component {
 	}
 
 	changeLinkStyle(e) {
-		let nav = document.getElementById('nav-movil');
-		let redes = document.getElementsByClassName('redes-nav')[0];
+		// let nav = document.getElementById('nav-movil');
+		// let redes = document.getElementsByClassName('redes-nav')[0];
 
 		this.setState({
 			link: e.target.hash.replace('#', '')
 		});
 
-		if (nav.classList.contains('open')) {
-			nav.classList.add('close');
-			nav.classList.remove('open');
-			redes.classList.add('Out');
-			redes.classList.remove('In');
+		this.close();
+	}
+	
+	close() {
+		if (document.getElementById('nav-menu').classList.contains('show')) {
+			document.getElementById('nav-menu').classList.remove('show');
+			document.getElementById('nav-menu').classList.add('hide');
 		}
 	}
 
@@ -189,8 +191,8 @@ export class Menu extends React.Component {
 						links.map(elemento => (
 							<li key={'li' + elemento}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
-								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)}  className={this.assignClass('Estrategias')}>
-									<span>-</span>
+								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias')}>
+									{/* <span>-</span> */}
 									{elemento.toUpperCase()}  
 								</NavLink>
 								{/* </Swipeable> */}
@@ -232,6 +234,15 @@ export class SubMenuMarketing extends React.Component {
 		this.setState({
 			link: e.target.hash.replace('#', '')
 		});
+
+		this.close();
+	}
+
+	close() {
+		if (document.getElementById('nav-menu').classList.contains('show')) {
+			document.getElementById('nav-menu').classList.remove('show');
+			document.getElementById('nav-menu').classList.add('hide');
+		}
 	}
 
 	assignClass(elemento) {
@@ -281,6 +292,15 @@ export class SubMenuRelaciones extends React.Component {
 			link: e.target.hash.replace('#', '')
 		});
 
+		this.close();
+
+	}
+
+	close() {
+		if (document.getElementById('nav-menu').classList.contains('show')) {
+			document.getElementById('nav-menu').classList.remove('show');
+			document.getElementById('nav-menu').classList.add('hide');
+		}
 	}
 
 	assignClass(elemento) {

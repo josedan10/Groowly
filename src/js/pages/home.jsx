@@ -78,6 +78,14 @@ export default class Home extends React.Component {
 		
 	}
 
+	removeClasses() {
+		document.getElementById('app').classList.remove('top');
+
+		if (document.getElementById('nav-menu').classList.contains('show')) {
+			document.getElementById('nav-menu').classList.remove('show');
+		}
+	}
+
 	render() {
 
 		const home = (
@@ -104,14 +112,14 @@ export default class Home extends React.Component {
 				</section>
 
 				<section className='sections-links'>
-					<NavLink to='Marketing' onClick={() => document.getElementById('app').classList.remove('top')} className='links'>
+					<NavLink to='Marketing' onClick={this.removeClasses} className='links'>
 						<div>
 							<h1>MAR</h1>
 							<h1>KETING</h1>
 							<h2><b>DIGITAL</b></h2>
 						</div>
 					</NavLink>
-					<NavLink to='Relaciones' onClick={() => document.getElementById('app').classList.remove('top')} className='links'>
+					<NavLink to='Relaciones' onClick={this.removeClasses} className='links'>
 						<div>
 							<h1>RELA</h1>
 							<h1>CIONES</h1>

@@ -80,6 +80,22 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	}
 }
 
+@keyframes showMenu {
+	from {
+		left: -110px;
+	} to {
+		left: 0;
+	}
+}
+
+@keyframes hideMenu {
+	from {
+		left: 0;
+	} to {
+		left: -110px;
+	}
+}
+
 *{
 	padding: 0;
 	margin: 0;
@@ -170,7 +186,8 @@ aside.right {
 
 section{
 	height: 100vh;
-	padding: 0 50px 0 220px;
+	padding: 0 50px 0 200px;
+	overflow: hidden;
 	
 	& > div {
 		height: 100%;
@@ -218,7 +235,7 @@ section{
 
 }
 
-@import 'nav';
+// @import 'nav';
 @import 'social';
 @import 'home';
 @import 'services';

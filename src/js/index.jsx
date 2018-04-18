@@ -54,8 +54,10 @@ class App extends React.Component {
 		if (nav.classList.contains('show')) {
 			nav.classList.remove('show');
 			nav.classList.add('hide');
-		} else {
+		} else if (nav.classList.contains('hide')) {
 			nav.classList.remove('hide');
+			nav.classList.add('show');
+		} else {
 			nav.classList.add('show');
 		}
 	}
@@ -78,11 +80,7 @@ class App extends React.Component {
 			<div>
 				<header>
 					<img src='src/img/logo.svg' alt='' />
-					<div className='icon' onClick={this.toogleMenu}>
-						<span/>
-						<span/>
-						<span/>
-					</div>
+					<span className='icon icon-menu8' onClick={this.toogleMenu}/>
 
 					<Nav tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
 				</header>
@@ -95,17 +93,19 @@ class App extends React.Component {
 ReactDOM.render(	
 	<HashRouter history={hashHistory}>
 		<Switch>
-			<Route path='/' exact render={ () => <App><Home config={config} /></App>} onTouchMove={noScroll} />
-			<Route path='/Marketing' exact render= { () => <Marketing /> } />
-			<Route path='/Relaciones' exact render= { () => <Relaciones /> } />
-			<Route path='/Estrategia' exact render= { () => <Estrategia /> } />
-			{/* <Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} /> */}
-			<Route path='/Works' render={ () => <SelectedWorks config={config} />} onTouchMove={noScroll} />
-			<Route path='/Community' render={ () => <OwnCommunity config={config} />} onTouchMove={noScroll} />
-			{/* <Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} /> */}
-			{/* <Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} /> */}
-			<Route path='/Videos' render={ () => <Videos config={config} />} onTouchMove={noScroll} />
-			<Route path='/Contact' render={ () => <Contact config={config} />} onTouchMove={noScroll} />
+			<App>
+				<Route path='/' exact render={ () => <Home config={config} />} onTouchMove={noScroll} />
+				<Route path='/Marketing' exact render= { () => <Marketing /> } />
+				<Route path='/Relaciones' exact render= { () => <Relaciones /> } />
+				<Route path='/Estrategia' exact render= { () => <Estrategia /> } />
+				{/* <Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} /> */}
+				<Route path='/Works' render={ () => <SelectedWorks config={config} />} onTouchMove={noScroll} />
+				<Route path='/Community' render={ () => <OwnCommunity config={config} />} onTouchMove={noScroll} />
+				{/* <Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} /> */}
+				{/* <Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} /> */}
+				<Route path='/Videos' render={ () => <Videos config={config} />} onTouchMove={noScroll} />
+				<Route path='/Contact' render={ () => <Contact config={config} />} onTouchMove={noScroll} />
+			</App>
 		</Switch>	
 	</HashRouter>
 	, document.getElementById('app')
