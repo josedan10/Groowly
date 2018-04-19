@@ -166,6 +166,9 @@ export class Menu extends React.Component {
 	assignClass(elemento) {
 		let classState;
 
+		console.log(elemento);
+		console.log(this.state);
+
 		switch (elemento) {
 		case 'Home':
 			classState = (this.state.link === '/') ? 'selected' : '';
@@ -189,8 +192,13 @@ export class Menu extends React.Component {
 						links.map(elemento => (
 							<li key={'li' + elemento} onClick={this.props.animation}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
+<<<<<<< HEAD
 								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias')}>
 									<span/>
+=======
+								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
+									{/* <span>-</span> */}
+>>>>>>> 02d311160af43af3c24ef1b1df8d1892bd799169
 									{elemento.toUpperCase()}  
 								</NavLink>
 								{/* </Swipeable> */}
@@ -229,6 +237,8 @@ export class SubMenuMarketing extends React.Component {
 	}
 
 	changeLinkStyle(e) {
+
+		console.log(e.target);
 		this.setState({
 			link: e.target.hash.replace('#', '')
 		});
@@ -254,12 +264,12 @@ export class SubMenuMarketing extends React.Component {
 		return (
 			<nav className='submenu'>
 				<ul>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategia')}><b>ESTRATEGIA</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Desarrollo')}><b>DESARROLLO<br/>WEB / APPS</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Manejo_RSS')}><b>MANEJO<br/>RRSS</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Influencer_Marketing')}><b>INFLUENCER<br/>MARKETING</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Marcas')}><b>CREACIÓN<br/>DE MARCAS</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Contenido')}><b>CREACIÓN<br/>DE CONTENIDO</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategia')}>ESTRATEGIA</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Desarrollo')}>DESARROLLO<br/>WEB / APPS</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Manejo_RSS')}>MANEJO<br/>RRSS</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Influencer_Marketing')}>INFLUENCER<br/>MARKETING</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Marcas')}>CREACIÓN<br/>DE MARCAS</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Creacion_Contenido')}>CREACIÓN<br/>DE CONTENIDO</NavLink></li>
 				</ul>
 			</nav>
 		);
@@ -303,11 +313,11 @@ export class SubMenuRelaciones extends React.Component {
 		return (
 			<nav className='submenu'>
 				<ul>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias_Comunicacion')}><b>ESTRATEGIAS <br />DE COMUNICACIÓN</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Convocatoria_Medios')}><b>CONVOCATORIA <br />DE MEDIOS</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Posicinamiento_Medios')}><b>POSICIONAMIENTO <br />EN MEDIOS</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Contenido_Editorial')}><b>CONTENIDO <br />EDITORIAL</b></NavLink></li>
-					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Produccion_Eventos')}><b>PRODUCCIÓN <br />DE EVENTOS</b></NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Estrategias_Comunicacion')}>ESTRATEGIAS <br />DE COMUNICACIÓN</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Convocatoria_Medios')}>CONVOCATORIA <br />DE MEDIOS</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Posicinamiento_Medios')}>POSICIONAMIENTO <br />EN MEDIOS</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Contenido_Editorial')}>CONTENIDO <br />EDITORIAL</NavLink></li>
+					<li><NavLink to='/Estrategia' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Produccion_Eventos')}>PRODUCCIÓN <br />DE EVENTOS</NavLink></li>
 				</ul>
 			</nav>
 		);

@@ -37,7 +37,6 @@ export default class Home extends React.Component {
 					if (app.classList.contains('top')) {
 						app.classList.remove('top');
 						app.classList.add('down');
-						this.arrowAnimation();
 					}
 	
 					break;
@@ -65,12 +64,6 @@ export default class Home extends React.Component {
 		}, 5000) });
 	}
 
-	stopArrowAnimation() {
-		let arrowBody = document.getElementById('arrowBody');
-		clearInterval(this.state.interval);
-		arrowBody.classList.add('init');
-	}
-
 	scrollTop() {
 		let app = document.getElementById('app');
 
@@ -78,9 +71,7 @@ export default class Home extends React.Component {
 			app.classList.remove('down');
 		}
 
-		app.classList.add('top');
-		this.stopArrowAnimation();
-		
+		app.classList.add('top');		
 	}
 
 	render() {

@@ -69,7 +69,15 @@ class App extends React.Component {
 		return (
 			
 			<div>
+<<<<<<< HEAD
 				{/* <Nav tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
+=======
+				<header>
+					<div className='icons'>
+						<img src='src/img/logo.svg' alt='' />
+						<span className='icon icon-menu8' onClick={this.toogleMenu}/>
+					</div>
+>>>>>>> 02d311160af43af3c24ef1b1df8d1892bd799169
 
 				<aside className='right' id='social'>
 					<ul>
