@@ -277,16 +277,72 @@ section{
 
 }
 
+[class*="btn"] {
+	background: none;
+	border: none;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn-backend {
+	padding: 10px;
+	width: 100px;
+	background-color: $violeta;
+	color: $gris;
+}
+
+// Flex containers
+[class^='flex'] {
+    display: flex
+}
+
+[class*='wrap'] {
+    flex-wrap: wrap;
+}
+
+// Position
+[class*='center'] {
+    justify-content: center;
+    align-items: center;
+}
+
+[class*='between'] {
+    align-items: center;
+    justify-content: space-between;
+}
+
+[class*='around'] {
+    align-items: center;
+    justify-content: space-around;
+}
+
+[class*='vertical'] {
+    align-items: center;
+}
+
+// Direction
+[class*='column'] {
+    flex-direction: column;
+}
+
+// Grid containers
+[class^='grid'] {
+    display: grid;
+}
+
 // @import 'nav';
-@import 'social';
-@import 'home';
-@import 'services';
-@import 'selected-works';
-@import 'own-community';
-@import 'team';
-@import 'videos';
-@import 'clientes';	
+// @import 'social';
+// @import 'home';
+// @import 'services';
+// @import 'selected-works';
+// @import 'own-community';
+// @import 'team';
+// @import 'videos';
+// @import 'clientes';	
 // @import 'timer';
-@import 'slideshow';
-@import 'contacto';
-@import 'responsive';
+// @import 'slideshow';
+// @import 'contacto';
+// @import 'responsive';
+
+@import 'backend/login';
