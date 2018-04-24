@@ -378,7 +378,7 @@ header {
       height: 100%;
       background: transparent; }
     header nav ul {
-      padding-right: 80px;
+      padding-right: 120px;
       padding-left: 20px;
       display: flex;
       transform: rotate(-90deg);
