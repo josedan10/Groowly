@@ -83,11 +83,12 @@ class App extends React.Component {
 		return (
 			
 			<div>
-				<header>
+				{/*<header>
 					<div className='icons'>
 						<img src='src/img/logo.svg' alt='' />
 						<span className='icon icon-menu8' onClick={this.toogleMenu}/>
 					</div>
+				</header>
 
 				<aside className='right' id='social'>
 					<ul>
