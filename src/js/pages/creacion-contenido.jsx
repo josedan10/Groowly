@@ -1,9 +1,11 @@
 import React from 'react';
 import { SubMenuMarketing } from '../nav/nav-menu';
 
-export default class Estrategia extends React.Component {
+export default class CreacionContenido extends React.Component {
+
 	constructor(props) {
 		super(props);
+
 	}
 
 	render() {
@@ -23,11 +25,11 @@ export default class Estrategia extends React.Component {
 							<span>S</span>
 						</div>
 						<div className='links'>
-							<h2>ESTRATEGIA</h2>
+							<h2>CREACIÓN <br/>DE CONTENIDO</h2>
 						</div>
 						<div className='info'>
 							<p>
-								<b>Nuestro enfoque sobre marketing digital es holístico. Permítenos contactarte y descubre cómo hemos ayudado a empresas como la tuya.</b>
+								<b>Eu nostrud in commodo consectetur eiusmod pariatur. Magna officia incididunt sunt ullamco occaecat commodo Lorem mollit fugiat mollit ea pariatur. Id eu et exercitation aliquip sint consectetur amet fugiat reprehenderit minim excepteur in deserunt. Do cupidatat aute ad cillum quis ad tempor non voluptate ipsum anim consequat ipsum. Ad in consequat consequat officia ea dolore do velit nulla duis consequat.</b>
 							</p>
 						</div>
 					</div>
@@ -36,4 +38,5 @@ export default class Estrategia extends React.Component {
 			</div>
 		);
 	}
+
 }

@@ -601,6 +601,11 @@ header {
       flex-direction: column;
       width: 100%; }
     header nav ul {
+<<<<<<< HEAD
+=======
+      padding-right: 120px;
+      padding-left: 20px;
+>>>>>>> 42d0989d8c721e0e9681cd3b5e77baf384d4172b
       display: flex;
       flex-direction: column;
       justify-content: center;

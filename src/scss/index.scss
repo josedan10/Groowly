@@ -82,27 +82,16 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 
 @keyframes showNav {
 	from {
-<<<<<<< HEAD
-		height: 0;
-	} to {
-		height: 414px;
-=======
 		left: -110px;
 		opacity: 0;
 	} to {
 		left: 0;
 		opacity: 1;
->>>>>>> 02d311160af43af3c24ef1b1df8d1892bd799169
 	}
 }
 
 @keyframes hideNav {
 	from {
-<<<<<<< HEAD
-		height: 414px;
-	} to {
-		height: 0;
-=======
 		left: 0;
 		opacity: 1;
 	} to {
@@ -146,7 +135,6 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	} to {
 		height: 0;
 		visibility: hidden;
->>>>>>> 02d311160af43af3c24ef1b1df8d1892bd799169
 	}
 }
 
@@ -288,16 +276,72 @@ section{
 
 }
 
-@import 'nav';
-@import 'social';
-@import 'home';
-@import 'services';
-@import 'selected-works';
-@import 'own-community';
-@import 'team';
-@import 'videos';
-@import 'clientes';	
+[class*="btn"] {
+	background: none;
+	border: none;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn-backend {
+	padding: 10px;
+	width: 100px;
+	background-color: $violeta;
+	color: $gris;
+}
+
+// Flex containers
+[class^='flex'] {
+    display: flex
+}
+
+[class*='wrap'] {
+    flex-wrap: wrap;
+}
+
+// Position
+[class*='center'] {
+    justify-content: center;
+    align-items: center;
+}
+
+[class*='between'] {
+    align-items: center;
+    justify-content: space-between;
+}
+
+[class*='around'] {
+    align-items: center;
+    justify-content: space-around;
+}
+
+[class*='vertical'] {
+    align-items: center;
+}
+
+// Direction
+[class*='column'] {
+    flex-direction: column;
+}
+
+// Grid containers
+[class^='grid'] {
+    display: grid;
+}
+
+// @import 'nav';
+// @import 'social';
+// @import 'home';
+// @import 'services';
+// @import 'selected-works';
+// @import 'own-community';
+// @import 'team';
+// @import 'videos';
+// @import 'clientes';	
 // @import 'timer';
-@import 'slideshow';
-@import 'contacto';
-@import 'responsive';
+// @import 'slideshow';
+// @import 'contacto';
+// @import 'responsive';
+
+@import 'backend/login';
