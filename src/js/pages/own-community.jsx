@@ -10,6 +10,10 @@ export default class OwnCommunity extends React.Component {
 		document.getElementsByTagName('header')[0].classList.add('list2');
 	}
 
+	componentWillUnmount() {
+		document.getElementsByTagName('header')[0].classList.remove('list2');
+	}
+
 	render() {
 		const ownCommunity = (
 			<section className='own-community flex-center' id='Own_Community' onTouchMove={this.props.onTouchMove}>

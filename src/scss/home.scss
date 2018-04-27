@@ -202,11 +202,35 @@ header {
         .icon {
             color: $gris;
         }
+
+        svg path {
+            fill: $gris;
+        }
+    }
+
+    .logo {
+        width: auto;
+        height: 100%;
+        position: relative;
+        max-width: 200px;
+
+        div {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
     }
     
-    img {
-        height: 30px;
-        margin-top: 50px;
+    svg {
+        width: 50%;
+        min-width: 100px;
+        position: relative;
+        left: -20px;
+        top: 40px;
+
+        path {
+            fill: $violeta;
+        }
     }
     
     .icon {
@@ -254,15 +278,15 @@ header {
         }
         
         ul {
-            padding-right: 120px;
-            padding-left: 20px;
+            padding-top: 120px;
+            padding-bottom: 20px;
             display: flex;
-            transform: rotate(-90deg);
-            // flex-direction: column;
+            // transform: rotate(-90deg);
+            flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            width: 100vh;
-            flex-direction: row-reverse;
+            height: 100vh;
+            // flex-direction: row-reverse;
 
             li {
                 display: flex;

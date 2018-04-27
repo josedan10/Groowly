@@ -41,14 +41,14 @@
     margin-top: 0; }
   100% {
     margin-top: 100vh; } }
-@keyframes showNav {
+@keyframes showMenu {
   from {
     left: -110px;
     opacity: 0; }
   to {
     left: 0;
     opacity: 1; } }
-@keyframes hideNav {
+@keyframes hideMenu {
   from {
     left: 0;
     opacity: 1; }
@@ -4123,6 +4123,13 @@ a.text-error:focus, a.text-error:hover {
   padding: 10px;
   height: auto;
   min-height: 100vh; }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    margin: 0; }
 
 aside {
   position: fixed;
@@ -4132,10 +4139,11 @@ aside {
     width: 100%;
     margin-bottom: 50px; }
     aside .logo img {
-      max-width: 300px;
+      max-width: 250px;
       width: 80%; }
   aside .menu {
-    background: transparent; }
+    background: transparent;
+    box-shadow: none; }
 
 .admin-data {
   margin-bottom: 50px; }
@@ -4147,5 +4155,45 @@ aside {
   .admin-data h4,
   .admin-data h5 {
     margin: 0; }
+
+header {
+  padding: 20px 5%;
+  border-bottom: 1px solid #667189; }
+
+.main {
+  padding: 20px;
+  width: 100%; }
+  .main table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 1px #667189; }
+    .main table .actions {
+      width: 100%; }
+    .main table th {
+      background-color: #5755d9;
+      color: #ececec; }
+    .main table th,
+    .main table td {
+      border-right: 1px solid #667189;
+      border-left: 1px solid #667189;
+      border-collapse: collapse;
+      text-align: center;
+      padding: 10px; }
+    .main table tbody tr:nth-child(even) {
+      background-color: #f0f1f4; }
+  .main form {
+    width: 100%;
+    padding: 0 5%; }
+    .main form .form-group {
+      text-align: left; }
+    .main form label {
+      text-align: left; }
+    .main form input[type="text"],
+    .main form input[type="file"],
+    .main form textarea {
+      width: 100%; }
+    .main form textarea {
+      resize: none;
+      height: 300px; }
 
 /*# sourceMappingURL=backend.css.map */

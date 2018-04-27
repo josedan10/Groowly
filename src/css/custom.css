@@ -41,14 +41,14 @@
     margin-top: 0; }
   100% {
     margin-top: 100vh; } }
-@keyframes showNav {
+@keyframes showMenu {
   from {
     left: -110px;
     opacity: 0; }
   to {
     left: 0;
     opacity: 1; } }
-@keyframes hideNav {
+@keyframes hideMenu {
   from {
     left: 0;
     opacity: 1; }
@@ -387,9 +387,25 @@ header {
   header.list2 a,
   header.list2 .icon {
     color: #ececec; }
-  header img {
-    height: 30px;
-    margin-top: 50px; }
+  header.list2 svg path {
+    fill: #ececec; }
+  header .logo {
+    width: auto;
+    height: 100%;
+    position: relative;
+    max-width: 200px; }
+    header .logo div {
+      display: flex;
+      justify-content: center;
+      height: 100%; }
+  header svg {
+    width: 50%;
+    min-width: 100px;
+    position: relative;
+    left: -20px;
+    top: 40px; }
+    header svg path {
+      fill: #230f28; }
   header .icon {
     position: absolute;
     top: 50px;
@@ -423,14 +439,13 @@ header {
       height: 100%;
       background: transparent; }
     header nav ul {
-      padding-right: 120px;
-      padding-left: 20px;
+      padding-top: 120px;
+      padding-bottom: 20px;
       display: flex;
-      transform: rotate(-90deg);
+      flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      width: 100vh;
-      flex-direction: row-reverse; }
+      height: 100vh; }
       header nav ul li {
         display: flex;
         align-items: center;
@@ -950,10 +965,13 @@ td {
     width: 100%;
     height: auto;
     background: transparent; }
-    header img {
-      margin-top: 10px; }
+    header svg {
+      top: 0; }
     header .icons {
-      background-color: rgba(236, 236, 236, 0.7); }
+      background-color: rgba(236, 236, 236, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
     header .icon {
       top: 10px;
       right: 50px; }
@@ -966,13 +984,11 @@ td {
       opacity: 1;
       background-color: rgba(35, 15, 40, 0.8); }
       header nav ul {
-        transform: rotate(0deg);
-        flex-direction: column;
         width: 100%;
         height: 100%;
         padding: 0; }
         header nav ul li {
-          height: 10vh;
+          height: 7vh;
           width: 100%;
           border-top: 1px solid #ececec; }
           header nav ul li a {
@@ -1151,7 +1167,7 @@ td {
     .submenu ul li {
       width: 30%; }
 
-  nav img {
+  nav svg {
     margin-top: 0; }
 
   .nav-movil {

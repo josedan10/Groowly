@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactSVG from 'react-svg';
 import { HashRouter, BrowserRouter, Route, Switch, hashHistory, browserHistory } from 'react-router-dom';
 import Nav from './nav/nav-menu';
 import Home from './pages/home';
@@ -80,6 +81,15 @@ class App extends React.Component {
 
 	render() {
 		window.addEventListener('resize', this.chooseNav.bind(this), false);
+		const logo = (
+			<div className='flex-center logo'>
+				<ReactSVG
+					path='/src/img/logo.svg'
+					className='flex-center'
+					wrapperClassName='flex-center'
+				/>
+			</div>
+		);
 		return (
 			
 			<div>
@@ -102,9 +112,7 @@ class App extends React.Component {
 				<header>
 					<Nav animation={this.toogleMenu.bind(this)} tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
 					<div className='icons'>
-						<div className='logo'>
-							<img src='src/img/logo.svg' alt='' />
-						</div>
+						{logo}
 						<span className='icon icon-dehaze' onClick={this.toogleMenu} id='menu-icon'/>
 						
 					</div>
