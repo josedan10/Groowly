@@ -17,17 +17,23 @@ export default class Home extends React.Component {
 		document.onkeydown = (e) => {
 			// console.log(document.getElementById('home'))
 			if (!(document.getElementById('Home') === null || document.getElementById('Home') === undefined)) {
+				console.log(e.keyCode);
 
 				switch (e.keyCode) {
 				case 40:
+					// Key RowDown
 					if (app.classList.contains('down')) {
 						app.classList.remove('down');
+					} else if (app.classList.contains('top')) {
+						break;
 					}
 					app.classList.add('top');
+					this.stopArrowAnimation();
 					
 					break;
 					
 				case 38:
+					// Key RowUp
 					if (app.classList.contains('top')) {
 						app.classList.remove('top');
 						app.classList.add('down');

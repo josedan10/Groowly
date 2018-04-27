@@ -80,7 +80,7 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	}
 }
 
-@keyframes showMenu {
+@keyframes showNav {
 	from {
 		left: -110px;
 		opacity: 0;
@@ -90,7 +90,7 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	}
 }
 
-@keyframes hideMenu {
+@keyframes hideNav {
 	from {
 		left: 0;
 		opacity: 1;
@@ -228,8 +228,7 @@ aside.right {
 
 section{
 	height: 100vh;
-	padding: 0 50px 0 200px;
-	overflow: hidden;
+	padding: 0 50px 0 220px;
 	
 	& > div {
 		height: 100%;

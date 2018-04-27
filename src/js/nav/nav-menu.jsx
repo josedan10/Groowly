@@ -105,7 +105,7 @@ export default class Nav extends React.Component {
 		// 	break;
 		// }
 		nav = (
-			// <aside className='left' onMouseEnter={this.rotateLogoIn} onMouseLeave={this.rotateLogoOut}>
+			// <aside className='left'>
 			// 	<nav className={this.props.tipo}>
 			// 		<Logo logo={this.props.logo}/>
 			// 		<Menu tipo={this.props.tipo} links={this.props.links}/>
@@ -113,9 +113,9 @@ export default class Nav extends React.Component {
 			// </aside>
 
 			// <aside className='left' >
-			<nav id='nav-menu'>
+			<nav id='nav-menu' className='flex-center hide-nav'>
 				{/* <Logo logo={this.props.logo}/> */}
-				<Menu tipo={this.props.tipo} links={this.props.links}/>
+				<Menu animation={this.props.animation} tipo={this.props.tipo} links={this.props.links}/>
 			</nav>
 			// </aside>
 		);
@@ -148,8 +148,8 @@ export class Menu extends React.Component {
 	}
 
 	changeLinkStyle(e) {
-		// let nav = document.getElementById('nav-movil');
-		// let redes = document.getElementsByClassName('redes-nav')[0];
+		let nav = document.getElementById('nav-movil');
+		let redes = document.getElementsByClassName('redes-nav')[0];
 
 		this.setState({
 			link: e.target.hash.replace('#', '')
@@ -192,7 +192,7 @@ export class Menu extends React.Component {
 				<ul>
 					{
 						links.map(elemento => (
-							<li key={'li' + elemento}>
+							<li key={'li' + elemento} onClick={this.props.animation}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
 								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
 									{/* <span>-</span> */}

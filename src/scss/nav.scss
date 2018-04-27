@@ -95,13 +95,13 @@ nav.default{
 }
 
 nav.nav-left{
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 220px;
+	width: 180px;
 
 	.rotateLogoIn {
 		animation-name: rotateLogoInAnimation;
@@ -190,7 +190,7 @@ nav.nav-left{
 
 
 .nav-movil {
-	position: relative;
+	position: fixed;
 	top: 0;
 	left: 0;
 	flex-direction: column;

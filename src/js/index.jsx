@@ -64,41 +64,51 @@ class App extends React.Component {
 
 	toogleMenu() {
 		let nav = document.getElementById('nav-menu');
+		let icon = document.getElementById('menu-icon');
 
-		if (nav.classList.contains('show')) {
-			nav.classList.remove('show');
-			nav.classList.add('hide');
-		} else if (nav.classList.contains('hide')) {
-			nav.classList.remove('hide');
-			nav.classList.add('show');
+		if (nav.classList.contains('show-nav')) {
+			nav.classList.remove('show-nav');
+			nav.classList.add('hide-nav');
+			icon.classList.remove('active');
+			
 		} else {
-			nav.classList.add('show');
+			nav.classList.remove('hide-nav');
+			nav.classList.add('show-nav');
+			icon.classList.add('active');
 		}
 	}
 
 	render() {
 		window.addEventListener('resize', this.chooseNav.bind(this), false);
-		
-		/* <Nav tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
-
-		<aside className='right' id='social'>
-			<ul>
-				<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
-				<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
-				<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
-			</ul>
-		</aside>
-
-		{this.props.children} */
 		return (
+			
 			<div>
-				<header>
+				{/*<header>
 					<div className='icons'>
 						<img src='src/img/logo.svg' alt='' />
 						<span className='icon icon-menu8' onClick={this.toogleMenu}/>
 					</div>
+				</header>
 
-					<Nav tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
+				<aside className='right' id='social'>
+					<ul>
+						<li><a href='https://www.facebook.com/groowly' target='_blank'><i className='icon icon-facebook' /></a></li>
+						<li><a href='https://www.twitter.com/groowly' target='_blank'><i className='icon icon-twitter' /></a></li>
+						<li><a href='https://www.instagram.com/groowly' target='_blank'><i className='icon icon-instagram' /></a></li>
+					</ul>
+				</aside> */}
+
+				{/* {this.props.children}  */}
+				<header>
+					<Nav animation={this.toogleMenu.bind(this)} tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
+					<div className='icons'>
+						<div className='logo'>
+							<img src='src/img/logo.svg' alt='' />
+						</div>
+						<div className='icon' onClick={this.toogleMenu}>
+							<span className='icon icon-dehaze' id='menu-icon'/>
+						</div>
+					</div>
 				</header>
 				{this.props.children}
 			</div>
@@ -108,8 +118,8 @@ class App extends React.Component {
 
 ReactDOM.render(	
 	<HashRouter history={hashHistory}>
-		<Switch>
-			<App>
+		<App>
+			<Switch>
 				<Route path='/' exact render={ () => <Home config={config} />} onTouchMove={noScroll} />
 				<Route path='/Marketing' exact render= { () => <Marketing /> } />
 				<Route path='/Relaciones' exact render= { () => <Relaciones /> } />
@@ -136,8 +146,8 @@ ReactDOM.render(
 				{/* <Route path='/Services' render={ () => <Services config={config} />} onTouchMove={noScroll} /> */}
 				{/* <Route path='/Team' render={ () => <Team config={config} />} onTouchMove={noScroll} /> */}
 				{/* <Route path='/Clients' render={ () => <Clients config={config} />} onTouchMove={noScroll} /> */}
-			</App>
-		</Switch>	
+			</Switch>	
+		</App>
 	</HashRouter>
 	, document.getElementById('app')
 );
