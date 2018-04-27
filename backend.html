@@ -14,28 +14,34 @@
 <body>
     <main>
         <section class="flex-center login">
-            <div class="flex-center-wrap form-container">
-                <div class="logo">
+            <form class="form-horizontal">
+                <div class="flex-center logo">
                     <img src="src/img/logo.svg" alt="">
                 </div>
-                <hr>
-                <form class="flex-center-wrap" method="POST" id="loginForm" onsubmit="loginValidation(event);">
-                    <div class="flex-between input-group">
-                        <label for="username">Username</label>
-                        <input type="text" placeholder="username" id="username">
-                        <span id="username-prompt" class="error-prompt"></span>
+                <div class="divider"></div>
+                <div class="form-group">
+                    <div class="col-3 col-sm-12">
+                        <label class="form-label" for="username">Username</label>
                     </div>
-                    <div class="flex-between input-group">
-                        <label for="password">Password</label>
-                        <input type="password" placeholder="password" id="password">
-                        <span id="password-prompt" class="error-prompt"></span>
+                    <div class="col-9 col-sm-12">
+                        <input class="form-input" type="text" id="username" placeholder="Username">
                     </div>
-
-                    <div class="flex-center input-group">
-                        <input class="btn-backend" type="submit" value="Ingresar">
+                </div>
+                <div class="form-group">
+                    <div class="col-3 col-sm-12">
+                        <label class="form-label" for="password">Password</label>
                     </div>
-                </form>
-            </div>     
+                    <div class="col-9 col-sm-12">
+                        <input class="form-input" type="password" id="password" placeholder="********">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-4 col-mx-auto col-sm-12">
+                        <input class="form-input c-hand btn btn-primary" type="submit" value="Login">
+                    </div>
+                </div>
+                <!-- form structure -->
+            </form>
         </section>
     </main>
 

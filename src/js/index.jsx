@@ -66,14 +66,14 @@ class App extends React.Component {
 		let nav = document.getElementById('nav-menu');
 		let icon = document.getElementById('menu-icon');
 
-		if (nav.classList.contains('show-nav')) {
-			nav.classList.remove('show-nav');
-			nav.classList.add('hide-nav');
+		if (nav.classList.contains('show')) {
+			nav.classList.remove('show');
+			nav.classList.add('hide');
 			icon.classList.remove('active');
 			
 		} else {
-			nav.classList.remove('hide-nav');
-			nav.classList.add('show-nav');
+			nav.classList.remove('hide');
+			nav.classList.add('show');
 			icon.classList.add('active');
 		}
 	}

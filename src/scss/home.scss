@@ -5,11 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
     padding-left: 25%;
-=======
-    padding: 50px;
->>>>>>> 4878747c0749c62f13e63e47a286d8f0ce276466
 
     article {
 
@@ -271,18 +267,19 @@ header {
                 width: 100%;
                 margin: 0;
                 border-top: 1px solid $gris;
-                border-bottom: 1px solid $gris;
+                // border-bottom: 1px solid $gris;
 
                 &:first-child {
-                    border-top: 2px solid $gris;
+                    border-top: none;
                 }
 
                 a {
                     padding: 10px;
                     color: $violeta;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    // width: auto;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
                     position: relative;
                     transition: all .3s ease;
 
@@ -306,11 +303,12 @@ header {
                         color: $dorado;
                         transition: all .3s ease;
 
-                        &::before {
-                            width: 100%;
-                            transition: all .3s ease;
-                        }
-    
+                        
+                    }
+                    &:hover::before,    
+                    &.selected::before {
+                        width: 100%;
+                        transition: all .3s ease;
                     }
                 }
             }

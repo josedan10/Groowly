@@ -1,0 +1,49 @@
+#app {
+    padding: 0;
+}
+
+.content {
+    padding: 10px;
+    height: auto;
+    min-height: 100vh;
+}
+
+aside {
+    position: fixed;
+    min-height: 100vh;
+    padding: 15px;
+    // background-color: $violeta;
+
+    .logo {
+        width: 100%;
+        margin-bottom: 50px;
+
+        img {
+            max-width: 300px;
+            width: 80%;
+        }
+    }
+
+    .menu {
+        background: transparent;
+    }
+}
+
+.admin-data {
+
+    margin-bottom: 50px;
+
+    figure {
+        background-color: $grisOsc;
+        border: 2px solid $gris;
+    }
+
+    .admin-info {
+        height: 100%;
+    }
+    
+    h4, 
+    h5 {
+        margin: 0;
+    }
+}
