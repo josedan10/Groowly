@@ -325,6 +325,7 @@ export class SubMenuRelaciones extends React.Component {
 					<li><NavLink to='/Posicionamiento-Medios' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Posicionamiento-Medios')}>POSICIONAMIENTO <br />EN MEDIOS</NavLink></li>
 					<li><NavLink to='/Contenido-Editorial' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Contenido-Editorial')}>CONTENIDO <br />EDITORIAL</NavLink></li>
 					<li><NavLink to='/Produccion-Eventos' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Produccion-Eventos')}>PRODUCCIÓN <br />DE EVENTOS</NavLink></li>
+					<li><NavLink to='/Digital-PR' onClick={this.changeLinkStyle.bind(this)} className={this.assignClass('Digital-PR')}>Digital PR</NavLink></li>
 				</ul>
 			</nav>
 		);

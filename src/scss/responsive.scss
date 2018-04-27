@@ -31,9 +31,14 @@
         img {
             margin-top: 10px
         }
+        
+        .icons {
+            background-color: rgba($color: $gris, $alpha: 0.7);
+        }
 
         .icon {
             top: 10px;
+            right: 50px;
         }
 
         nav {

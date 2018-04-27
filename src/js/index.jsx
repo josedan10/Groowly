@@ -83,7 +83,7 @@ class App extends React.Component {
 		return (
 			
 			<div>
-				{/*<header>
+				{/* <header>
 					<div className='icons'>
 						<img src='src/img/logo.svg' alt='' />
 						<span className='icon icon-menu8' onClick={this.toogleMenu}/>
@@ -105,9 +105,8 @@ class App extends React.Component {
 						<div className='logo'>
 							<img src='src/img/logo.svg' alt='' />
 						</div>
-						<div className='icon' onClick={this.toogleMenu}>
-							<span className='icon icon-dehaze' id='menu-icon'/>
-						</div>
+						<span className='icon icon-dehaze' onClick={this.toogleMenu} id='menu-icon'/>
+						
 					</div>
 				</header>
 				{this.props.children}
