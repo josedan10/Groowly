@@ -68,12 +68,24 @@ export default class Home extends React.Component {
 		app.classList.add('top');		
 	}
 
-	removeClasses() {
+	removeClasses(tipo) {
 		document.getElementById('app').classList.remove('top');
 
 		if (document.getElementById('nav-menu').classList.contains('show')) {
 			document.getElementById('nav-menu').classList.remove('show');
 		}
+
+		this.changeLinks(tipo);
+	}
+
+	changeLinks(tipo) {
+		let links = document.querySelectorAll('nav ul li a');
+		// Remove classes and add classes
+		
+		console.log(links);
+		// if (tipo == 1) {
+			
+		// }
 	}
 
 	render() {
@@ -102,18 +114,18 @@ export default class Home extends React.Component {
 				</section>
 
 				<section className='sections-links'>
-					<NavLink to='Marketing' onClick={this.removeClasses} className='links'>
+					<NavLink to='Marketing' onClick={(e) => this.removeClasses(e)} className='links'>
 						<div>
-							<h1>MAR</h1>
-							<h1>KETING</h1>
-							<h2><b>DIGITAL</b></h2>
+							<h1 onClick={() => this.removeClasses(1)}>MAR</h1>
+							<h1 onClick={() => this.removeClasses(1)}>KETING</h1>
+							<h2 onClick={() => this.removeClasses(1)}><b>DIGITAL</b></h2>
 						</div>
 					</NavLink>
-					<NavLink to='Relaciones' onClick={this.removeClasses} className='links'>
+					<NavLink to='Relaciones' onClick={this.removeClasses.bind(this)} className='links'>
 						<div>
-							<h1>RELA</h1>
-							<h1>CIONES</h1>
-							<h2><b>PÚBLICAS</b></h2>
+							<h1 onClick={() => this.removeClasses(2)}>RELA</h1>
+							<h1 onClick={() => this.removeClasses(2)}>CIONES</h1>
+							<h2 onClick={() => this.removeClasses(2)}><b>PÚBLICAS</b></h2>
 						</div>
 					</NavLink>	
 				</section>

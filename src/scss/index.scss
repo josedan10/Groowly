@@ -331,18 +331,18 @@ section{
     display: grid;
 }
 
-// @import 'nav';
-// @import 'social';
-// @import 'home';
-// @import 'services';
-// @import 'selected-works';
-// @import 'own-community';
-// @import 'team';
-// @import 'videos';
-// @import 'clientes';	
-// @import 'timer';
-// @import 'slideshow';
-// @import 'contacto';
-// @import 'responsive';
+@import 'nav';
+@import 'social';
+@import 'home';
+@import 'services';
+@import 'selected-works';
+@import 'own-community';
+@import 'team';
+@import 'videos';
+@import 'clientes';	
+@import 'timer';
+@import 'slideshow';
+@import 'contacto';
+@import 'responsive';
 
-@import 'backend/login';
+// @import 'backend/login';
