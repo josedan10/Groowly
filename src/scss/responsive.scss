@@ -54,15 +54,15 @@
             background-color: rgba($color: $violeta, $alpha: 0.8);
 
             ul {
-                // transform: rotate(0deg);
-                // flex-direction: column;
+                transform: rotate(0deg);
+                flex-direction: column;
                 width: 100%;
                 height: 100%;
                 padding: 0;
 
                 li {
                     // padding: 10px;
-                    height: 7vh;
+                    height: 10vh;
                     width: 100%;
                     border-top: 1px solid $gris;
                     

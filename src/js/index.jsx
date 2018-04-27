@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactSVG from 'react-svg';
-import { HashRouter, BrowserRouter, Route, Switch, hashHistory, browserHistory } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Route, Switch, hashHistory, browserHistory, NavLink } from 'react-router-dom';
 import Nav from './nav/nav-menu';
 import Home from './pages/home';
 import SelectedWorks from './pages/selected-works';
@@ -83,11 +83,13 @@ class App extends React.Component {
 		window.addEventListener('resize', this.chooseNav.bind(this), false);
 		const logo = (
 			<div className='flex-center logo'>
-				<ReactSVG
-					path='/src/img/logo.svg'
-					className='flex-center'
-					wrapperClassName='flex-center'
-				/>
+				<a href='#/'>
+					<ReactSVG
+						path='./src/img/logo.svg'
+						className='flex-center'
+						wrapperClassName='flex-center'
+					/>
+				</a>
 			</div>
 		);
 		return (

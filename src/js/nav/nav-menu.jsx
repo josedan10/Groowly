@@ -172,7 +172,7 @@ export class Menu extends React.Component {
 		// console.log(this.state);
 
 		switch (elemento) {
-		case 'Home':
+		case 'About':
 			classState = (this.state.link === '/') ? 'selected' : '';
 			break;
 
@@ -194,7 +194,7 @@ export class Menu extends React.Component {
 						links.map(elemento => (
 							<li key={'li' + elemento} onClick={this.props.animation}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
-								<NavLink to={(elemento === 'Home') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
+								<NavLink to={(elemento === 'About') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
 									{/* <span>-</span> */}
 									{elemento.toUpperCase()}  
 								</NavLink>
