@@ -1,0 +1,122 @@
+#app {
+    padding: 0;
+}
+
+.content {
+    padding: 10px;
+    height: auto;
+    min-height: 100vh;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+}
+
+aside {
+    position: fixed;
+    min-height: 100vh;
+    padding: 15px;
+    // background-color: $violeta;
+
+    .logo {
+        width: 100%;
+        margin-bottom: 50px;
+
+        img {
+            max-width: 250px;
+            width: 80%;
+        }
+    }
+
+    .menu {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+.admin-data {
+
+    margin-bottom: 50px;
+
+    figure {
+        background-color: $grisOsc;
+        border: 2px solid $gris;
+    }
+
+    .admin-info {
+        height: 100%;
+    }
+    
+    h4, 
+    h5 {
+        margin: 0;
+    }
+}
+
+header {
+    padding: 20px 5%;
+    border-bottom: 1px solid $gray-color-dark;
+}
+
+.main {
+
+    padding: 20px;
+    width: 100%;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: solid 1px $gray-color-dark;
+
+        .actions {
+            width: 100%;
+        }
+
+        th {
+            background-color: $primary-color;
+            color: $gris;
+        }
+
+        th,
+        td {
+            border-right: 1px solid $gray-color-dark;
+            border-left: 1px solid $gray-color-dark;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: $bg-color-dark
+        }
+    }
+
+    form {
+        width: 100%;
+        padding: 0 5%;
+
+        .form-group {
+            text-align: left;
+        }
+
+        label {
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+        }
+
+        textarea {
+            resize: none;
+            height: 300px;
+        }
+    }
+}

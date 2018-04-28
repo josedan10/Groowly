@@ -5,6 +5,7 @@ const config = {
 
 	// entry: './src/js/index.jsx',
 	entry: {
+<<<<<<< HEAD
 		config: './resources/assets/js/config.js',
 		index: './resources/assets/js/index.jsx',
 		clients: './resources/assets/js/clients.jsx',
@@ -16,14 +17,28 @@ const config = {
 		works: './resources/assets/js/works.jsx',
 		nav: './resources/assets/js/nav/nav-menu.jsx'
 		// timer: './src/js/timer.config.jsx',
+=======
+		config: './src/js/config.js',
+		index: './src/js/index.jsx',
+		formContact: './src/js/form-contact/form-contact.jsx',
+		presentation: './src/js/presentation-container/presentation.jsx',
+		nav: './src/js/nav/nav-menu.jsx',
+		timer: './src/js/timer.config.jsx'
+>>>>>>> frontend
 		// slideshow: './src/js/slideshow.config.jsx'
 		// slideshow: './src/js/slideshow/swiper-js/source/jquery.slides.js'
 	},
 
 	output: {
+<<<<<<< HEAD
 	    path: path.resolve(__dirname, 'public/js/'),
 		// publicPath: '/testing/site/dist/',
 		publicPath: './public/js/',
+=======
+	    path: path.resolve(__dirname, 'dist'),
+		// publicPath: '/testing/site/dist/',
+		publicPath: '/dist/',
+>>>>>>> frontend
 	    filename: '[name].min.js' // Archivo de salida
 	},
 
@@ -61,7 +76,7 @@ const config = {
 	devServer: {
 		contentBase: path.join(__dirname, './'),
 		historyApiFallback: true,	
-		port: 8080
+		port: 8000
 	},
 
 	devtool: 'inline-source-map',

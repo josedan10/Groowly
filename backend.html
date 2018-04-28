@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Groowly</title>
+
+    <link rel="icon" href="favicon.png" type="image/x-icon" />	
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/animate.css">
+    <link rel="stylesheet" href="src/css/backend.css">
+</head>
+<body>
+    <main>
+        <section class="flex-center login">
+            <form class="form-horizontal">
+                <div class="flex-center logo">
+                    <img src="src/img/logo.svg" alt="">
+                </div>
+                <div class="divider"></div>
+                <div class="form-group">
+                    <div class="col-3 col-sm-12">
+                        <label class="form-label" for="username">Username</label>
+                    </div>
+                    <div class="col-9 col-sm-12">
+                        <input class="form-input" type="text" id="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-3 col-sm-12">
+                        <label class="form-label" for="password">Password</label>
+                    </div>
+                    <div class="col-9 col-sm-12">
+                        <input class="form-input" type="password" id="password" placeholder="********">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-4 col-mx-auto col-sm-12">
+                        <input class="form-input c-hand btn btn-primary" type="submit" value="Login">
+                    </div>
+                </div>
+                <!-- form structure -->
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function loginValidation (event) {
+            // console.log(event);
+            let username = document.getElementById('username');
+            let password = document.getElementById('password');
+
+            if (username.innerHTML === null || username.innerHTML == "") {
+                // console.log('Usuario invalido');
+                event.preventDefault();
+                displayPrompt('username', 'Debe ingresar un usuario');
+                // return false;
+            }
+
+            if (password.innerHTML === null || password.innerHTML == "") {
+                // console.log('Contraseña inválida');  
+                event.preventDefault();
+                displayPrompt('password', 'Debe ingresar una contraseña');
+                // return false;
+            }
+
+            // document.getElementById('username-prompt').classList.remove('show');
+            // document.getElementById('password-prompt').classList.remove('show');
+        }
+
+        function displayPrompt (target, msg) {
+            // let msgNode = document.createTextNode(msg);
+
+            switch (target) {
+                case 'username':
+                    // console.log(document.getElementById('username-prompt'));
+                    document.getElementById('username-prompt').innerHTML = msg;
+                    document.getElementById('username-prompt').classList.add('show');
+                    break;
+                
+                default:
+                    // console.log(document.getElementById('password-prompt'));
+                    document.getElementById('password-prompt').innerHTML = msg;
+                    document.getElementById('password-prompt').classList.add('show');
+                    break;
+            }
+        }
+
+        // document.querySelector('#loginForm').addEventListener('submit', loginValidation, false);
+        // console.log(document.querySelector('#loginForm').onsubmit);
+    </script>
+</body>
+</html>
