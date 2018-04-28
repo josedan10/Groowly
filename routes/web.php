@@ -11,26 +11,36 @@
 |
 */
 
-Route::view('/', 'frontend/index');
+// Route::view('/', 'frontend/index');
 
-Route::view('Community', 'frontend/community');
+// Route::view('Community', 'frontend/community');
 
-Route::view('Services', 'frontend/services');
+// Route::view('Services', 'frontend/services');
 
-Route::view('Works', 'frontend/works');
+// Route::view('Works', 'frontend/works');
 
-Route::view('Clients', 'frontend/clients');
+// Route::view('Clients', 'frontend/clients');
 
-Route::view('Team', 'frontend/team');
+// Route::view('Team', 'frontend/team');
 
-Route::view('Contact', 'frontend/contact');
+// Route::view('Contact', 'frontend/contact');
 
-Route::get('Contact/sendMessage', 'ContactController@sendMessage');
+// Route::get('Contact/sendMessage', 'ContactController@sendMessage');
 
 Route::group(['prefix' => 'admin'], function() {
     // Admin Panel
     Route::get('login', 'LoginController@view');
+    Route::post('login', 'LoginController@login');
+
+    Route::get('home', 'AdminController@home')->name('admin-home');
+    Route::get('home/edit', 'AdminController@editHome')->name('edit-home');
+    Route::post('home/edit', 'AdminController@editHomeAction');
+    
 });
 
+// Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
 ?>
+
+

@@ -18,7 +18,7 @@ class CreateHomeTable extends Migration
             $table->string('name');
             $table->string('title');
             $table->string('paragraph1');
-            $table->string('pargraph2')->nullable();
+            $table->string('paragraph2')->nullable();
             $table->timestamps();
         });
     }

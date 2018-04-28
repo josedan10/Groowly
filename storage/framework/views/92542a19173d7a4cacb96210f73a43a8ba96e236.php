@@ -9,7 +9,10 @@
 
 
 <?php if(isset($page)): ?>
-    <link rel="stylesheet" href="<?php echo e(asset('css/'.$page.'.css')); ?>">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />	
+    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/animate.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/backend.css')); ?>">
 <?php else: ?>
     <link rel="stylesheet" href="<?php echo e(asset('css/custom.css')); ?>">
 <?php endif; ?>

@@ -9,7 +9,10 @@
 
 {{--  Style sheet  --}}
 @if(isset($page))
-    <link rel="stylesheet" href="{{ asset('css/'.$page.'.css') }}">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />	
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{asset('css/backend.css') }}">
 @else
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 @endif
