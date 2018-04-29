@@ -31,10 +31,21 @@ Route::group(['prefix' => 'admin'], function() {
     // Admin Panel
     Route::get('login', 'LoginController@view');
     Route::post('login', 'LoginController@login');
+    Route::get('', function() {
+        return view('admin.home');
+    } );
 
     Route::get('home', 'AdminController@home')->name('admin-home');
     Route::get('home/edit', 'AdminController@editHome')->name('edit-home');
     Route::post('home/edit', 'AdminController@editHomeAction');
+
+    Route::get('marketing', 'AdminController@marketing')->name('admin-marketing');
+    Route::get('marketing/edit', 'AdminController@editMarketing')->name('edit-marketing');
+    Route::post('marketing/edit', 'AdminController@editMarketingAction');
+
+    Route::get('relaciones', 'AdminController@relaciones')->name('admin-relaciones');
+    Route::get('relaciones/edit', 'AdminController@editRelaciones')->name('edit-relaciones');
+    Route::post('relaciones/edit', 'AdminController@editRelacionesAction');
     
 });
 

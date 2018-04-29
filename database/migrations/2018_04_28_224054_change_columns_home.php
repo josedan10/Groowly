@@ -13,7 +13,7 @@ class ChangeColumnsHome extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('home', function (Blueprint $table) {
             $table->text('paragraph1')->change();
             $table->text('paragraph2')->change();
         });
@@ -21,6 +21,10 @@ class ChangeColumnsHome extends Migration
         Schema::table('marketing_relaciones', function (Blueprint $table) {
             $table->text('paragraph1')->change();
             $table->text('paragraph2')->change();
+        });
+
+        Schema::table('marketing_subsections', function (Blueprint $table) {
+            $table->text('paragraph1')->change();
         });
     }
 

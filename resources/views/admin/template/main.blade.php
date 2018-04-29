@@ -43,9 +43,8 @@
                             </label>
                             <div class="accordion-body">
                                 <ul class="menu menu-nav">
-                                    <li class="menu-item">Item 1</li>
-                                    <li class="menu-item">Item 2</li>
-                                    <li class="menu-item">Item 3</li>
+                                <li class="menu-item"><a href="{{ route('admin-relaciones') }}">Ver Sección</a></li>
+                                    <li class="menu-item">Ver Subsecciones</li>
                                 </ul>
                             </div>
                         </div>
@@ -59,17 +58,16 @@
                             </label>
                             <div class="accordion-body">
                                 <ul class="menu menu-nav">
-                                    <li class="menu-item">Item 1</li>
-                                    <li class="menu-item">Item 2</li>
-                                    <li class="menu-item">Item 3</li>
+                                <li class="menu-item"><a href="{{ route('admin-marketing') }}">Ver Sección</a></li>
+                                    <li class="menu-item">Ver Subsecciones</li>
                                 </ul>
                             </div>
                         </div>
                     </li>
                     <li class="menu-item">
                         <div class="accordion">
-                            <input type="radio" id="accordion-admins" name="accordion-radio" hidden>
-                            <label class="accordion-header c-hand" for="accordion-admins">
+                            <input type="radio" id="accordion-contacto" name="accordion-radio" hidden>
+                            <label class="accordion-header c-hand" for="accordion-contacto">
                                 <i class="icon icon-arrow-right mr-1"></i>
                                 Contacto
                             </label>
@@ -105,6 +103,7 @@
         <section class="col-10 col-ml-auto content">
             @yield('content')
         </section>
+        <script src="{{ asset('vendors/ckeditor/ckeditor.js') }}"></script>
     </main>
 </body>
 </html>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use App\Home;
+use App\marketingRelaciones;
 
 class AdminController extends Controller
 {
@@ -47,6 +48,68 @@ class AdminController extends Controller
         $home->save();
 
         return redirect(route('admin-home'));
+
+    }
+
+    public function marketing() {
+        $marketing = MarketingRelaciones::where('name', 'Marketing')->get();
+
+        return view('admin.marketing.list', ['marketing' => $marketing]);
+    }
+
+    public function editMarketing() {
+        $marketing = MarketingRelaciones::where('name', 'Marketing')->get();
+
+        return view('admin.marketing.edit', ['marketing' => $marketing]);
+    }
+
+    public function editMarketingAction(Request $request) 
+    {
+        $marketing = MarketingRelaciones::where('name', 'Marketing')->get();
+        
+        if (!$marketing) {
+            // Edit
+            $marketing = new marketing();
+        }
+
+        $marketing->name = $request->name;
+        $marketing->paragraph1 = $request->paragraph1;
+        $marketing->paragraph2 = $request->paragraph2;
+
+        $marketing->save();
+
+        return redirect(route('admin-marketing'));
+
+    }
+
+    public function relaciones() {
+        $relaciones = marketingRelaciones::where('name', 'relaciones')->get();
+
+        return view('admin.relaciones.list', ['relaciones' => $relaciones]);
+    }
+
+    public function editRelaciones() {
+        $relaciones = marketingRelaciones::where('name', 'relaciones')->get();
+
+        return view('admin.relaciones.edit', ['relaciones' => $relaciones]);
+    }
+
+    public function editRelacionesAction(Request $request) 
+    {
+        $relaciones = marketingRelaciones::where('name', 'relaciones')->get();
+        
+        if (!$relaciones) {
+            // Edit
+            $relaciones = new relaciones();
+        }
+
+        $relaciones->name = $request->name;
+        $relaciones->paragraph1 = $request->paragraph1;
+        $relaciones->paragraph2 = $request->paragraph2;
+
+        $relaciones->save();
+
+        return redirect(route('admin-relaciones'));
 
     }
 }
