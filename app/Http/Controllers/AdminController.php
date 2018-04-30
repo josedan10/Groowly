@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use App\Home;
-use App\marketingRelaciones;
+use App\MarketingRelaciones;
+use App\User;
+use App\MarketingSubsections;
+use App\RelacionesSubsections;
 
 class AdminController extends Controller
 {
@@ -83,20 +86,20 @@ class AdminController extends Controller
     }
 
     public function relaciones() {
-        $relaciones = marketingRelaciones::where('name', 'relaciones')->get();
+        $relaciones = MarketingRelaciones::where('name', 'relaciones')->get();
 
         return view('admin.relaciones.list', ['relaciones' => $relaciones]);
     }
 
     public function editRelaciones() {
-        $relaciones = marketingRelaciones::where('name', 'relaciones')->get();
+        $relaciones = MarketingRelaciones::where('name', 'relaciones')->get();
 
         return view('admin.relaciones.edit', ['relaciones' => $relaciones]);
     }
 
     public function editRelacionesAction(Request $request) 
     {
-        $relaciones = marketingRelaciones::where('name', 'relaciones')->get();
+        $relaciones = MarketingRelaciones::where('name', 'relaciones')->get();
         
         if (!$relaciones) {
             // Edit
@@ -111,5 +114,98 @@ class AdminController extends Controller
 
         return redirect(route('admin-relaciones'));
 
+    }
+
+    public function users() {
+        $users = User::all();
+        // dd($users);
+        return view('admin.users.list', ['users' => $users]);
+    }   
+
+    public function subsection($subsection) {
+
+        // dd($subsection);
+
+        switch($subsection) {
+            case 'marketing':
+                $subsecciones = MarketingSubsections::all();
+                break;
+            default:
+                $subsecciones = RelacionesSubsections::all();
+                break;
+        }
+
+        return view('admin.subsecciones.list', ['seccion' => $subsection, 'subsections' => $subsecciones]);
+    }
+    
+    public function addSubsectionMarketing() {
+
+        // $subsection = MarketingSubsections::find($id);
+
+        return view('admin.subseccion.edit', ['subsection' => null]);
+    }
+
+    public function addSubsectionMarketingAction(Request $req) {
+
+        $subsection = new MarketingSubsections();
+
+        $subsection->name = $req->name;
+        $subsection->title = $req->title;
+        $subsection->paragraph1 = $req->paragraph1;
+        $subsection->save();
+
+        return redirect(url('/admin/subsections/marketing'));
+    }
+
+    public function addSubsectionRelacionesAction(Request $req) { 
+
+        $subsection = new RelacionesSubsections();
+
+        $subsection->name = $req->name;
+        $subsection->title = $req->title;
+        $subsection->paragraph1 = $req->paragraph1;
+        $subsection->save();
+
+        return redirect(url('/admin/subsections/relaciones'));
+    }
+
+    public function editSubsectionMarketing($id) {
+
+        $subsection = MarketingSubsections::find($id);
+
+        return view('admin.subsecciones.edit', ['subsection' => $subsection]);
+    }
+
+    public function editSubsectionRelaciones($id) {
+
+        $subsection = RelacionesSubsections::find($id);
+
+        return view('admin.subsecciones.edit', ['subsection' => $subsection]);
+    }
+
+    public function editSubsectionMarketingAction(Request $req) {
+
+        $subsection = new MarketingSubsections();
+
+        $subsection->id = $req->id;
+        $subsection->name = $req->name;
+        $subsection->title = $req->title;
+        $subsection->paragraph1 = $req->paragraph1;
+        $subsection->save();
+
+        return redirect(url('/admin/subsections/marketing'));
+    }
+
+    public function editSubsectionRelacionesAction(Request $req) {
+
+        $subsection = new RelacionesSubsections();
+
+        $subsection->id = $req->id;
+        $subsection->name = $req->name;
+        $subsection->title = $req->title;
+        $subsection->paragraph1 = $req->paragraph1;
+        $subsection->save();
+
+        return redirect(route('/admin/subsections/relaciones'));
     }
 }

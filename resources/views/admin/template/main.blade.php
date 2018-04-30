@@ -43,8 +43,8 @@
                             </label>
                             <div class="accordion-body">
                                 <ul class="menu menu-nav">
-                                <li class="menu-item"><a href="{{ route('admin-relaciones') }}">Ver Sección</a></li>
-                                    <li class="menu-item">Ver Subsecciones</li>
+                                    <li class="menu-item"><a href="{{ route('admin-relaciones') }}">Ver Sección</a></li>
+                                    <li class="menu-item"><a href="{{ url('admin/subsections/relaciones') }}">Ver Subsecciones</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -58,13 +58,13 @@
                             </label>
                             <div class="accordion-body">
                                 <ul class="menu menu-nav">
-                                <li class="menu-item"><a href="{{ route('admin-marketing') }}">Ver Sección</a></li>
-                                    <li class="menu-item">Ver Subsecciones</li>
+                                    <li class="menu-item"><a href="{{ route('admin-marketing') }}">Ver Sección</a></li>
+                                    <li class="menu-item"><a href="{{ url('admin/subsections/marketing') }}">Ver Subsecciones</a></li>
                                 </ul>
                             </div>
                         </div>
                     </li>
-                    <li class="menu-item">
+                    {{-- <li class="menu-item">
                         <div class="accordion">
                             <input type="radio" id="accordion-contacto" name="accordion-radio" hidden>
                             <label class="accordion-header c-hand" for="accordion-contacto">
@@ -79,23 +79,22 @@
                                 </ul>
                             </div>
                         </div>
-                    </li>
-                    <li class="menu-item">
+                    </li> --}}
+                    {{-- <li class="menu-item">
                         <div class="accordion">
                             <input type="radio" id="accordion-admins" name="accordion-radio" hidden>
                             <label class="accordion-header c-hand" for="accordion-admins">
                                 <i class="icon icon-arrow-right mr-1"></i>
-                                Admins
+                                Admin
                             </label>
                             <div class="accordion-body">
                                 <ul class="menu menu-nav">
-                                    <li class="menu-item">Item 1</li>
-                                    <li class="menu-item">Item 2</li>
-                                    <li class="menu-item">Item 3</li>
+                                    <li class="menu-item"><a href="{{ route('admin-users') }}">Administrar usuarios<a></li>
+                                    <li class="menu-item"><a href="{{ route('my-account') }}">Mi cuenta</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </li>
+                    </li> --}}
                 </ul>
             </nav>
         </aside>
