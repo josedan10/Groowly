@@ -142,7 +142,14 @@ class AdminController extends Controller
 
         // $subsection = MarketingSubsections::find($id);
 
-        return view('admin.subseccion.edit', ['subsection' => null]);
+        return view('admin.subsecciones.edit', ['subsection' => null, 'name' => 'marketing']);
+    }
+
+    public function addSubsectionRelaciones() {
+
+        // $subsection = MarketingSubsections::find($id);
+
+        return view('admin.subsecciones.edit', ['subsection' => null, 'name' => 'relaciones']);
     }
 
     public function addSubsectionMarketingAction(Request $req) {

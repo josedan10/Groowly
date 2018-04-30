@@ -5,9 +5,13 @@
 </header>
 
 <div class="flex-center main">
-    <form action="{{ url('/admin/subsection/edit') }}" method="POST">
+    @if ($subsection !== null)
+    <form action="{{ url('/admin/subsection/'.$name.'/'.$subsection->id.'/edit') }}" method="POST">
+    @else 
+    <form action="{{ url('/admin/subsection/'.$name.'/add') }}" method="POST">
+    @endif
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-        @if(!subsection) <input type="hidden" name="id" value="{{ $subsection->id }}">@endif
+        @if($subsection !== null) <input type="hidden" name="id" value="{{ $subsection->id }}">@endif
         <input type="hidden" name="id" value="{{}}">
         <div class="form-group">
             <label class="form-label" for="name">Nombre</label>
