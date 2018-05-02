@@ -192,9 +192,7 @@ class AdminController extends Controller
 
     public function editSubsectionMarketingAction(Request $req) {
 
-        $subsection = new MarketingSubsections();
-
-        $subsection->id = $req->id;
+        $subsection = MarketingSubsections::find($req->id);
         $subsection->name = $req->name;
         $subsection->title = $req->title;
         $subsection->paragraph1 = $req->paragraph1;
@@ -205,9 +203,7 @@ class AdminController extends Controller
 
     public function editSubsectionRelacionesAction(Request $req) {
 
-        $subsection = new RelacionesSubsections();
-
-        $subsection->id = $req->id;
+        $subsection = RelacionesSubsections::find($req->id);
         $subsection->name = $req->name;
         $subsection->title = $req->title;
         $subsection->paragraph1 = $req->paragraph1;
