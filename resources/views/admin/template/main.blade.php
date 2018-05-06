@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
     @section('page', 'Admin | ')
     @include('includes/head', ['page' => 'admin'])
 </head>
@@ -18,7 +18,6 @@
                 </figure>
                 <div class="flex-around-column admin-info">
                     <h5>Welcome</h5>
-                    <h4>{{Auth::user()->name}}</h4>
                 </div>
             </div>
 

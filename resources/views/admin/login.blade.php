@@ -8,7 +8,7 @@
     <main>
         <section class="flex-center login">
             <form class="form-horizontal" action="{{ url('/admin/login') }}" method="POST">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                @csrf
                 <div class="flex-center logo">
                     <img src="{{ asset('img/logo.svg')}}" alt="">
                 </div>
@@ -32,6 +32,15 @@
                 <div class="form-group">
                     <div class="col-4 col-mx-auto col-sm-12">
                         <input class="form-input c-hand btn btn-primary" type="submit" value="Login">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-12 col-mx-auto">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Mantener sesión iniciada
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <!-- form structure -->

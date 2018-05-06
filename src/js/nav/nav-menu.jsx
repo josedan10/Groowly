@@ -152,7 +152,7 @@ export class Menu extends React.Component {
 		// let redes = document.getElementsByClassName('redes-nav')[0];
 
 		this.setState({
-			link: e.target.hash.replace('#', '')
+			link: e.target.hash.replace('')
 		});
 
 		// this.close();
@@ -194,7 +194,7 @@ export class Menu extends React.Component {
 						links.map(elemento => (
 							<li key={'li' + elemento} onClick={this.props.animation}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
-								<NavLink to={(elemento === 'About') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
+								<a href={(elemento === 'About') ? '/' : elemento} className={this.assignClass(elemento)}>
 									{/* <span>-</span> */}
 									{elemento.toUpperCase()}  
 								</NavLink>

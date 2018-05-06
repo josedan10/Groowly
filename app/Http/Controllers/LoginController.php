@@ -6,9 +6,18 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
+
+    use AuthenticatesUsers;
+
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+    
     public function view() {
         return view('admin/login');
     }
@@ -17,12 +26,12 @@ class LoginController extends Controller
         // dd('hola');
         $user = $req->only('username', 'password');
 
-        if (Auth::attempt($user)) {
+        if (Auth::attempt($user, true)) {
             // Authentication passed...
             // dd('valido');
+
+            
             return redirect('admin');
         }
-
-        dd('invalido');
     }
 }
