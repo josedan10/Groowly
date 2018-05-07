@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb18030">
     @section('page', 'Admin | ')
     @include('includes/head', ['page' => 'admin'])
 </head>
