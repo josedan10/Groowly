@@ -1,4 +1,4 @@
-@extends('template.standard')
+@extends('frontend.template.standard')
 @section('content')
 <div>
     <section className='marketing'>
@@ -18,9 +18,9 @@
                 <div className='capitalize'>
 
                     {{-- Mostramos la primera letra en capital --}}
-                    <span>{{}}P</span>
+                    <span>{{ substr($marketing['paragraph1'], 3, 1) }}</span>
                     <p>
-                        <b>otencializamos el impacto de tu marca a través de poderosas estrategias de marketing digital.</b>
+                        <b>{{ substr($marketing['paragraph1'], 4, strlen($marketing['paragraph1']) - 8) }}</b>
                     </p>
                 </div>
                 <p>
@@ -34,7 +34,7 @@
                 <p><b>DIGITAL</b></p>
             </div>
         </div>
-        @include('includes.submenuMarketing')
+        {{-- @include('includes.submenuMarketing') --}}
     </section>
 </div>
 @endsection

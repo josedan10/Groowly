@@ -8,7 +8,7 @@
         </div>
     </header>
     <div class="flex-center-wrap main">
-        @if($relaciones->isEmpty() !== false)
+        @if(!$relaciones)
             No hay datos para mostrar
         @else
             <table class="list">
@@ -25,9 +25,9 @@
                 <tbody>
 
                     <tr>
-                        <td class="col-2">{{ $relaciones->name }}</td>
-                        <td class="col-5">{{ $relaciones->paragraph1 }}</td>
-                        <td class="col-5">{{ $relaciones->paragraph2 }}</td>
+                        <td class="col-2">{!! $relaciones->name !!}</td>
+                        <td class="col-5">{!! $relaciones->paragraph1 !!}</td>
+                        <td class="col-5">{!! $relaciones->paragraph2 !!}</td>
                         {{--  <td class="col-1">
                             <div class="flex-around actions">
                                     <a><i class="icon icon-photo c-hand"></i></a>

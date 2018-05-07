@@ -4,18 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\MarketingRelaciones;
 
-class HomeController extends Controller
+class FrontendController extends Controller
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -24,6 +21,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-    	return view('home');
+    	return view('frontend.about');
+    }
+
+    public function marketing()
+    {
+        $marketing = MarketingRelaciones::where('name', 'marketing')->first();
+
+        return view('frontend.marketing', ['marketing' => $marketing]);
     }
 }

@@ -11,11 +11,11 @@
 
         <div class="form-group">
             <label class="form-label" for="paragraph1">Parrafo 1</label>
-            <textarea class="form-input ckeditor" type="text" id="paragraph1" name="paragraph1" @if(!$relaciones->isEmpty())'value="'.$relaciones->paragraph1.'"'@endif placeholder="Write here..."></textarea>
+            <textarea class="form-input ckeditor" type="text" id="paragraph1" name="paragraph1" @if(!$relaciones)'value="'.$relaciones->paragraph1.'"'@endif placeholder="Write here..."></textarea>
         </div>
         <div class="form-group">
             <label class="form-label" for="paragraph2">Parrafo 2</label>
-            <textarea class="form-input ckeditor" type="text" id="paragraph2" name="paragraph2" @if(!$relaciones->isEmpty())'value="'.$relaciones->paragraph2.'"'@endif placeholder="Write here..."></textarea>
+            <textarea class="form-input ckeditor" type="text" id="paragraph2" name="paragraph2" @if(!$relaciones)'value="'.$relaciones->paragraph2.'"'@endif placeholder="Write here..."></textarea>
         </div>
         <div class="flex-center form-group">
             <input class="btn btn-primary" type="submit" value="Editar">

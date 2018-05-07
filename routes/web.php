@@ -27,7 +27,7 @@
 
 // Route::get('Contact/sendMessage', 'ContactController@sendMessage');
 
-Route::group(['prefix' => 'admin',  'middlewareGroups' => ['web']], function() {
+Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
     // Admin Panel
     
     Route::get('login', 'LoginController@view')->name('login');
@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin',  'middlewareGroups' => ['web']], function() {
     
     //Route::group(['middleware' => ['auth']], function() {
         Route::get('', function() {
-            dd(Auth::user());
+            // dd(Auth::user());
             return view('admin.home');
         } );
 
@@ -77,7 +77,8 @@ Route::get('/migrate', function() {
     Artisan::call('migrate');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'FrontendController@index')->name('home');
+Route::get('/marketing', 'FrontendController@marketing')->name('marketing');
 ?>
 
 

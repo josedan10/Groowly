@@ -56,24 +56,32 @@ class AdminController extends Controller
     }
 
     public function marketing() {
-        $marketing = MarketingRelaciones::where('name', 'Marketing')->get();
+        $marketing = MarketingRelaciones::where('name', 'Marketing')->first();
 
         return view('admin.marketing.list', ['marketing' => $marketing]);
     }
 
     public function editMarketing() {
-        $marketing = MarketingRelaciones::where('name', 'Marketing')->get();
+        if (!MarketingRelaciones::where('name', 'Marketing')->exists()) {
+            // Edit
+            $marketing = false;
+        } else {
+            
+            $marketing = MarketingRelaciones::where('name', 'Marketing')->first();
+        }
 
         return view('admin.marketing.edit', ['marketing' => $marketing]);
     }
 
     public function editMarketingAction(Request $request) 
     {
-        $marketing = MarketingRelaciones::where('name', 'Marketing')->get();
         
-        if (!$marketing) {
+        if (!MarketingRelaciones::where('name', 'Marketing')->exists()) {
             // Edit
-            $marketing = new marketing();
+            $marketing = new MarketingRelaciones();
+        } else {
+            
+            $marketing = MarketingRelaciones::where('name', 'Marketing')->first();
         }
 
         $marketing->name = $request->name;
@@ -87,24 +95,32 @@ class AdminController extends Controller
     }
 
     public function relaciones() {
-        $relaciones = MarketingRelaciones::where('name', 'relaciones')->get();
+        $relaciones = MarketingRelaciones::where('name', 'relaciones')->first();
 
         return view('admin.relaciones.list', ['relaciones' => $relaciones]);
     }
 
     public function editRelaciones() {
-        $relaciones = MarketingRelaciones::where('name', 'relaciones')->get();
+        if (!MarketingRelaciones::where('name', 'relaciones')->exists()) {
+            // Edit
+            $relaciones = false;
+        } else {
+            
+            $relaciones = MarketingRelaciones::where('name', 'relaciones')->first();
+        }
 
         return view('admin.relaciones.edit', ['relaciones' => $relaciones]);
     }
 
     public function editRelacionesAction(Request $request) 
     {
-        $relaciones = MarketingRelaciones::where('name', 'relaciones')->get();
         
-        if (!$relaciones) {
+        if (!MarketingRelaciones::where('name', 'relaciones')->exists()) {
             // Edit
-            $relaciones = new relaciones();
+            $relaciones = new MarketingRelaciones();
+        } else {
+            
+            $relaciones = MarketingRelaciones::where('name', 'relaciones')->first();
         }
 
         $relaciones->name = $request->name;
