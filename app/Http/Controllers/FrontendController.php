@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\MarketingRelaciones;
+use App\MarketingSubsections;
 
 class FrontendController extends Controller
 {
@@ -27,7 +28,15 @@ class FrontendController extends Controller
     public function marketing()
     {
         $marketing = MarketingRelaciones::where('name', 'marketing')->first();
+        $subsections = MarketingSubsections::all();
 
-        return view('frontend.marketing', ['marketing' => $marketing]);
+        return view('frontend.marketing', ['marketing' => $marketing, 'subsections' => $subsections]);
+    }
+
+    public function relaciones()
+    {
+        $relaciones = MarketingRelaciones::where('name', 'relaciones')->first();
+
+        return view('frontend.relaciones', ['relaciones' => $relaciones]);
     }
 }

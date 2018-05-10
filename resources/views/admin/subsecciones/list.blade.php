@@ -14,7 +14,7 @@
             <table class="list">
                 <thead>
                     <tr>
-                        <th class="col-3">Nombre</th>
+                        <th class="col-3">Slug</th>
                         <th class="col-3">Titulo</th>
                         <th class="col-4">Contenido</th>
                         <th class="col-2">
@@ -27,12 +27,12 @@
 
                         <tr>
                             <td class="col-1">{{ $subsection->name }}</td>
-                            <td class="col-3">{{ $subsection->title }}</td>
-                            <td class="col-4">{{ $subsection->paragraph1 }}</td>
+                            <td class="col-3">{!! $subsection->title !!}</td>
+                            <td class="col-4">{!! $subsection->paragraph1 !!}</td>
                             <td class="col-1">
                                 <div class="flex-around actions">
                                         {{-- <a><i class="icon icon-photo c-hand"></i></a> --}}
-                                    <a href="{{ url('admin/subsection/'.$subsection->id.'/edit/') }}"><i class="icon icon-edit c-hand"></i></a>
+                                    <a href="{{ url('admin/subsection/'.$seccion.'/'.$subsection->id.'/edit/') }}"><i class="icon icon-edit c-hand"></i></a>
                                     <a href=""><i class="icon icon-delete c-hand"></i></a>
                                 </div>
                             </td>

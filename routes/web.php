@@ -63,11 +63,11 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
         Route::get('subsection/marketing/add', 'AdminController@addSubsectionMarketing')->name('add-subsection-marketing');
         Route::post('subsection/marketing/add', 'AdminController@addSubsectionMarketingAction');
         Route::get('subsection/relaciones/add', 'AdminController@addSubsectionRelaciones')->name('add-subsection-relaciones');
-        Route::post('subsection/relaciones/add', 'AdminController@addSubsectionRelaciones');
+        Route::post('subsection/relaciones/add', 'AdminController@addSubsectionRelacionesAction');
         Route::get('subsection/marketing/{id}/edit', 'AdminController@editSubsectionMarketing')->name('edit-subsection-marketing');
         Route::post('subsection/marketing/{id}/edit', 'AdminController@editSubsectionMarketingAction');
         Route::get('subsection/relaciones/{id}/edit', 'AdminController@editSubsectionRelaciones')->name('edit-subsection-relaciones');
-        Route::post('subsection/relaciones/{id}/edit', 'AdminController@editSubsectionRelaciones');
+        Route::post('subsection/relaciones/{id}/edit', 'AdminController@editSubsectionRelacionesAction');
     //});    
 });
 
@@ -79,6 +79,7 @@ Route::get('/migrate', function() {
 
 Route::get('/home', 'FrontendController@index')->name('home');
 Route::get('/marketing', 'FrontendController@marketing')->name('marketing');
+Route::get('/relaciones', 'FrontendController@relaciones')->name('relaciones');
 ?>
 
 

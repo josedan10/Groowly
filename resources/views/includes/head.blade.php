@@ -7,17 +7,13 @@
 
 <title>@yield('page', 'Home | ')Groowly</title>
 
-<link rel="icon" href="{{ 'favicon.ico' }}" type="image/x-icon" />	
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+<link rel="icon" href="{{ '/favicon.ico' }}" type="image/x-icon" />	
+{{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/animate.css') }}"> --}}
 
 {{--  Style sheet  --}}
 @if(isset($page))
-    <link rel="icon" href="favicon.png" type="image/x-icon" />	
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-    <link rel="stylesheet" href="{{asset('css/backend.css') }}">
-    
+    <link rel="stylesheet" href="{{asset('css/backend.css') }}">    
 @else
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 @endif

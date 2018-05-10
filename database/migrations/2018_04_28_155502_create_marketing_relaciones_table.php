@@ -16,8 +16,8 @@ class CreateMarketingRelacionesTable extends Migration
         Schema::create('marketing_relaciones', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('title');
             $table->string('paragraph1');
-            $table->string('paragraph2')->nullable();
             $table->timestamps();
         });
     }

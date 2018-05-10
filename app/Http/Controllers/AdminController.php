@@ -178,6 +178,8 @@ class AdminController extends Controller
         $subsection->paragraph1 = $req->paragraph1;
         $subsection->save();
 
+        dd($subsection);
+
         return redirect(url('/admin/subsections/marketing'));
     }
 
@@ -196,15 +198,17 @@ class AdminController extends Controller
     public function editSubsectionMarketing($id) {
 
         $subsection = MarketingSubsections::find($id);
+        $name = 'marketing';
 
-        return view('admin.subsecciones.edit', ['subsection' => $subsection]);
+        return view('admin.subsecciones.edit', ['subsection' => $subsection, 'name' => $name]);
     }
 
     public function editSubsectionRelaciones($id) {
 
         $subsection = RelacionesSubsections::find($id);
+        $name = 'relaciones';
 
-        return view('admin.subsecciones.edit', ['subsection' => $subsection]);
+        return view('admin.subsecciones.edit', ['subsection' => $subsection, 'name' => $name]);
     }
 
     public function editSubsectionMarketingAction(Request $req) {
