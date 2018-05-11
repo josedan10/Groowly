@@ -112,7 +112,7 @@ class App extends React.Component {
 
 				{/* {this.props.children}  */}
 				<header>
-					<Nav animation={this.toogleMenu.bind(this)} tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} />
+					<Nav animation={this.toogleMenu.bind(this)} tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} decoration={config.getDecoration()} />
 					<div className='icons'>
 						{logo}
 						<span className='icon icon-dehaze' onClick={this.toogleMenu} id='menu-icon'/>

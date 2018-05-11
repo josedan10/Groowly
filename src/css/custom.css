@@ -270,7 +270,7 @@ section {
   align-items: center;
   position: relative; }
   .sections-links a:hover {
-    color: #230f28; }
+    color: #d39205; }
   .sections-links .links:first-child h2 {
     padding-left: 6px; }
   .sections-links .links:last-child {
@@ -313,6 +313,7 @@ section {
   .relaciones .links,
   .subsection .links {
     width: auto;
+    z-index: 1;
     max-width: 40%; }
     .marketing .links p,
     .relaciones .links p,
@@ -358,8 +359,7 @@ section {
         .subsection .submenu ul a.selected {
           color: #d39205; }
 
-.marketing .text-decoration,
-.relaciones .text-decoration {
+.text-decoration {
   display: flex;
   padding: 0 50px;
   justify-content: space-between;
@@ -369,9 +369,9 @@ section {
   position: absolute;
   bottom: 20px;
   left: 0; }
-  .marketing .text-decoration span,
-  .relaciones .text-decoration span {
+  .text-decoration span {
     font-weight: bold; }
+
 .marketing .content,
 .relaciones .content {
   display: flex;
@@ -460,10 +460,14 @@ header {
           padding: 10px;
           color: #230f28;
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          justify-content: space-between;
           align-items: center;
           position: relative;
           transition: all .3s ease; }
+          header nav ul li a .link-decoration {
+            opacity: 0;
+            transition: all .3s ease; }
           header nav ul li a::before {
             position: absolute;
             margin: 0 auto;
@@ -476,6 +480,9 @@ header {
           header nav ul li a:hover, header nav ul li a.selected {
             color: #d39205;
             transition: all .3s ease; }
+            header nav ul li a:hover .link-decoration, header nav ul li a.selected .link-decoration {
+              opacity: 1;
+              transition: all .3s ease; }
             header nav ul li a:hover::before, header nav ul li a.selected::before {
               width: 100%;
               transition: all .3s ease; }
@@ -491,18 +498,6 @@ header {
 .subsection .links {
   margin-right: 50px;
   z-index: 1; }
-.subsection .text-decoration {
-  display: flex;
-  padding: 0 50px;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 150px;
-  color: white;
-  position: absolute;
-  top: -28px;
-  left: 0; }
-  .subsection .text-decoration span {
-    font-weight: bold; }
 .subsection .content {
   display: flex;
   justify-content: center;
@@ -1001,6 +996,8 @@ td {
           header nav ul li a {
             color: #ececec;
             font-size: 16px; }
+            header nav ul li a .link-decoration {
+              display: none; }
           header nav ul li:first-child {
             border-top: none; }
       header nav.show {
@@ -1026,7 +1023,7 @@ td {
 
   section,
   .subsection .submenu,
-  .marketing .submenu
+  .marketing .submenu,
   .relaciones .submenu {
     padding: 0; } }
 @media (max-width: 991px) {
@@ -1039,16 +1036,16 @@ td {
     font-size: 20px;
     line-height: 10px; }
 
+  .text-decoration {
+    padding: 0 10px;
+    font-size: 100px; }
+
   .marketing,
   .relaciones {
     padding: 0 10px; }
     .marketing .content,
     .relaciones .content {
       justify-content: space-between; }
-    .marketing .text-decoration,
-    .relaciones .text-decoration {
-      padding: 0 10px;
-      font-size: 100px; }
     .marketing .info p,
     .relaciones .info p {
       font-size: 16px; }
@@ -1062,10 +1059,6 @@ td {
 
   .subsection {
     padding: 0; }
-    .subsection .text-decoration {
-      padding: 0 10px;
-      font-size: 120px;
-      top: -20px; }
     .subsection .info p {
       font-size: 14px; }
     .subsection .submenu {
@@ -1288,21 +1281,8 @@ td {
     .subsection .content .info {
       width: 100%;
       padding: 30px; }
-  .subsection .text-decoration {
-    top: 260px;
-    position: fixed;
-    left: -250px;
-    right: auto;
-    margin: 0;
-    padding: 0;
-    width: 100vh;
-    justify-content: space-between;
-    transform: rotate(-90deg); }
-    .subsection .text-decoration span {
-      font-size: 20vh; }
 
-  .marketing .text-decoration,
-  .relaciones .text-decoration {
+  .text-decoration {
     font-size: 20vw; }
 
   .services .flex-container > div h2 {
