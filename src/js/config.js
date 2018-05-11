@@ -6,6 +6,7 @@ class Config {
 		this.redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 		this.logo = logo;
 		this.communities = communities;
+		this.decoration = ['Who we are', 'What we do', 'How we connect', 'Enjoy', 'Where we are', 'Also we'];
 		this.team = [
 			{
 				nombre: 'Jose Quintero',
@@ -143,6 +144,10 @@ class Config {
 
 	getTeam() {
 		return this.team;
+	}
+	
+	getDecoration() {
+		return this.decoration;
 	}
 }
 

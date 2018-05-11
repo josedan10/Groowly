@@ -69,6 +69,10 @@
                     a {
                         color: $gris;
                         font-size: 16px;
+
+                        .link-decoration {
+                            display: none;
+                        }
                     }
 
                     &:first-child {
@@ -152,7 +156,7 @@
     
     section,
     .subsection .submenu, 
-    .marketing .submenu 
+    .marketing .submenu, 
     .relaciones .submenu {
         padding: 0;
     }
@@ -177,17 +181,17 @@
     
     }
 
+    .text-decoration {
+        padding: 0 10px;
+        font-size: 100px;
+    }
+
     .marketing,
     .relaciones {
         padding: 0 10px;
 
         .content {
             justify-content: space-between;
-        }
-
-        .text-decoration {
-            padding: 0 10px;
-            font-size: 100px;
         }
 
         .info {
@@ -211,11 +215,11 @@
     .subsection {
         padding: 0;
 
-        .text-decoration {
-            padding: 0 10px;
-            font-size: 120px;
-            top: -20px;
-        }
+        // .text-decoration {
+        //     padding: 0 10px;
+        //     font-size: 120px;
+        //     top: -20px;
+        // }
 
         .info {
             p {
@@ -607,29 +611,30 @@
                 padding: 30px;
             }
         }
-        .text-decoration {
-            top: 260px;
-            position: fixed;
-            left: -250px;
-            right: auto;
-            margin: 0;
-            padding: 0;
-            width: 100vh;
-            justify-content: space-between;
-            transform: rotate(-90deg);
+        // .text-decoration {
+        //     top: 260px;
+        //     position: fixed;
+        //     left: -250px;
+        //     right: auto;
+        //     margin: 0;
+        //     padding: 0;
+        //     width: 100vh;
+        //     justify-content: space-between;
+        //     transform: rotate(-90deg);
 
-            span {
-                font-size: 20vh;
-            }
-        }
+        //     span {
+        //         font-size: 20vh;
+        //     }
+        // }
     }
 
-    .marketing,
-    .relaciones {
-        .text-decoration {
-            font-size: 20vw;
-        }
+    .text-decoration {
+        font-size: 20vw;
     }
+
+    // .marketing,
+    // .relaciones {
+    // }
 
     .services {
         .flex-container {

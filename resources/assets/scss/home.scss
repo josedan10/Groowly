@@ -66,7 +66,7 @@
     position: relative;
     
     a:hover {
-        color: $violeta;
+        color: $dorado;
     }
 
     .links:first-child h2 {
@@ -119,6 +119,7 @@
 
     .links {
         width: auto;
+        z-index: 1;
         max-width: 40%;
         p {
             line-height: 20px;
@@ -165,24 +166,24 @@
     }
 }
 
+.text-decoration {
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 150px;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+
+    span {
+        font-weight: bold;
+    }
+}
+
 .marketing,
 .relaciones {
-    .text-decoration {
-        display: flex;
-        padding: 0 50px;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 150px;
-        color: white;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-
-        span {
-            font-weight: bold;
-        }
-    }
-
     .content {
         display: flex;
         justify-content: space-around;
@@ -303,14 +304,18 @@ header {
                     padding: 10px;
                     color: $violeta;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
+                    justify-content: space-between;
                     align-items: center;
                     position: relative;
                     transition: all .3s ease;
 
-                    // span {
-                    //     margin-right: 10px;
-                    // }
+                    .link-decoration {
+                        opacity: 0;
+                        transition: all .3s ease;
+                    }
+
+                    
                     &::before {
                         position: absolute;
                         margin: 0 auto;
@@ -327,6 +332,11 @@ header {
 
                         color: $dorado;
                         transition: all .3s ease;
+
+                        .link-decoration {
+                            opacity: 1;
+                            transition: all .3s ease;
+                        }
 
                         &::before {
                             width: 100%;
@@ -360,21 +370,21 @@ header {
         z-index: 1;
     }
 
-    .text-decoration {
-        display: flex;
-        padding: 0 50px;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 150px;
-        color: white;
-        position: absolute;
-        top: -28px;
-        left: 0;
+    // .text-decoration {
+    //     display: flex;
+    //     padding: 0 50px;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     font-size: 150px;
+    //     color: white;
+    //     position: absolute;
+    //     top: -28px;
+    //     left: 0;
 
-        span {
-            font-weight: bold;
-        }
-    }
+    //     span {
+    //         font-weight: bold;
+    //     }
+    // }
 
     .content {
         display: flex;
