@@ -8,8 +8,8 @@
 <title>@yield('page', 'Home | ')Groowly</title>
 
 <link rel="icon" href="{{ '/favicon.ico' }}" type="image/x-icon" />	
-{{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link rel="stylesheet" href="{{ asset('css/animate.css') }}"> --}}
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
 
 {{--  Style sheet  --}}
 @if(isset($page))

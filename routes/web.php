@@ -54,8 +54,8 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
         Route::get('users', 'AdminController@users')->name('admin-users');
         Route::get('users/add', 'AdminController@addUser')->name('add-user');
         Route::post('users/add', 'AdminController@editUserAction');
-        Route::get('users/edit/{$id}', 'AdminController@editUser')->name('edit-user');
-        Route::post('users/edit/{$id}', 'AdminController@editUserAction');
+        Route::get('users/edit/{id}', 'AdminController@editUser')->name('edit-user');
+        Route::post('users/edit/{id}', 'AdminController@editUserAction');
         Route::get('users/my-account', 'AdminController@myAccount')->name('my-account');
         Route::post('users/my-account', 'AdminController@myAccountEdit');
     
@@ -79,7 +79,9 @@ Route::get('/migrate', function() {
 
 Route::get('/home', 'FrontendController@index')->name('home');
 Route::get('/marketing', 'FrontendController@marketing')->name('marketing');
+Route::get('/marketing/{subsection}', 'FrontendController@marketingSubsections');
 Route::get('/relaciones', 'FrontendController@relaciones')->name('relaciones');
+Route::get('/marketing/{subsection}', 'FrontendController@marketingSubsections');
 ?>
 
 

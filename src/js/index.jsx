@@ -1,33 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactSVG from 'react-svg';
-import { HashRouter, BrowserRouter, Route, Switch, hashHistory, browserHistory, NavLink } from 'react-router-dom';
+// import { HashRouter, BrowserRouter, Route, Switch, hashHistory, browserHistory, NavLink } from 'react-router-dom';
 import Nav from './nav/nav-menu';
-import Home from './pages/home';
+// import Home from './pages/home';
 // import SelectedWorks from './pages/selected-works';
-import OwnCommunity from './pages/own-community';
-import Videos from './pages/videos';
+// import OwnCommunity from './pages/own-community';
+// import Videos from './pages/videos';
 // import Contact from './pages/contact';
-import Marketing from './pages/marketing';
-import Relaciones from './pages/relaciones';
+// import Marketing from './pages/marketing';
+// import Relaciones from './pages/relaciones';
 // import Services from './pages/services';
 // import Team from './pages/team';
 // import Clients from './pages/clients';
 
 // SubMenu Marketing
-import Estrategia from './pages/estrategia';
-import DesarrolloWebApps from './pages/desarrollo-web-apps';
-import ManejoRRSS from './pages/manejo-rrss';
-import InfluencerMarketing from './pages/influencer-marketing';
-import CreacionMarcas from './pages/creacion-marcas';
-import CreacionContenido from './pages/creacion-contenido';
+// import Estrategia from './pages/estrategia';
+// import DesarrolloWebApps from './pages/desarrollo-web-apps';
+// import ManejoRRSS from './pages/manejo-rrss';
+// import InfluencerMarketing from './pages/influencer-marketing';
+// import CreacionMarcas from './pages/creacion-marcas';
+// import CreacionContenido from './pages/creacion-contenido';
 
 // SubMenu Relaciones
-import EstrategiasComunicacion from './pages/estrategias-comunicacion';
-import ConvocatoriaMedios from './pages/convocatoria-medios';
-import PosicionamientoMedios from './pages/posicionamiento-medios';
-import ContenidoEditorial from './pages/contenido-editorial';
-import ProduccionEventos from './pages/produccion-eventos';
+// import EstrategiasComunicacion from './pages/estrategias-comunicacion';
+// import ConvocatoriaMedios from './pages/convocatoria-medios';
+// import PosicionamientoMedios from './pages/posicionamiento-medios';
+// import ContenidoEditorial from './pages/contenido-editorial';
+// import ProduccionEventos from './pages/produccion-eventos';
 
 var config = require('./config');
 config = config.config;
@@ -61,22 +61,6 @@ class App extends React.Component {
 		this.setState({
 			nav: navType
 		});
-	}
-
-	toogleMenu() {
-		let nav = document.getElementById('nav-menu');
-		let icon = document.getElementById('menu-icon');
-
-		if (nav.classList.contains('show')) {
-			nav.classList.remove('show');
-			nav.classList.add('hide');
-			icon.classList.remove('active');
-			
-		} else {
-			nav.classList.remove('hide');
-			nav.classList.add('show');
-			icon.classList.add('active');
-		}
 	}
 
 	render() {
@@ -119,13 +103,13 @@ class App extends React.Component {
 						
 					</div>
 				</header>
-				{this.props.children}
+				{/* {this.props.children} */}
 			</div>
 		);
 	}
 }
 
 ReactDOM.render(	
-		<App />
-	, document.getElementById('app')
+	<Nav animation={this.toogleMenu.bind(this)} tipo={this.state.nav} logo={config.getLogo()} links={config.getLinks()} decoration={config.getDecoration()} />
+	, document.getElementById('nav')
 );

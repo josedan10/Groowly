@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Nav from './nav/nav-menu';
 // import { HashRouter, BrowserRouter, Route, Switch, hashHistory, browserHistory } from 'react-router-dom';
 // import Home from './pages/home';
 // import SelectedWorks from './pages/selected-works';
@@ -12,7 +13,10 @@ import ReactDOM from 'react-dom';
 // 	document.getElementById('app')
 // );
 
+var config = require('./config');
+config = config.config;
+
 ReactDOM.render(
-	<p>Home</p>,
-	document.getElementById('app')
+	<Nav logo={config.getLogo()} links={config.getLinks()} decoration={config.getDecoration()} />
+	, document.getElementById('nav')
 );
