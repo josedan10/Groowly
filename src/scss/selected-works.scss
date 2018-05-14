@@ -1,0 +1,77 @@
+.selected-works {
+    .flex-center {
+        
+        .works-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            div{
+                background-color: $gris;
+                width: 22%;
+                min-height: 100px;
+                height: 30.33%;
+                margin: 1%;
+                transition: all .7 ease;
+                overflow: hidden;
+                position: relative;
+
+                img{
+                    position: absolute;
+                }
+                
+                img:hover{
+                    opacity: 0.7;
+                    cursor: pointer;
+                    transition: all .7 ease;
+                }
+            }
+        }
+
+    }
+    
+    .work-display {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: .7);
+
+        &.slideInDown {
+            visibility: visible;
+            animation-duration: 1s;
+        }
+
+        img {
+            height: 90vh;
+        }
+
+        .info{
+            background-color: rgba($color: #000000, $alpha: .7);
+            padding: 20px;
+            color: $gris;
+            width: 300px;
+            position: absolute;
+            top: 0;
+            right: 50px;
+
+            h2 {
+                margin-bottom: 30px;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            a {
+                display: block;
+                margin-top: 30px;
+                color: $dorado;
+            }
+        }
+
+    }
+}

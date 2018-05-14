@@ -1,0 +1,318 @@
+@keyframes rotateLogoOutAnimation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-90deg);
+	}
+}
+
+@keyframes rotateLogoInAnimation {
+	from {
+		transform: rotate(-90deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes iconsIn {
+    from {
+		transform: translateX(-600px);
+	}
+    to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes iconsOut {
+    from {
+		transform: translateX(0px);
+	}
+    to {
+		transform: translateX(-600px);
+	}
+}
+
+#nav{
+	height: 100%;
+	width: 100%;
+}
+
+nav{
+	display: flex;
+	background: $gris;
+	width: 50px;
+	height: 100%;
+	padding: 20px 10px;
+
+	transition: all .7s ease;
+
+	img{
+		transform: rotate(-90deg);
+		height: 25px;
+		margin-top: 30px;
+	}
+
+	ul{
+		list-style: none;
+		display: flex;
+
+		li{
+			margin: 3px 0;
+			width: 100%;div {
+				position: static;
+			}
+
+			a{
+				text-decoration: none;
+
+
+				color: $grisOsc;
+				transition: all .5s ease;
+
+				&:hover{
+					color: $dorado;
+					transition: all .5s ease;
+				}
+
+				i{
+					margin-right: 3px;
+				}
+			}
+		}
+	}
+
+	// &:hover {
+	// 	width: 210px;
+	// 	transition: all .7s ease;
+	// }
+}
+
+nav.default{
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav.nav-left{
+	position: fixed;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 180px;
+
+	.rotateLogoIn {
+		animation-name: rotateLogoInAnimation;
+		animation-duration: 1s;
+	}
+
+	.rotateLogoOut {
+		animation-name: rotateLogoOutAnimation;
+		animation-duration: 1s;
+	}
+
+	#logo {
+		transform: rotate(0deg);
+	}
+
+	// &:hover {
+	// 	#logo {
+	// 		transform: rotate(0deg);
+	// 		animation-duration: 1s;
+	// 	}
+	// }
+
+	img{
+		position: fixed;
+		top: 50px;
+	}
+
+	div{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 210px;
+		position: absolute;
+		right: 0;
+		top: 40%;
+
+		ul{
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+
+			li{
+				div {
+					position: static;
+				}
+				a {
+					transition: all .7s ease;
+					display: block;
+					padding-right: 70px;
+					width: 100%;
+					text-align: right;
+					position: relative;
+					font-size: 14px;
+
+					&.selected {
+						color: $dorado;
+
+						span {
+							background: $dorado;
+						}
+					}
+
+					span{
+						display: block;
+						width: 20px;
+						height: 1px;
+						background-color: $grisOsc;
+						position: absolute;
+						top: 7px;
+						right: 15px;
+					}
+
+					&:hover	{
+						color: $dorado;
+						transition: all .5s ease;
+
+						span{
+							background-color: $dorado;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.nav-movil {
+	position: fixed;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	img{
+		position: fixed;
+		top: 50px;
+	}
+	
+	div{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 210px;
+		position: absolute;
+		right: 0;
+		top: 40%;
+
+		ul{
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+
+			li{
+				div {
+					position: static;
+				}
+
+				a {
+					transition: all .7s ease;
+					display: block;
+					padding-right: 70px;
+					width: 100%;
+					text-align: right;
+					position: relative;
+					font-size: 14px;
+
+					&.selected {
+						color: $dorado;
+
+						span {
+							background: $dorado;
+						}
+					}
+
+					span{
+						display: block;
+						width: 20px;
+						height: 1px;
+						background-color: $grisOsc;
+						position: absolute;
+						top: 7px;
+						right: 15px;
+					}
+
+					&:hover	{
+						color: $dorado;
+						transition: all .5s ease;
+
+						span{
+							background-color: $dorado;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.redes-nav {
+		position: absolute;
+		bottom: 10px;
+		transition: all .5s ease;
+		animation-duration: .5s;
+
+		&.In {
+			animation-name: iconsIn;
+			transform: translateX(0px);
+		}
+
+		&.Out {
+			animation-name: iconsOut;
+			transform: translateX(-600px);
+		}
+
+		i {
+			margin: 10px;
+		}
+	}
+
+	.rotateLogoIn {
+		animation-name: rotateLogoInAnimation;
+		animation-duration: 1s;
+	}
+
+	.rotateLogoOut {
+		animation-name: rotateLogoOutAnimation;
+		animation-duration: 1s;
+	}
+
+	// &:hover {
+	// 	#logo {
+	// 		transform: rotate(0deg);
+	// 		animation-duration: 1s;
+	// 	}
+	// 	.redes-nav{
+	// 		margin-right: 0;
+	// 		transition: all .5s ease;
+	// 		animation-duration: .5s;
+	// 	}
+	// }
+}
+
+nav.nav-right{
+	top: 0;
+	right: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	ul{
+		flex-direction: column;
+	}
+}

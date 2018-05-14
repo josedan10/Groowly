@@ -152,7 +152,7 @@ export class Menu extends React.Component {
 		// let redes = document.getElementsByClassName('redes-nav')[0];
 
 		this.setState({
-			link: e.target.hash.replace('')
+			link: e.target.hash.replace('#', '')
 		});
 
 		// this.close();
@@ -167,19 +167,17 @@ export class Menu extends React.Component {
 
 	assignClass(elemento) {
 		let classState;
-		let reg = new RegExp(elemento); 
 
-		console.log(reg);
 		// console.log(elemento);
 		// console.log(this.state);
 
 		switch (elemento) {
 		case 'About':
-			
+			classState = (this.state.link === '/') ? 'selected' : '';
 			break;
 
 		default:
-			
+			classState = (this.state.link === '/' + elemento) ? 'selected' : '';
 			break;
 		}
 
@@ -197,10 +195,10 @@ export class Menu extends React.Component {
 						links.map((elemento, index) => (
 							<li key={'li' + elemento} onClick={this.props.animation}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
-								<a href={(elemento === 'About') ? '/' : elemento} className={this.assignClass(elemento)}>
+								<NavLink to={(elemento === 'About') ? '/' : elemento} onClick={this.changeLinkStyle.bind(this)} className={this.assignClass(elemento)}>
 									<span className='link-text'>{elemento.toUpperCase()}</span>
 									<span className='link-decoration'>{decoration[index]}</span>
-								</a>
+								</NavLink>
 								{/* </Swipeable> */}
 							</li>)
 						)
