@@ -4,7 +4,7 @@
     
     <div class='icons'>
         <div class='flex-center logo'>
-            <a href='/'>
+            <a class='flex-center' href='/'>
                 <svg
                     xmlns:dc="http://purl.org/dc/elements/1.1/"
                     xmlns:cc="http://creativecommons.org/ns#"
@@ -61,7 +61,6 @@
                 </svg>
             </a>
         </div>
-        <span class='icon icon-dehaze' id='menu-icon'/>
-        
+        <span class='icon icon-dehaze' id='menu-icon'></span>
     </div>
 </header>

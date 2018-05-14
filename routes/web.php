@@ -78,10 +78,10 @@ Route::get('/migrate', function() {
 });
 
 Route::get('/home', 'FrontendController@index')->name('home');
-Route::get('/marketing', 'FrontendController@marketing')->name('marketing');
-Route::get('/marketing/{subsection}', 'FrontendController@marketingSubsections');
-Route::get('/relaciones', 'FrontendController@relaciones')->name('relaciones');
-Route::get('/marketing/{subsection}', 'FrontendController@marketingSubsections');
+Route::get('/Marketing', 'FrontendController@marketing')->name('marketing');
+Route::get('/Marketing/{subsection}', 'FrontendController@marketingSubsections');
+Route::get('/Relaciones', 'FrontendController@relaciones')->name('relaciones');
+Route::get('/Relaciones/{subsection}', 'FrontendController@relacionesSubsections');
 ?>
 
 

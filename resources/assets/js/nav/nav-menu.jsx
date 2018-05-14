@@ -169,19 +169,13 @@ export class Menu extends React.Component {
 		let classState;
 		let reg = new RegExp(elemento); 
 
-		console.log(reg);
+		console.log(elemento);
+		console.log(location.pathname);
+		console.log(reg.exec(location.pathname));
 		// console.log(elemento);
 		// console.log(this.state);
 
-		switch (elemento) {
-		case 'About':
-			
-			break;
-
-		default:
-			
-			break;
-		}
+		classState = (reg.exec(location.pathname) !== null) ? 'active' : ''; 
 
 		return classState;
 	}
@@ -197,7 +191,7 @@ export class Menu extends React.Component {
 						links.map((elemento, index) => (
 							<li key={'li' + elemento} onClick={this.props.animation}>
 								{/* <Swipeable onSwipingRight={this.props.onSwipingRight} onSwipingLeft={this.props.onSwipingLeft}> */}
-								<a href={(elemento === 'About') ? '/' : elemento} className={this.assignClass(elemento)}>
+								<a href={(elemento === 'About') ? '/' : '/' + elemento} className={this.assignClass(elemento)}>
 									<span className='link-text'>{elemento.toUpperCase()}</span>
 									<span className='link-decoration'>{decoration[index]}</span>
 								</a>

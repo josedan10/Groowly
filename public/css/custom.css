@@ -352,11 +352,11 @@ section {
         font-weight: bold;
         display: block;
         position: relative; }
-        .marketing .submenu ul a:hover, .marketing .submenu ul a.selected,
+        .marketing .submenu ul a:hover, .marketing .submenu ul a.active,
         .relaciones .submenu ul a:hover,
-        .relaciones .submenu ul a.selected,
+        .relaciones .submenu ul a.active,
         .subsection .submenu ul a:hover,
-        .subsection .submenu ul a.selected {
+        .subsection .submenu ul a.active {
           color: #d39205; }
 
 .text-decoration {
@@ -463,27 +463,32 @@ header {
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
-          position: relative;
           transition: all .3s ease; }
+          header nav ul li a .link-text {
+            position: relative;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            header nav ul li a .link-text::before {
+              position: absolute;
+              margin: 0 auto;
+              content: '';
+              bottom: 50%;
+              height: 1px;
+              background-color: #d39205;
+              width: 0;
+              transition: all .3s ease; }
           header nav ul li a .link-decoration {
             opacity: 0;
             transition: all .3s ease; }
-          header nav ul li a::before {
-            position: absolute;
-            margin: 0 auto;
-            content: '';
-            bottom: 50%;
-            height: 1px;
-            background-color: #d39205;
-            width: 0;
-            transition: all .3s ease; }
-          header nav ul li a:hover, header nav ul li a.selected {
+          header nav ul li a:hover, header nav ul li a.active {
             color: #d39205;
             transition: all .3s ease; }
-            header nav ul li a:hover .link-decoration, header nav ul li a.selected .link-decoration {
+            header nav ul li a:hover .link-decoration, header nav ul li a.active .link-decoration {
               opacity: 1;
               transition: all .3s ease; }
-            header nav ul li a:hover::before, header nav ul li a.selected::before {
+            header nav ul li a:hover .link-text::before, header nav ul li a.active .link-text::before {
               width: 100%;
               transition: all .3s ease; }
     header nav.hide {
@@ -947,7 +952,7 @@ td {
             color: #ececec;
             transition: all .3s ease; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .services .flex-container {
     padding: 120px 50px; }
 
@@ -1121,14 +1126,14 @@ td {
 
   .marketing .links {
     position: absolute;
-    top: 30px;
+    top: 12vh;
     left: -7px; }
     .marketing .links p {
       padding-left: 6px; }
 
   .relaciones .links {
     position: absolute;
-    top: 30px;
+    top: 12vh;
     right: 0;
     text-align: right;
     max-width: 100%; }
@@ -1147,6 +1152,9 @@ td {
 
   .subsection .text-decoration {
     top: -10px; }
+
+  .subsection .links {
+    margin-top: 0; }
 
   .sections-links .links {
     position: absolute; }
@@ -1224,6 +1232,17 @@ td {
         width: 31%;
         height: 20%; } }
 @media (max-width: 480px) {
+  .marketing .links {
+    left: -2px; }
+
+  .links h1 {
+    font-size: 40px;
+    line-height: 30px; }
+
+  header svg {
+    top: auto;
+    left: 0;
+    position: absolute; }
   header .icons {
     z-index: 5;
     position: absolute;
@@ -1232,7 +1251,8 @@ td {
     justify-content: space-between;
     align-items: center; }
   header .icon {
-    top: auto; }
+    top: auto;
+    right: 20px; }
   header nav {
     height: 90vh;
     visibility: hidden;
@@ -1259,20 +1279,41 @@ td {
     .marketing .submenu ul li,
     .relaciones .submenu ul li {
       width: 40%;
-      text-align: center; }
+      text-align: center;
+      margin: 5px; }
     .subsection .submenu ul a,
     .marketing .submenu ul a,
     .relaciones .submenu ul a {
-      font-size: 14px;
+      font-size: 12px;
       text-align: center; }
+  .subsection .info,
+  .marketing .info,
+  .relaciones .info {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10vh; }
+    .subsection .info p,
+    .marketing .info p,
+    .relaciones .info p {
+      font-size: 12px; }
+  .subsection .text-decoration,
+  .marketing .text-decoration,
+  .relaciones .text-decoration {
+    font-size: 50px; }
 
-  .home article h1 {
-    font-size: 25px; }
-  .home article p {
-    font-size: 16px; }
+  .subsection .info {
+    margin-top: 0; }
+
+  .home article {
+    margin-top: 10vh; }
+    .home article h1 {
+      font-size: 25px; }
+    .home article p {
+      font-size: 14px; }
 
   .sections-links .links h1 {
-    font-size: 80px; }
+    font-size: 60px;
+    line-height: 50px; }
   .sections-links .links:first-child {
     left: -5px; }
 

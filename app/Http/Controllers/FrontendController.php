@@ -31,7 +31,7 @@ class FrontendController extends Controller
         $marketing = MarketingRelaciones::where('name', 'marketing')->first();
         $subsections = MarketingSubsections::all();
 
-        return view('frontend.marketing', ['section' => 'marketing', 'marketing' => $marketing, 'subsections' => $subsections]);
+        return view('frontend.marketing', ['section' => 'Marketing', 'marketing' => $marketing, 'subsections' => $subsections]);
     }
 
     public function relaciones()
@@ -39,7 +39,7 @@ class FrontendController extends Controller
         $relaciones = MarketingRelaciones::where('name', 'relaciones')->first();
         $subsections = MarketingSubsections::all();
 
-        return view('frontend.relaciones', ['section' => 'relaciones', 'relaciones' => $relaciones, 'subsections' => $subsections]);
+        return view('frontend.relaciones', ['section' => 'Relaciones', 'relaciones' => $relaciones, 'subsections' => $subsections]);
     }
 
     public function marketingSubsections($slug)
@@ -52,7 +52,12 @@ class FrontendController extends Controller
         $find = array('<p>', '</p>');
         $subsection_title = str_replace($find, '', $subsection->title);
 
-        return view('frontend.subsections', ['subsections' => $subsections, 'subsection' => $subsection, 'section' => 'marketing', 'title' => $subsection_title]);
+        // Formating title
+        $subsection->title = trim(preg_replace('/\s\s+/', '<br>', $subsection->title));
+        // dd($subsection->title);
+        $subsection->title = str_replace($find, '', $subsection->title);
+
+        return view('frontend.subsections', ['subsections' => $subsections, 'subsection' => $subsection, 'section' => 'Marketing', 'title' => $subsection_title]);
     }
 
     public function relacionesSubsections($slug)
@@ -65,7 +70,10 @@ class FrontendController extends Controller
         $find = array('<p>', '</p>');
         $subsection_title = str_replace($find, '', $subsection->title);
 
+        // Formating title
+        $subsection->title = trim(preg_replace('/\s\s+/', '<br>', $subsection->title));
+        $subsection->title = str_replace($find, '', $subsection->title);
 
-        return view('frontend.subsections', ['subsections' => $subsections, 'subsection' => $subsection, 'section' => 'relaciones', 'title' => $subsection_title]);
+        return view('frontend.subsections', ['subsections' => $subsections, 'subsection' => $subsection, 'section' => 'Relaciones', 'title' => $subsection_title]);
     }
 }

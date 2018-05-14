@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .services {
         .flex-container {
             padding: 120px 50px;
@@ -340,7 +340,7 @@
     .marketing {
         .links {
             position: absolute;
-            top: 30px;
+            top: 12vh;
             left: -7px;
 
             p {
@@ -352,7 +352,7 @@
     .relaciones {
         .links {
             position: absolute;
-            top: 30px;
+            top: 12vh;
             right: 0;
             text-align: right;
             max-width: 100%;
@@ -379,6 +379,12 @@
     .subsection .text-decoration {
         top: -10px;
         
+    }
+
+    .subsection {
+        .links {
+            margin-top: 0;
+        }
     }
 
     .sections-links {
@@ -516,7 +522,22 @@
 
 @media (max-width: 480px) { 
 
+    .marketing .links {
+        left: -2px;
+    }
+
+    .links h1 {
+        font-size: 40px;
+        line-height: 30px;
+    }
+
     header {
+
+        svg {
+            top: auto;
+            left: 0;
+            position: absolute;
+        }
 
         .icons {
             z-index: 5;
@@ -530,6 +551,7 @@
 
         .icon {
             top: auto;
+            right: 20px;
         }
 
         nav {
@@ -570,23 +592,46 @@
                 li {
                     width: 40%;
                     text-align: center;
+                    margin: 5px;
                 }
 
                 a {
-                    font-size: 14px;
+                    font-size: 12px;
                     text-align: center;
                 }
             }
+        }
+
+        .info {
+            width: 100%;
+            padding: 5px;
+            margin-top: 10vh;
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .text-decoration {
+            font-size: 50px;
+        }
+    }
+
+    .subsection {
+        .info {
+            margin-top: 0;
         }
     }
 
     .home {
         article {
+            margin-top: 10vh;
+
             h1 {
                 font-size: 25px;
             }
             p {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
@@ -594,7 +639,8 @@
     .sections-links {
 
         .links h1 {
-            font-size: 80px;
+            font-size: 60px;
+            line-height: 50px;
         }
 
         .links:first-child {
