@@ -72,7 +72,8 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
         Route::get('subsection/marketing/{id}/delete', 'AdminController@deleteSubsectionMarketing');
         Route::get('subsection/relaciones/{id}/delete', 'AdminController@deleteSubsectionRelaciones');
 
-        Route::get('community', 'AdminController@Community')->name('admin-community');
+        Route::get('community', 'AdminController@community')->name('admin-community');
+        Route::get('community/add', 'AdminController@addCommunity')->name('add-community');
     //});    
 });
 

@@ -562,13 +562,15 @@
                     font-size: 12px;
                 }
             }
+
+            & > .icon {
+                font-size: 20px;
+                right: 20px;
+            }
         }
 
 
-        & > .icon {
-            top: auto;
-            right: 20px;
-        }
+        
 
         nav {
             height: 90vh;

@@ -10,6 +10,7 @@ use App\MarketingRelaciones;
 use App\User;
 use App\MarketingSubsections;
 use App\RelacionesSubsections;
+use App\Community;
 
 class AdminController extends Controller
 {
@@ -245,5 +246,16 @@ class AdminController extends Controller
         RelacionesSubsections::destroy($id);
 
         return redirect(url('/admin/subsections/relaciones'));
+    }
+
+    public function community() {
+        $communities = Community::all();
+
+        return view('admin.community.list', ['communities' => $communities]);
+    }
+
+    public function addCommunity() {
+        
+        return view('admin.community.edit', ['community' => false]);
     }
 }

@@ -419,16 +419,6 @@ header {
     top: 40px; }
     header svg path {
       fill: #230f28; }
-  header > .icon {
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    z-index: 1;
-    color: #230f28;
-    font-size: 30px; }
-    header > .icon:hover {
-      color: #d39205;
-      cursor: pointer; }
   header .icons {
     padding: 0 20px;
     width: 100%;
@@ -436,6 +426,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center; }
+    header .icons > .icon {
+      position: absolute;
+      right: 50px;
+      z-index: 1;
+      color: #230f28;
+      font-size: 30px; }
+      header .icons > .icon:hover, header .icons > .icon.active {
+        color: #d39205;
+        cursor: pointer; }
     header .icons .social {
       height: 100%;
       margin: 0 auto;
@@ -1299,9 +1298,9 @@ td {
       margin-left: 55%; }
       header .icons .social .icon {
         font-size: 12px; }
-  header > .icon {
-    top: auto;
-    right: 20px; }
+    header .icons > .icon {
+      font-size: 20px;
+      right: 20px; }
   header nav {
     height: 90vh;
     visibility: hidden;

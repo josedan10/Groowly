@@ -243,21 +243,6 @@ header {
         }
     }
     
-    & > .icon {
-        position: absolute;
-        top: 50px;
-        right: 20px;
-        z-index: 1;
-        color: $violeta;
-        font-size: 30px;
-        
-        &:hover {
-            
-            color: $dorado;
-            cursor: pointer;
-        }
-    }
-    
     .icons {
         padding: 0 20px;
         width: 100%;
@@ -266,6 +251,21 @@ header {
         justify-content: center;
         align-items: center;
         // background-color: rgba($color: $gris, $alpha: 0.9)
+
+        & > .icon {
+            position: absolute;
+            right: 50px;
+            z-index: 1;
+            color: $violeta;
+            font-size: 30px;
+            
+            &:hover,
+            &.active {
+                
+                color: $dorado;
+                cursor: pointer;
+            }
+        }
 
         .social {
             height: 100%;
