@@ -15,7 +15,7 @@ export default class Videos extends React.Component {
 		const videos = (			
 			<section style={style} className='videos' id='videos' onTouchMove={this.props.onTouchMove}> 
 				<video autoPlay className='video'>
-					<source src='videos/video1.mp4' type='video/mp4' />
+					<source src='/src/video1.mp4' type='video/mp4' />
 					Your browser does not support the video tag.
 				</video>
 			</section>

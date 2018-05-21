@@ -32,8 +32,8 @@
                             <td class="col-1">
                                 <div class="flex-around actions">
                                         {{-- <a><i class="icon icon-photo c-hand"></i></a> --}}
-                                    <a href="{{ url('admin/subsection/'.$seccion.'/'.$subsection->id.'/edit/') }}"><i class="icon icon-edit c-hand"></i></a>
-                                    <a href=""><i class="icon icon-delete c-hand"></i></a>
+                                    <a href="{{ url('admin/subsection/'.$seccion.'/'.$subsection->id.'/edit') }}"><i class="icon icon-edit c-hand"></i></a>
+                                    <a href="{{ url('admin/subsection/'.$seccion.'/'.$subsection->id.'/delete') }}"><i class="icon icon-delete c-hand"></i></a>
                                 </div>
                             </td>
                         </tr>

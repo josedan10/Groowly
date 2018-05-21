@@ -19,9 +19,9 @@
                 <div class='capitalize'>
 
                     {{-- Mostramos la primera letra en capital --}}
-                    <span>{{ substr($marketing->paragraph1, 3, 1) }}</span>
+                    <span>{!! substr($marketing->paragraph1, 3, 1) !!}</span>
                     <p>
-                        <b>{{ substr($marketing->paragraph1, 4, strlen($marketing->paragraph1) - 8) }}</b>
+                        <b>{!! substr($marketing->paragraph1, 4, strlen($marketing->paragraph1) - 8) !!}</b>
                     </p>
                 </div>
                 <p>

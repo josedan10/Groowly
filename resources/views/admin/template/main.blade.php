@@ -24,15 +24,11 @@
 
             <nav>
                 <ul class="menu">
-                    <li class="menu-item">
-                        <div>                            
-                            <label class="c-hand" for="accordion-home">
-                                <a href="{{ route('admin-home') }}">
-                                    <i class="icon icon-home mr-1"></i>
-                                    Home
-                                </a>
-                            </label>
-                        </div>
+                    <li class="menu-item">                        
+                        <a href="{{ route('admin-home') }}">
+                            <i class="icon icon-home mr-1"></i>
+                            Home
+                        </a>
                     </li>
                     <li class="menu-item">
                         <div class="accordion">
@@ -63,6 +59,11 @@
                                 </ul>
                             </div>
                         </div>
+                    </li>
+                    <li class="menu-item">
+                        
+                        <li class="menu-item"><a href="{{ route('admin-community') }}">Community</a></li>
+                
                     </li>
                     {{-- <li class="menu-item">
                         <div class="accordion">

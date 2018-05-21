@@ -7,10 +7,11 @@ const config = {
 	entry: {
 		config: './resources/assets/js/config.js',
 		index: './resources/assets/js/index.jsx',
+		arrow: './resources/assets/js/arrow.jsx',
 		// home: './resources/assets/js/home.jsx',
-		// contact: './resources/assets/js/contact.jsx',
+		contact: './resources/assets/js/contact.jsx',
 		// community: './resources/assets/js/community.jsx',
-		// videos: './resources/assets/js/videos.jsx',
+		videos: './resources/assets/js/videos.jsx',
 		// marketing: './resources/assets/js/marketing.jsx',
 		// relaciones: './resources/assets/js/contenidoEditorial.jsx',
 		nav: './resources/assets/js/nav/nav-menu.jsx'

@@ -37,7 +37,7 @@ export default class FormContact extends React.Component {
 		var muestra;
 		let form = (
 			<div className='form-view flex-center'>
-				<form className='grid-container' method='GET' action='Contact/sendMessage'>
+				<form className='grid-container' method='POST' action='/Contact'>
 					<input type='text' placeholder='Name' name='name' id='name'/>
 					<input type='email' placeholder='Email' name='email' id='email'/>
 					<input type='phone' placeholder='Phone' name='phone' id='phone'/>
@@ -73,7 +73,7 @@ export default class FormContact extends React.Component {
 				<div className='header-form flex-center'>
 					<h1>CONTACT</h1>
 					<p>Comentario genial!</p>
-					<div className='btn-actions'>
+					<div id='btn-actions' className='btn-actions'>
 						<div className='btn-container'>
 							<button className='flex-center active' id='displayContact' onClick={this.mostrarFormulario.bind(this)}>FORM</button>
 							<button className='flex-center' id='displayEmail' onClick={this.mostrarCorreo.bind(this)}>CONTACT</button>

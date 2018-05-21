@@ -152,7 +152,7 @@ class Config {
 }
 
 // Links para el menu y las redes
-const links = ['About', 'Marketing', 'Relaciones', 'Videos', 'Contact', 'Community'];
+const links = ['About', 'Marketing', 'Relaciones', 'Videos', 'Contact'/*, 'Community'*/];
 // const redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 
 // Imagen del logo

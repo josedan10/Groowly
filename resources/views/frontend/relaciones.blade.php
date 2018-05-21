@@ -1,5 +1,5 @@
 @extends('frontend.template.standard')
-@section('page', 'Relaciones |')
+@section('page', 'Relaciones | ')
 @section('content')
 <div>
     <section class='relaciones'>
@@ -8,13 +8,13 @@
                 <div class='capitalize'>
 
                     {{-- Mostramos la primera letra en capital --}}
-                    <span>{{ substr($relaciones->paragraph1, 3, 1) }}</span>
+                    <span>{!! substr($relaciones->paragraph1, 3, 1) !!}</span>
                     <p>
-                        <b>{{ substr($relaciones->paragraph1, 4, strlen($relaciones->paragraph1) - 8) }}</b>
+                        <b>{!! substr($relaciones->paragraph1, 4, strlen($relaciones->paragraph1) - 8) !!}</b>
                     </p>
                 </div>
                 <p>
-                    <b>{{ substr($relaciones->paragraph2, 3, strlen($relaciones->paragraph2) - 8) }}</b>
+                    <b>{!! substr($relaciones->paragraph2, 3, strlen($relaciones->paragraph2) - 8) !!}</b>
                 </p>
             </div>
             <div class='links'>
@@ -34,7 +34,7 @@
             <span>O</span>
             <span>S</span>
         </div>
-        <SubMenuRelaciones />
+        @include('includes.submenu')
     </section>
 </div>
 @endsection

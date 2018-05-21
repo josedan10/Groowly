@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Home;
 use App\MarketingRelaciones;
 use App\MarketingSubsections;
 use App\RelacionesSubsections;
@@ -23,7 +24,9 @@ class FrontendController extends Controller
      */
     public function index()
     {
-    	return view('frontend.about');
+        $home = Home::find(1);
+
+    	return view('frontend.index', ['home' => $home]);
     }
 
     public function marketing()

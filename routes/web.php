@@ -11,7 +11,8 @@
 |
 */
 
-// Route::view('/', 'frontend/index');
+Route::get('/', 'FrontendController@index');
+// Route::view('/Videos', 'frontend.videos');
 
 // Route::view('Community', 'frontend/community');
 
@@ -65,9 +66,13 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
         Route::get('subsection/relaciones/add', 'AdminController@addSubsectionRelaciones')->name('add-subsection-relaciones');
         Route::post('subsection/relaciones/add', 'AdminController@addSubsectionRelacionesAction');
         Route::get('subsection/marketing/{id}/edit', 'AdminController@editSubsectionMarketing')->name('edit-subsection-marketing');
-        Route::post('subsection/marketing/{id}/edit', 'AdminController@editSubsectionMarketingAction');
+        Route::put('subsection/marketing/{id}/edit', 'AdminController@editSubsectionMarketingAction');
         Route::get('subsection/relaciones/{id}/edit', 'AdminController@editSubsectionRelaciones')->name('edit-subsection-relaciones');
-        Route::post('subsection/relaciones/{id}/edit', 'AdminController@editSubsectionRelacionesAction');
+        Route::put('subsection/relaciones/{id}/edit', 'AdminController@editSubsectionRelacionesAction');
+        Route::get('subsection/marketing/{id}/delete', 'AdminController@deleteSubsectionMarketing');
+        Route::get('subsection/relaciones/{id}/delete', 'AdminController@deleteSubsectionRelaciones');
+
+        Route::get('community', 'AdminController@Community')->name('admin-community');
     //});    
 });
 
@@ -82,6 +87,18 @@ Route::get('/Marketing', 'FrontendController@marketing')->name('marketing');
 Route::get('/Marketing/{subsection}', 'FrontendController@marketingSubsections');
 Route::get('/Relaciones', 'FrontendController@relaciones')->name('relaciones');
 Route::get('/Relaciones/{subsection}', 'FrontendController@relacionesSubsections');
+
+Route::get('/Contact', function() {
+
+    return view('frontend.contact');
+})->name('contact');
+
+Route::get('/Videos', function() {
+
+    return view('frontend.videos');
+});
+
+Route::post('/Contact', 'ContactController@sendMessage');
 ?>
 
 

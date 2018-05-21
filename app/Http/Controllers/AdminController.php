@@ -230,6 +230,20 @@ class AdminController extends Controller
         $subsection->paragraph1 = $req->paragraph1;
         $subsection->save();
 
-        return redirect(route('/admin/subsections/relaciones'));
+        return redirect(url('/admin/subsections/relaciones'));
+    }
+
+    public function deleteSubsectionMarketing($id) {
+
+        MarketingSubsections::destroy($id);
+
+        return redirect(url('/admin/subsections/marketing'));
+    }
+
+    public function deleteSubsectionRelaciones($id) {
+
+        RelacionesSubsections::destroy($id);
+
+        return redirect(url('/admin/subsections/relaciones'));
     }
 }

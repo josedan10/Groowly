@@ -7,6 +7,7 @@
 <div class="flex-center main">
     @if ($subsection !== null)
     <form action="{{ url('/admin/subsection/'.$name.'/'.$subsection->id.'/edit') }}" method="POST">
+        {{ method_field('PUT') }}
     @else 
     <form action="{{ url('/admin/subsection/'.$name.'/add') }}" method="POST">
     @endif

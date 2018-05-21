@@ -33,7 +33,7 @@ class ContactMail extends Mailable
     {
         $subject = 'Nuevo contacto';
 
-        return $this->view('frontend/mail')
+        return $this->view('frontend.mail')
                     ->from($this->user['email'], $this->user['name'])
                     ->cc($this->user['email'], $this->user['name'])
                     ->bcc($this->user['email'], $this->user['name'])
