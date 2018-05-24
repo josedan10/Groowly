@@ -89,6 +89,10 @@ header {
             border-collapse: collapse;
             text-align: center;
             padding: 10px;
+
+            img {
+                max-width: 200px;
+            }
         }
 
         tbody tr:nth-child(even) {

@@ -81,6 +81,11 @@
   to {
     height: 0;
     visibility: hidden; } }
+@keyframes hideMessage {
+  from {
+    visibility: visible; }
+  to {
+    visibility: hidden; } }
 * {
   padding: 0;
   margin: 0;
@@ -108,7 +113,8 @@ html,
 body {
   height: 100%;
   background: #ececec;
-  color: #595959; }
+  color: #595959;
+  position: relative; }
 
 main {
   position: absolute;
@@ -4144,11 +4150,6 @@ aside {
   aside .menu {
     background: transparent;
     box-shadow: none; }
-  aside a {
-    color: #ececec; }
-    aside a:hover {
-      text-decoration: none;
-      color: #ececec; }
 
 .admin-data {
   margin-bottom: 50px; }
@@ -4168,8 +4169,6 @@ header {
 .main {
   padding: 20px;
   width: 100%; }
-  .main a {
-    color: #230f28; }
   .main table {
     width: 100%;
     border-collapse: collapse;
@@ -4185,8 +4184,10 @@ header {
       border-left: 1px solid #667189;
       border-collapse: collapse;
       text-align: center;
-      padding: 10px;
-      word-break: keep-all; }
+      padding: 10px; }
+      .main table th img,
+      .main table td img {
+        max-width: 200px; }
     .main table tbody tr:nth-child(even) {
       background-color: #f0f1f4; }
   .main form {

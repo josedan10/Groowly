@@ -26,8 +26,8 @@
 
                         <tr>
                             <td class="col-1">{{ $community->name }}</td>
-                            <td class="col-3">{!! $community->imagen_big !!}</td>
-                            <td class="col-4">{!! $community->imagen_mobile !!}</td>
+                            <td class="col-3"><img src="{{ asset('storage/community/'.basename($community->img_big)) }}" alt=""></td>
+                            <td class="col-4"><img src="{{ asset('storage/community/'.basename($community->img_mobile)) }}" alt=""></td>
                             <td class="col-1">
                                 <div class="flex-around actions">
                                         {{-- <a><i class="icon icon-photo c-hand"></i></a> --}}

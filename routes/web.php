@@ -74,6 +74,8 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
 
         Route::get('community', 'AdminController@community')->name('admin-community');
         Route::get('community/add', 'AdminController@addCommunity')->name('add-community');
+        Route::post('community/add', 'AdminController@addCommunityStore');
+        Route::get('community/{id}/delete', 'AdminController@deleteCommunity');
     //});    
 });
 
@@ -81,6 +83,10 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
 
 Route::get('/migrate', function() {
     Artisan::call('migrate');
+});
+
+Route::get('/storageLink', function() {
+    Artisan::call('storage:link');
 });
 
 Route::get('/home', 'FrontendController@index')->name('home');
