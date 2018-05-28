@@ -76,6 +76,8 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
         Route::get('community/add', 'AdminController@addCommunity')->name('add-community');
         Route::post('community/add', 'AdminController@addCommunityStore');
         Route::get('community/{id}/delete', 'AdminController@deleteCommunity');
+        Route::get('community/{id}/edit', 'AdminController@editCommunity');
+        Route::post('community/{id}/edit', 'AdminController@editCommunityStore');
     //});    
 });
 

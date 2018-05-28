@@ -282,6 +282,36 @@ class AdminController extends Controller
 
     }
 
+    public function editCommunity($id) {
+        
+        $community = Community::find($id);
+
+        return view('admin.community.edit', ['community' => $community]);
+    }
+
+    public function editCommunityStore(Request $request) {
+        
+        $community = Community::find($request->id);
+
+        // dd($request->file('img_big'));
+        
+        if($request) {
+            
+            $community->name = $request->name;
+            $community->script = $request->script;
+
+            if($request->hasFile('img_big')) $community->img_big = $request->file('img_big')->store('public/community');
+
+            if($request->hasFile('img_mobile')) $community->img_mobile = $request->file('img_mobile')->store('public/community');
+
+            
+            $community->save();
+        }
+
+        return redirect(route('admin-community'));
+
+    }
+
     public function deleteCommunity($id) {
 
         Community::destroy($id);

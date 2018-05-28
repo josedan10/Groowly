@@ -7,6 +7,7 @@
 <div class="flex-center main">
     @if($community)
         <form action="{{ url('/admin/community/'.$community->id.'/edit') }}" method="POST" enctype="multipart/form-data">
+            <input type="hidden" value="{{ $community->id }}" name="id">
     @else
         <form action="{{ url('/admin/community/add') }}" method="POST" enctype="multipart/form-data">
     @endif
@@ -25,7 +26,7 @@
         </div>
         <div class="form-group">
             <label class="form-label" for="script">Script</label>
-            <input class="form-input" type="text" id="script" name="script" />
+            <input class="form-input" type="text" id="script" name="script" value="{{  ($community)?$community->script : '' }}"/>
         </div>
         <div class="flex-center form-group">
             <input class="btn btn-primary" type="submit" value="Editar">

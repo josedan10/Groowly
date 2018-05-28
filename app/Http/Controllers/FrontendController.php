@@ -40,7 +40,7 @@ class FrontendController extends Controller
     public function relaciones()
     {
         $relaciones = MarketingRelaciones::where('name', 'relaciones')->first();
-        $subsections = MarketingSubsections::all();
+        $subsections = RelacionesSubsections::all();
 
         return view('frontend.relaciones', ['section' => 'Relaciones', 'relaciones' => $relaciones, 'subsections' => $subsections]);
     }
