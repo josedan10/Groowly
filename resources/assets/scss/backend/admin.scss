@@ -37,15 +37,6 @@ aside {
         background: transparent;
         box-shadow: none;
     }
-
-    a {
-        color: $gris;
-
-        &:hover {
-            text-decoration: none;
-            color: $gris;
-        }
-    }
 }
 
 .admin-data {
@@ -74,10 +65,6 @@ header {
 
 .main {
 
-    a {
-        color: $violeta;
-    }
-
     padding: 20px;
     width: 100%;
 
@@ -102,7 +89,10 @@ header {
             border-collapse: collapse;
             text-align: center;
             padding: 10px;
-            word-break: keep-all;
+
+            img {
+                max-width: 200px;
+            }
         }
 
         tbody tr:nth-child(even) {

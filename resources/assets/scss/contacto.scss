@@ -127,3 +127,22 @@
     }
 
 }
+
+.message-contact {
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    visibility: hidden;
+    color: #fff;
+    background: rgba($color: $violeta, $alpha: .7);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    animation-name: hideMessage;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+}

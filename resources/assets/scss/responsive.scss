@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .services {
         .flex-container {
             padding: 120px 50px;
@@ -6,7 +6,7 @@
     }
     
     .contacto {
-        padding: 0 10px 0 50px;
+        padding: 10px;
     }
 
     .selected-works {
@@ -22,6 +22,10 @@
         }
     }
 
+    .contacto .form-contact {
+        padding-top: 11vh;
+    }
+
     header {
 
         width: 100%;
@@ -35,11 +39,11 @@
         .icons {
             background-color: rgba($color: $gris, $alpha: 0.7);
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
             align-items: center;
         }
 
-        .icon {
+        & > .icon {
             top: 10px;
             right: 50px;
         }
@@ -61,7 +65,7 @@
                 padding: 0;
 
                 li {
-                    // padding: 10px;
+                    padding-top: 10px;
                     height: 10vh;
                     width: 100%;
                     border-top: 1px solid $gris;
@@ -71,7 +75,8 @@
                         font-size: 16px;
 
                         .link-decoration {
-                            display: none;
+                            // display: none;
+                            color: $dorado;
                         }
                     }
 
@@ -340,7 +345,7 @@
     .marketing {
         .links {
             position: absolute;
-            top: 30px;
+            top: 12vh;
             left: -7px;
 
             p {
@@ -352,7 +357,7 @@
     .relaciones {
         .links {
             position: absolute;
-            top: 30px;
+            top: 12vh;
             right: 0;
             text-align: right;
             max-width: 100%;
@@ -381,6 +386,12 @@
         
     }
 
+    .subsection {
+        .links {
+            margin-top: 0;
+        }
+    }
+
     .sections-links {
         .links {
             position: absolute;
@@ -394,7 +405,7 @@
             }
 
             &:first-child {
-                top: 10%;
+                top: 11vh;
                 left: -9px;
             }
 
@@ -516,21 +527,50 @@
 
 @media (max-width: 480px) { 
 
+    .marketing .links {
+        left: -2px;
+    }
+
+    .links h1 {
+        font-size: 40px;
+        line-height: 30px;
+    }
+
     header {
+
+        svg {
+            top: auto;
+            left: 0;
+            position: absolute;
+        }
 
         .icons {
             z-index: 5;
-            position: absolute;
+            // position: absolute;
             height: 10vh;
             display: flex;
             justify-content: space-between;
             align-items: center;
             // background-color: rgba($color: $gris, $alpha: 1);
+            
+            .social {
+                // position: absolute;
+                // right: 100px;
+                margin-left: 55%;
+    
+                .icon {
+                    font-size: 12px;
+                }
+            }
+
+            & > .icon {
+                font-size: 20px;
+                right: 20px;
+            }
         }
 
-        .icon {
-            top: auto;
-        }
+
+        
 
         nav {
             height: 90vh;
@@ -541,7 +581,7 @@
                 height: 90vh;
 
                 li {
-                    height: 15vh;
+                    height: 18vh;
                     padding: 0;
                 }
             }
@@ -570,23 +610,46 @@
                 li {
                     width: 40%;
                     text-align: center;
+                    margin: 5px;
                 }
 
                 a {
-                    font-size: 14px;
+                    font-size: 12px;
                     text-align: center;
                 }
             }
+        }
+
+        .info {
+            width: 100%;
+            padding: 5px;
+            margin-top: 10vh;
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .text-decoration {
+            font-size: 50px;
+        }
+    }
+
+    .subsection {
+        .info {
+            margin-top: 0;
         }
     }
 
     .home {
         article {
+            margin-top: 10vh;
+
             h1 {
                 font-size: 25px;
             }
             p {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
@@ -594,7 +657,8 @@
     .sections-links {
 
         .links h1 {
-            font-size: 80px;
+            font-size: 60px;
+            line-height: 50px;
         }
 
         .links:first-child {
@@ -686,7 +750,9 @@
     }
 
     .contacto {
-        overflow: hidden;
+        padding-top: 12vh;
+        padding-bottom: 20px;
+        
         .form-contact {
             padding: 40px 10px;
 

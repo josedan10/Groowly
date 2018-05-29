@@ -138,6 +138,14 @@ $font-normal: 'BrownStd-Light', Arial, Helvetica, sans-serif;
 	}
 }
 
+@keyframes hideMessage {
+	from {
+		visibility: visible;
+	} to {
+		visibility: hidden;
+	}
+}
+
 *{
 	padding: 0;
 	margin: 0;
@@ -169,6 +177,7 @@ body{
 	height: 100%;
 	background: $gris;
 	color: $grisOsc;
+	position: relative;
 }
 
 main{
@@ -332,20 +341,20 @@ section{
 
 // @import 'nav';
 // @import 'social';
-@import 'home';
+// @import 'home';
 // @import 'services';
 // @import 'selected-works';
-@import 'own-community';
+// @import 'own-community';
 // @import 'team';
-@import 'videos';
+// @import 'videos';
 // @import 'clientes';	
 // @import 'timer';
 // @import 'slideshow';
-@import 'contacto';
-@import 'responsive';
+// @import 'contacto';
+// @import 'responsive';
 
-// @import 'spectre/src/spectre';
-// @import 'spectre/src/spectre-exp';
-// @import 'spectre/src/spectre-icons';
-// @import 'backend/login';
-// @import 'backend/admin';
+@import 'spectre/src/spectre';
+@import 'spectre/src/spectre-exp';
+@import 'spectre/src/spectre-icons';
+@import 'backend/login';
+@import 'backend/admin';
