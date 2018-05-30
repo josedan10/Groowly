@@ -26,6 +26,10 @@
         padding-top: 11vh;
     }
 
+    .social-main {
+        display: none;
+    }
+
     header {
 
         width: 100%;
@@ -41,12 +45,17 @@
             display: flex;
             // justify-content: space-between;
             align-items: center;
+            
+            & > .icon {
+                top: 10px;
+                right: 50px;
+            }
+
+            .social {
+                display: flex;
+            }
         }
 
-        & > .icon {
-            top: 10px;
-            right: 50px;
-        }
 
         nav {
             left: 0;

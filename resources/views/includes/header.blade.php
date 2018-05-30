@@ -71,3 +71,9 @@
         <span class='icon icon-dehaze' id='menu-icon'></span>
     </div>
 </header>
+
+<div class="social-main">
+    <a target="_blank" href="https://twitter.com/groowly"><i class="icon icon-twitter"></i></a>
+    <a target="_blank" href="https://facebook.com/groowly"><i class="icon icon-facebook"></i></a>
+    <a target="_blank" href="https://instagram.com/groowly"><i class="icon icon-instagram"></i></a>
+</div>

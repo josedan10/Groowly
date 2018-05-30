@@ -195,11 +195,11 @@
 header {
     height: 100%;
     position: absolute;
-    width: 200px;
+    width: 250px;
     z-index: 20;
     display: flex;
     justify-content: center;
-    align-items: center;
+
 
     &.list2 {
         a,
@@ -232,11 +232,8 @@ header {
     }
     
     svg {
-        width: 50%;
+        width: 80%;
         min-width: 100px;
-        position: relative;
-        left: -20px;
-        top: 40px;
 
         path {
             fill: $violeta;
@@ -244,20 +241,21 @@ header {
     }
     
     .icons {
-        padding: 0 20px;
+        padding: 20px;
         width: 100%;
-        height: 50px;
+        height: 80px;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
         // background-color: rgba($color: $gris, $alpha: 0.9)
 
         & > .icon {
             position: absolute;
-            right: 50px;
+            right: 0;
             z-index: 1;
             color: $violeta;
-            font-size: 30px;
+            font-size: 40px;
             
             &:hover,
             &.active {
@@ -271,7 +269,7 @@ header {
             height: 100%;
             margin: 0 auto;
             min-width: 80px;
-            display: flex;
+            display: none;
             justify-content: space-between;
             align-items: center;
     
@@ -310,7 +308,7 @@ header {
         }
         
         ul {
-            padding-right: 120px;
+            padding-right: 80px;
             padding-left: 20px;
             display: flex;
             transform: rotate(-90deg);
@@ -322,9 +320,9 @@ header {
 
             li {
                 display: flex;
-                align-items: center;
+                // align-items: center;
                 justify-content: center;
-                width: auto;
+                height: 80px;
                 
                 a {
                     padding: 10px;
@@ -396,6 +394,26 @@ header {
             left: 0;
             opacity: 1;
             animation: showMenu .5s ease;
+        }
+    }
+}
+
+.social-main {
+    margin: 0 auto;
+    width: 100px;
+    position: absolute;
+    top: 40px;
+    right: 2%;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+        color: $violeta;
+        font-size: 20px;
+
+
+        &:hover {
+            color: $dorado;
         }
     }
 }
