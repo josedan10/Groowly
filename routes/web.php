@@ -78,6 +78,13 @@ Route::group(['prefix' => 'admin',  'middleware' => ['web']], function() {
         Route::get('community/{id}/delete', 'AdminController@deleteCommunity');
         Route::get('community/{id}/edit', 'AdminController@editCommunity');
         Route::post('community/{id}/edit', 'AdminController@editCommunityStore');
+
+
+        Route::get('communities', function() {
+            $communities = App\Community::all()->toJson(JSON_PRETTY_PRINT);
+
+            return $communities;
+        });
     //});    
 });
 

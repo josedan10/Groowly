@@ -1,3 +1,4 @@
+import axios from 'axios';
 class Config {
 	constructor(links, logo, baseURL, clientes, communities) {
 		this.links = links;
@@ -165,43 +166,62 @@ const baseURL = '/';
 const clientes = ['mundoejecutivo', 'alfonso', 'igpm', 'expogrow', 'bath', 'themeltinhot', 'fiera', 'vecoolstyle', 'kathies', 'equilibrio370', 'caro-mansabel', 'unilever'];
 
 // Comunidades
-const communities = [
-	{
-		name: 'Groowly',
-		followers: 78.9,
-		posts: 41,
-		img: 'src/img/communities/groowly-community.jpg',
-		description: 'Groowly Mindful Marketing.'
-	},
-	{
-		name: 'DibujosEs',
-		followers: 971,
-		posts: 4.377,
-		img: 'src/img/communities/dibujoses-community.jpg',
-		description: 'DibujosEs.com | ART, CONNECT. Dibujoses is one platform for sharing artwork worldwide.' 
-	},
-	{
-		name: 'RecetasEs',
-		followers: 392,
-		posts: 642,
-		img: 'src/img/communities/recetases-community.jpg',
-		description: 'Nos gusta cocinar y conocer contigo.'
-	},
-	{
-		name: 'Travel',
-		followers: null,
-		posts: null,
-		img: 'src/img/communities/travel-community.jpg',
-		description: ''
-	},
-	{
-		name: 'Celine',
-		followers: null,
-		posts: null,
-		img: 'src/img/communities/celine-community.jpg',
-		description: ''
-	}
-];
+// const communities = [
+// 	{
+// 		name: 'Groowly',
+// 		followers: 78.9,
+// 		posts: 41,
+// 		img: 'src/img/communities/groowly-community.jpg',
+// 		description: 'Groowly Mindful Marketing.'
+// 	},
+// 	{
+// 		name: 'DibujosEs',
+// 		followers: 971,
+// 		posts: 4.377,
+// 		img: 'src/img/communities/dibujoses-community.jpg',
+// 		description: 'DibujosEs.com | ART, CONNECT. Dibujoses is one platform for sharing artwork worldwide.' 
+// 	},
+// 	{
+// 		name: 'RecetasEs',
+// 		followers: 392,
+// 		posts: 642,
+// 		img: 'src/img/communities/recetases-community.jpg',
+// 		description: 'Nos gusta cocinar y conocer contigo.'
+// 	},
+// 	{
+// 		name: 'Travel',
+// 		followers: null,
+// 		posts: null,
+// 		img: 'src/img/communities/travel-community.jpg',
+// 		description: ''
+// 	},
+// 	{
+// 		name: 'Celine',
+// 		followers: null,
+// 		posts: null,
+// 		img: 'src/img/communities/celine-community.jpg',
+// 		description: ''
+// 	}
+// ];
+
+var communities;
+
+axios.get('/admin/communities').then(res => {
+	communities = res.data;
+	// res.json();
+});
+	// .then(
+	// 	(result) => {
+	// 		communities = result;
+	// 		console.log(result);
+	// 	},
+
+	// 	(error) => {
+	// 		console.log(error);
+	// 	}
+	// );
+
+// console.log(communities);
 
 
 exports.config = new Config(links, logo, baseURL, clientes, communities);

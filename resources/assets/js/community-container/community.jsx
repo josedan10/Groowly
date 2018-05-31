@@ -59,7 +59,8 @@ export default class Community extends React.Component {
 
 					{this.props.communities.map(community => 
 						(<div className='flex-center' key={'community-' + community.name} onClick={this.showCommunity.bind(this)}>
-							<img className='community-image' src={community.img} />
+							<img className='community-image image-big' src={community.img_big} />
+							<img className='community-image image-mobile' src={community.img_mobile} />
 							<div className='view-screen' />
 						</div>)
 					)}

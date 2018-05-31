@@ -18,7 +18,6 @@ class Arrow extends React.Component {
 		document.onkeydown = (e) => {
 			// console.log(document.getElementById('home'))
 			if (!(document.getElementById('Home') === null || document.getElementById('Home') === undefined)) {
-				console.log(e.keyCode);
 
 				switch (e.keyCode) {
 				case 40:

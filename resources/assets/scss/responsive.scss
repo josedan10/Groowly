@@ -549,7 +549,7 @@
 
         svg {
             top: auto;
-            left: 0;
+            left: 20px;
             position: absolute;
         }
 
@@ -565,7 +565,7 @@
             .social {
                 // position: absolute;
                 // right: 100px;
-                margin-left: 55%;
+                margin-left: 50%;
     
                 .icon {
                     font-size: 12px;
@@ -573,8 +573,9 @@
             }
 
             & > .icon {
-                font-size: 20px;
-                right: 20px;
+                font-size: 22px;
+                right: 23.5px;
+                top: 14px;
             }
         }
 
@@ -660,6 +661,10 @@
             p {
                 font-size: 14px;
             }
+        }
+
+        .arrow {
+            right: 20px;
         }
     }
 

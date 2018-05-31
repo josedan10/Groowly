@@ -16,7 +16,7 @@
                     <b>{!!$home->paragraph2!!}</b>
                 </p>
             </article>
-            <div id="arrow" class='arrow'>
+            <div id="arrow">
             </div>
         </section>
 

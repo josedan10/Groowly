@@ -1,9 +1,17 @@
 import React from 'react';
 import Community from '../community-container/community';
+import axios from 'axios';
 
 export default class OwnCommunity extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+
+	componentDidMount() {
+		axios.get('/admin/communities').then(res => {
+			console.log(res);
+			// res.json();
+		});
 	}
 
 	render() {

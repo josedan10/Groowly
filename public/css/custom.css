@@ -520,6 +520,7 @@ header {
   margin: 0 auto;
   width: 100px;
   position: absolute;
+  z-index: 10;
   top: 40px;
   right: 2%;
   justify-content: space-between;
@@ -1047,7 +1048,7 @@ header {
 
   header svg {
     top: auto;
-    left: 0;
+    left: 20px;
     position: absolute; }
   header .icons {
     z-index: 5;
@@ -1056,12 +1057,13 @@ header {
     justify-content: space-between;
     align-items: center; }
     header .icons .social {
-      margin-left: 55%; }
+      margin-left: 50%; }
       header .icons .social .icon {
         font-size: 12px; }
     header .icons > .icon {
-      font-size: 20px;
-      right: 20px; }
+      font-size: 22px;
+      right: 23.5px;
+      top: 14px; }
   header nav {
     height: 90vh;
     visibility: hidden;
@@ -1119,6 +1121,8 @@ header {
       font-size: 25px; }
     .home article p {
       font-size: 14px; }
+  .home .arrow {
+    right: 20px; }
 
   .sections-links .links h1 {
     font-size: 60px;

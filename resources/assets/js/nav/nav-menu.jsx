@@ -168,13 +168,7 @@ export class Menu extends React.Component {
 	assignClass(elemento) {
 		let classState;
 		let reg = new RegExp(elemento); 
-
-		console.log(elemento);
-		console.log(location.pathname);
-		console.log(reg.exec(location.pathname));
-		// console.log(elemento);
-		// console.log(this.state);
-
+		
 		classState = (reg.exec(location.pathname) !== null) ? 'active' : ''; 
 
 		return classState;
