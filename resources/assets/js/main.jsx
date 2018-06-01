@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Nav from './nav/nav-menu';
+import config from './config';
 
-var config = require('./config');
+console.log(config);
+
+// var config = require('./config');
 config = config.config;
 
 export default class Main extends React.Component {

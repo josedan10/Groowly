@@ -153,7 +153,7 @@ class Config {
 }
 
 // Links para el menu y las redes
-const links = ['About', 'Marketing', 'Relaciones', 'Videos', 'Contact'/*, 'Community'*/];
+const links = ['About', 'Marketing', 'Relaciones', 'Videos', 'Contact'/* , 'Community'*/];
 // const redes = ['twitter', 'facebook', 'instagram', 'youtube'];
 
 // Imagen del logo
@@ -210,18 +210,18 @@ axios.get('/admin/communities').then(res => {
 	communities = res.data;
 	// res.json();
 });
-	// .then(
-	// 	(result) => {
-	// 		communities = result;
-	// 		console.log(result);
-	// 	},
+// .then(
+// 	(result) => {
+// 		communities = result;
+// 		console.log(result);
+// 	},
 
-	// 	(error) => {
-	// 		console.log(error);
-	// 	}
-	// );
+// 	(error) => {
+// 		console.log(error);
+// 	}
+// );
 
 // console.log(communities);
+let config = new Config(links, logo, baseURL, clientes, communities);
 
-
-exports.config = new Config(links, logo, baseURL, clientes, communities);
+export default config;

@@ -93,15 +93,14 @@ class CommunityData extends React.Component {
 class InstagramWidget extends React.Component {
 	constructor(props) {
 		super(props);
-		this.widgets = [
-			null,
-			<iframe src='//lightwidget.com/widgets/33e450847f2b5cda91909dfa2417f553.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{width: '100%', border: '0', overflow: 'hidden'}} />,
-			<iframe src='//lightwidget.com/widgets/469a216100aa53cf955804d66fe8ea50.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{width: '100%', border: '0', overflow: 'hidden'}} />,
-			<iframe src='//lightwidget.com/widgets/579bd239e0005fc49bc744d1a9ca15cf.html' scrolling='no' allowtransparency='true' className='lightwidget-widget' style={{width: '100%', border: '0', overflow: 'hidden'}} />
-		];
+		this.widgets = this.props.communities.map(
+			community => community.script
+		);
 	}
 
 	render() {
+		console.log(this.widgets);
+		
 		let container = <div className='community-widget' id='widget'/>;
         
 		if (this.props.index !== null) {

@@ -68,11 +68,7 @@ const config = {
 
 	optimization: {
 
-	},
-
-	plugins: [
-		
-	]
+	}
 };
 
 module.exports = config;
